@@ -7,6 +7,8 @@ html {
 }
 
 :root {
+  --ui-bg: var(--ui-color-neutral-50);
+  --ui-text: var(--ui-color-neutral-900);
   --ui-container: var(--container-4xl);
 
 
@@ -17,6 +19,10 @@ html {
 }
 
 .dark {
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-text: var(--ui-color-neutral-50);
+  --ui-border: var(--ui-color-neutral-900);
+
   ::selection {
     color: #ffffff;
     background-color: #474747;

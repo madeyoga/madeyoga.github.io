@@ -1,8 +1,9 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 
 export default defineContentConfig({
   collections: {
-    index: defineCollection({
+    index: defineCollection(asSitemapCollection({
       type: 'page',
       source: 'index.yml',
       schema: z.object({
@@ -51,7 +52,7 @@ export default defineContentConfig({
           }))
         })
       })
-    }),
+    })),
     content: defineCollection({
       type: 'page',
       source: '**/*.md'

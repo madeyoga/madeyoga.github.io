@@ -5,7 +5,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxt/content',
+    '@nuxtjs/seo',
   ],
+  site: { 
+    url: 'https://madeyoga.github.io', 
+    name: 'Made Yoga Mahardika | Portofolio' 
+  }, 
   future: {
     compatibilityVersion: 4
   },
