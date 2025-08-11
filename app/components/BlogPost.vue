@@ -16,10 +16,10 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
   <article class="relative group/blog-post flex flex-col rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:items-center gap-x-8 p-0 sm:p-0 transition col-span-full">
     <div class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none shadow-lg rounded-lg">
       <img 
-        :alt="props.image?.alt || 'Blog post image'" 
+        :alt="props.image?.alt" 
         data-nuxt-img="" 
         class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover/blog-post:scale-110" 
-        :src="props.image?.src || 'https://picsum.photos/id/490/640/360'"
+        :src="props.image?.src"
       />
     </div>
 
@@ -55,18 +55,18 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
               :alt="props.authors[0]?.name" 
               role="img" 
               class="h-full w-full rounded-[inherit] object-cover" 
-              :src="props.authors[0]?.avatar?.src || 'https://picsum.photos/id/1005/32/32'" />
+              :src="props.authors[0]?.avatar?.src" />
           </span>
           <div class="">
             <a 
               tabindex="-1" 
               rel="noopener noreferrer" 
-              :aria-label="props.authors[0]?.name || 'Made Y'" 
+              :aria-label="props.authors[0]?.name" 
               class="focus:outline-none peer">
               <span class="absolute inset-0" aria-hidden="true"></span>
             </a>
             <p class="font-medium text-default peer-hover:text-highlighted transition-colors text-sm">
-              {{ props.authors[0]?.name || 'Made Y' }}
+              {{ props.authors[0]?.name }}
             </p>
           </div>
         </div>

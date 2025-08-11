@@ -3,7 +3,7 @@ title: Exploring the Culinary Wonders of Asia
 description: "Embark on a tantalizing expedition through the diverse and
   enchanting flavors of Asia "
 image:
-  src: https://picsum.photos/id/490/640/360
+  src: /images/chrome_2025-07-24_14-44-25.jpg
 authors:
   - name: Made Y
     to: https://madeyoga.github.io
