@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: post } = await useAsyncData(route.path, () => queryCollection('blogPosts').path(route.path).first(), {server: true, lazy: false})
+const { data: post } = await useAsyncData(route.path, () => queryCollection('blogPosts').path(route.path).first())
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }

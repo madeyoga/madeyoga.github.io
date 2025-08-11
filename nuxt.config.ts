@@ -54,6 +54,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
+        '/blog/foo',
       ],
       crawlLinks: true,
     }
