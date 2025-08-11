@@ -32,7 +32,7 @@ useSeoMeta({
     <div class="mt-8 pb-24 space-y-12">
       <BlogPost
         v-for="(post, index) in posts"
-        :key="index"
+        :key="`${post.path}-${post.title}-${index}`"
         :to="post.path"
         :title="post.title"
         :description="post.description"

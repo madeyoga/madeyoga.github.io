@@ -1,9 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
 
-console.log('Build timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone)
-console.log('Build locale:', Intl.DateTimeFormat().resolvedOptions().locale)
-console.log('Node version:', process.version)
-
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',

@@ -2,15 +2,6 @@ export function useFormattedDate(date: string | Date) {
   const dateObj = computed(() =>{
     const parsed = typeof date === 'string' ? new Date(date) : date
 
-    if (import.meta.server) {
-      console.log('[SSR] raw input:', date)
-      console.log('[SSR] parsed date:', parsed.toISOString())
-    }
-    if (import.meta.client) {
-      console.log('[Client] raw input:', date)
-      console.log('[Client] parsed date:', parsed.toISOString())
-    }
-    
     return parsed
   })
 

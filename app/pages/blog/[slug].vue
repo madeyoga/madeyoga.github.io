@@ -59,7 +59,7 @@ const { formattedDate } = useFormattedDate(post.value.date)
         <div class="flex flex-wrap items-center gap-3 mt-4">
           <UButton
             v-for="(author, index) in post.authors"
-            :key="index"
+            :key="`slug-authorbutton-${author.name}-${author.to}-${index}`"
             :to="author.to"
             color="neutral"
             variant="subtle"
