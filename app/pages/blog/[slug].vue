@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const route = useRoute()
 const normalizedPath = route.path.replace(/\/$/, '') // remove trailing slash
-const { data: post1 } = await useAsyncData(route.path, () => queryCollection('posts').first())
 const { data: post } = await useAsyncData(route.path, () => queryCollection('posts').path(normalizedPath).first())
+const { data: post1 } = await useAsyncData(route.path + "test", () => queryCollection('posts').first())
 
+console.log(post.value)
+console.log(post1.value)
+console.log(route.path, normalizedPath)
 if (!post.value) {
-  console.log(post.value)
-  console.log(post1.value)
-  console.log(route.path, normalizedPath)
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
 
