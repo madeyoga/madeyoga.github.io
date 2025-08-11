@@ -7,6 +7,8 @@ useHead({
   title: page.value.title
 })
 
+console.log(page.value)
+
 const colorMode = useColorMode()
 
 const isDark = computed({

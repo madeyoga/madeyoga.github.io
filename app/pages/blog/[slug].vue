@@ -2,22 +2,18 @@
 const route = useRoute()
 
 const { data: post } = await useAsyncData(
-  route.path, 
-  () => queryCollection('blogPosts').path(route.path).first(), 
-  {
-    server: true,
-    lazy: false,
-  }
+  `${route.path}-mainpost`, 
+  () => queryCollection('posts').path(route.path).first(), 
 )
 
-// if (!post.value) {
-//   console.log(post.value)
-//   console.log(route.path)
-//   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
-// }
+if (!post.value) {
+  console.log(post.value)
+  console.log(route.path)
+  throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
+}
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings('blogPosts', route.path, {
+  return queryCollectionItemSurroundings('posts', route.path, {
     fields: ['description']
   })
 })

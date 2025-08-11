@@ -4,23 +4,23 @@
       <div style="position: relative;">
         <ul class="isolate min-w-0 flex items-center">
           <li class="py-2 min-w-0">
-            <a href="/" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">
+            <NuxtLink to="/" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">
               <span class="truncate">Home</span>
-            </a>
+            </NuxtLink>
           </li>
           <li class="py-2 min-w-0">
-            <a href="/#workexperience" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">
+            <NuxtLink to="/#workexperience" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">
               <span class="truncate">Work Experience</span>
-            </a>
+            </NuxtLink>
           </li>
           <li class="py-2 min-w-0">
-            <a href="/#projects" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Projects</a>
+            <NuxtLink to="/#projects" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Projects</NuxtLink>
           </li>
           <li class="py-2 min-w-0">
-            <a href="/#contact" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Contact</a>
+            <NuxtLink to="/#contact" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Contact</NuxtLink>
           </li>
           <li class="py-2 min-w-0">
-            <a href="/blog" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Blog</a>
+            <NuxtLink to="/blog" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Blog</NuxtLink>
           </li>
         </ul>
 

@@ -61,7 +61,7 @@ export default defineContentConfig({
       type: 'page',
       source: 'blog.yml'
     })),
-    blogPosts: defineCollection(asSitemapCollection({
+    posts: defineCollection(asSitemapCollection({
       type: 'page',
       source: 'blog/*.md',
       schema: z.object({
