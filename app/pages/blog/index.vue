@@ -37,7 +37,7 @@ useSeoMeta({
         :title="post.title"
         :description="post.description"
         :image="post.image"
-        :date="new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' })"
+        :date="post.date"
         :authors="post.authors"
         :badge="post.badge"
         :class="[index === 0 && 'col-span-full']"

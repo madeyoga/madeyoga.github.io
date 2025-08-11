@@ -31,6 +31,8 @@ if (post.value.image?.src) {
     headline: 'Blog'
   })
 }
+
+const { formattedDate } = useFormattedDate(post.value.date)
 </script>
 
 <template>
@@ -43,7 +45,7 @@ if (post.value.image?.src) {
           variant="subtle"
         />
         <span class="text-muted">&middot;</span>
-        <time class="text-muted">{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
+        <time class="text-muted">{{ formattedDate }}</time>
       </div>
       <div>
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">

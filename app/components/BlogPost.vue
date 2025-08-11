@@ -8,6 +8,8 @@ const props = defineProps<{
   badge?: { label: string },
   to?: string,
 }>()
+
+const { isoDate, formattedDate } = useFormattedDate(props.date)
 </script>
 
 <template>
@@ -33,10 +35,8 @@ const props = defineProps<{
         <span class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-accented text-default bg-elevated">
           <span class="truncate">{{ props.badge?.label }}</span>
         </span>
-        <time 
-          :datetime="(typeof props.date === 'string' ? new Date(props.date) : props.date).toISOString()" 
-          class="text-sm text-toned">
-          {{ typeof props.date === 'string' ? new Date(props.date).toLocaleDateString() : props.date.toLocaleDateString() }}
+        <time :datetime="isoDate" class="text-sm text-toned">
+          {{ formattedDate }}
         </time>
       </div>
 
