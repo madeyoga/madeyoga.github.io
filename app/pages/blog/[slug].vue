@@ -36,11 +36,11 @@ const { formattedDate } = useFormattedDate(post.value.date)
 </script>
 
 <template>
-  <UContainer v-if="post">
+  <UContainer>
     <div class="relative border-b border-default py-8">
       <div class="mb-2.5 text-sm font-semibold text-primary flex items-center gap-1.5">
         <UBadge
-          v-bind="post.badge"
+          v-bind="post!.badge"
           variant="subtle"
         />
         <span class="text-muted">&middot;</span>
@@ -57,7 +57,7 @@ const { formattedDate } = useFormattedDate(post.value.date)
         </div>
         <div class="flex flex-wrap items-center gap-3 mt-4">
           <UButton
-            v-for="(author, index) in post.authors"
+            v-for="(author, index) in post!.authors"
             :key="`slug-authorbutton-${author.name}-${author.to}-${index}`"
             :to="author.to"
             color="neutral"
@@ -84,7 +84,7 @@ const { formattedDate } = useFormattedDate(post.value.date)
           :value="post"
         />
 
-        <USeparator v-if="surround?.length" />
+        <!-- <USeparator v-if="surround?.length" /> -->
       </div>
     </div>
   </UContainer>
