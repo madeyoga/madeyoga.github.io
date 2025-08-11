@@ -3,7 +3,7 @@ const props = defineProps<{
   title: string,
   description: string,
   image?: { src: string, alt?: string },
-  date: Date | string,
+  date: string,
   authors: Array<{ name: string, to: string, avatar?: { src: string } }>,
   badge?: { label: string },
   to?: string,
@@ -49,14 +49,13 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
       <div class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
         <div data-orientation="horizontal" class="relative group/user flex items-center gap-2">
           <span class="inline-flex items-center justify-center select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0 transform transition-transform duration-200 group-hover/user:scale-115">
-            <img 
+            <NuxtImg 
               width="32" 
               height="32" 
               :alt="props.authors[0]?.name" 
-              data-nuxt-img="" 
               role="img" 
               class="h-full w-full rounded-[inherit] object-cover" 
-              :src="props.authors[0]?.avatar?.src || 'https://picsum.photos/id/1005/32/32'">
+              :src="props.authors[0]?.avatar?.src || 'https://picsum.photos/id/1005/32/32'" />
           </span>
           <div class="">
             <a 

@@ -1,11 +1,15 @@
 import tailwindcss from "@tailwindcss/vite";
 
+console.log('Build timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone)
+console.log('Build locale:', Intl.DateTimeFormat().resolvedOptions().locale)
+console.log('Node version:', process.version)
 
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@nuxtjs/seo',
     '@nuxt/content',
+    '@nuxt/image'
   ],
   site: { 
     url: 'https://madeyoga.github.io', 
@@ -40,7 +44,10 @@ export default defineNuxtConfig({
   },
   components: [
     '~/components',
-    '~/components/prose'
+    {
+      path: '~/components/prose',
+      global: true,
+    },
   ],
   nitro: {
     prerender: {
