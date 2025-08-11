@@ -37,7 +37,6 @@ const { formattedDate } = useFormattedDate(post.value.date)
 
 <template>
   <UContainer v-if="post">
-    <!-- Page Header -->
     <div class="relative border-b border-default py-8">
       <div class="mb-2.5 text-sm font-semibold text-primary flex items-center gap-1.5">
         <UBadge
@@ -86,16 +85,7 @@ const { formattedDate } = useFormattedDate(post.value.date)
         />
 
         <USeparator v-if="surround?.length" />
-
-        <!-- <UContentSurround :surround="surround" /> -->
       </div>
-
-      <!-- <template
-        v-if="post?.body?.toc?.links?.length"
-        #right
-      >
-        <UContentToc :links="post.body.toc.links" />
-      </template> -->
     </div>
   </UContainer>
 </template>
