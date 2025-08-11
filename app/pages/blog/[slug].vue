@@ -4,8 +4,6 @@ const route = useRoute()
 const normalizedPath = route.path.replace(/\/$/, '') // remove trailing slash
 const { data: post } = await useAsyncData(normalizedPath, () => queryCollection('posts').path(route.path).first())
 
-console.log(post.value)
-
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
@@ -15,7 +13,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
     fields: ['description']
   })
 })
-
+const surroundLength = surround.value?.length 
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
 
@@ -88,7 +86,7 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
           :value="post"
         />
 
-        <USeparator v-if="surround?.length" />
+        <USeparator v-if="surroundLength" />
       </div>
     </div>
   </UContainer>

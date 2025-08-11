@@ -7,8 +7,6 @@ useHead({
   title: page.value.title
 })
 
-console.log(page.value)
-
 const colorMode = useColorMode()
 
 const isDark = computed({
@@ -37,10 +35,9 @@ const isDark = computed({
 
             <div class="flex flex-col gap-6 justify-center h-full">
               <div>
-                <MDC
-                  :value="page.hero.title"
-                  class="text-center md:text-start font-bold text-3xl dark:text-muted leading-[1.5]"
-                />
+                <h1 class="text-center md:text-start font-bold text-3xl dark:text-muted leading-[1.5]">
+                  <span class="dark:text-green-400 text-green-800">Hey, I'm Made Yoga.</span> <br>Fullstack Software Developer.
+                </h1>
               </div>
 
               <div class="w-full flex flex-col md:flex-row items-center justify-between">
