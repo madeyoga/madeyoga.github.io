@@ -10,11 +10,11 @@ const { data: post } = await useAsyncData(
   }
 )
 
-if (!post.value) {
-  console.log(post.value)
-  console.log(route.path)
-  throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
-}
+// if (!post.value) {
+//   console.log(post.value)
+//   console.log(route.path)
+//   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
+// }
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   return queryCollectionItemSurroundings('blogPosts', route.path, {
@@ -22,8 +22,8 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   })
 })
 
-const title = post.value.seo?.title || post.value.title
-const description = post.value.seo?.description || post.value.description
+const title = post.value?.seo?.title || post.value?.title
+const description = post.value?.seo?.description || post.value?.description
 
 useSeoMeta({
   title,
@@ -32,7 +32,7 @@ useSeoMeta({
   ogDescription: description
 })
 
-if (post.value.image?.src) {
+if (post.value?.image?.src) {
   defineOgImage({
     url: post.value.image.src
   })
@@ -42,7 +42,7 @@ if (post.value.image?.src) {
   })
 }
 
-const { formattedDate } = useFormattedDate(post.value.date)
+const { formattedDate } = useFormattedDate(post.value?.date || new Date())
 </script>
 
 <template>
