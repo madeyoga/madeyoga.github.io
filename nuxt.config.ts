@@ -4,8 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
-    '@nuxt/content',
     '@nuxtjs/seo',
+    '@nuxt/content',
   ],
   site: { 
     url: 'https://madeyoga.github.io', 
@@ -29,8 +29,19 @@ export default defineNuxtConfig({
     },
     components: {
       prose: true,
+      map: {
+        h2: 'MyProseH2', 
+        h3: 'MyProseH3',
+        p: 'MyProseP',
+        li: 'MyProseLi',
+        ul: 'MyProseUl',
+      }
     }
   },
+  components: [
+    '~/components',
+    '~/components/prose'
+  ],
   nitro: {
     prerender: {
       routes: [

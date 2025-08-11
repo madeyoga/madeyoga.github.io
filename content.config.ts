@@ -56,6 +56,26 @@ export default defineContentConfig({
     content: defineCollection({
       type: 'page',
       source: '**/*.md'
-    })
+    }),
+    blog: defineCollection(asSitemapCollection({
+      type: 'page',
+      source: 'blog.yml'
+    })),
+    blogPosts: defineCollection(asSitemapCollection({
+      type: 'page',
+      source: 'blog/*.md',
+      schema: z.object({
+        image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+        authors: z.array(
+          z.object({
+            name: z.string().nonempty(),
+            to: z.string().nonempty(),
+            avatar: z.object({ src: z.string().nonempty().editor({ input: 'media' }) })
+          })
+        ),
+        date: z.date(),
+        badge: z.object({ label: z.string().nonempty() })
+      })
+    }))
   }
 })

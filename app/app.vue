@@ -1,8 +1,9 @@
-<script setup>
-</script>
-
 <template>
   <UApp>
-    <NuxtPage />
+    <NuxtLoadingIndicator />
+    
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>
