@@ -57,7 +57,7 @@ export default defineNuxtConfig({
         '/robots.txt',
         '/sitemap.xml',
         '/blog',
-        '/blog/foo',
+        '/blog/asian-cuisine',
       ],
       crawlLinks: true,
     }
