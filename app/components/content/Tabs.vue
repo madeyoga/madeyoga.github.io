@@ -17,16 +17,17 @@ const tabs = computed(() => {
 </script>
 
 <template>
-  <UTabs
-    color="neutral"
-    variant="link"
-    :items="tabs"
-  >
-    <template #content="{ item }">
-      <template v-if="slots.default">
-        <component :is="slots.default()[item.index]" />
+  <ClientOnly>
+    <UTabs
+      color="neutral"
+      variant="link"
+      :items="tabs"
+    >
+      <template #content="{ item }">
+        <template v-if="slots.default">
+          <component :is="slots.default()[item.index]" />
+        </template>
       </template>
-      <!-- <component :is="{ render: item.render }" /> -->
-    </template>
-  </UTabs>
+    </UTabs>
+  </ClientOnly>
 </template>

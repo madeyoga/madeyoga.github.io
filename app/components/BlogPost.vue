@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtImg } from '#components';
+
 const props = defineProps<{
   title: string,
   description: string,
@@ -15,9 +17,8 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
 <template>
   <article class="relative group/blog-post flex flex-col rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:items-center gap-x-8 p-0 sm:p-0 transition col-span-full">
     <div class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none shadow-lg rounded-lg">
-      <img 
+      <NuxtImg 
         :alt="props.image?.alt" 
-        data-nuxt-img="" 
         class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover/blog-post:scale-110" 
         :src="props.image?.src"
       />
