@@ -2,10 +2,12 @@
 const route = useRoute()
 const normalizedPath = route.path.replace(/\/$/, '') // remove trailing slash
 const { data: post } = await useAsyncData(route.path, () => queryCollection('posts').path(normalizedPath).first())
-const { data: post1 } = await useAsyncData(route.path + "test", () => queryCollection('posts').first())
+const { data: post1 } = await useAsyncData(route.path + "test1", () => queryCollection('posts').all())
+const { data: post2 } = await useAsyncData(route.path + "test2", () => queryCollection('posts').path(route.path).first())
 
 console.log(post.value)
 console.log(post1.value)
+console.log(post2.value)
 console.log(route.path, normalizedPath)
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })

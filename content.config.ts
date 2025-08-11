@@ -63,7 +63,7 @@ export default defineContentConfig({
     })),
     posts: defineCollection(asSitemapCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: 'blog/**/*',
       schema: z.object({
         image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
         authors: z.array(
