@@ -1,10 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: post } = await useAsyncData(
-  `${route.path}-mainpost`, 
-  () => queryCollection('posts').path(route.path).first(), 
-)
+const { data: post } = await useAsyncData(route.path, () => queryCollection('posts').path(route.path).first())
 
 if (!post.value) {
   console.log(post.value)

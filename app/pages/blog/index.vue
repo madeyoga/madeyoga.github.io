@@ -1,8 +1,9 @@
 <script setup lang="ts">
-const route = useRoute()
-
 const { data: page } = await useAsyncData('blog', () => queryCollection('blog').first())
 const { data: posts } = await useAsyncData('blog_index_posts', () => queryCollection('posts').all())
+
+console.log(page)
+console.log(posts)
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
