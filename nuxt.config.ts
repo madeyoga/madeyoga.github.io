@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/seo',
     '@nuxt/content',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/html-validator'
   ],
   site: { 
     url: 'https://madeyoga.github.io', 
@@ -31,9 +32,6 @@ export default defineNuxtConfig({
     }
   },
   mdc: {
-    highlight: {
-      noApiRoute: false
-    },
     components: {
       prose: true,
       map: {
@@ -55,8 +53,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/'
-      ]
+        '/',
+      ],
+      crawlLinks: true,
     }
   },
   icon: {

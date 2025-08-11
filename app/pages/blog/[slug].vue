@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: post } = await useAsyncData(route.path, () => queryCollection('blogPosts').path(route.path).first())
+const { data: post } = await useAsyncData(route.path, () => queryCollection('blogPosts').path(route.path).first(), {server: true, lazy: false})
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
@@ -84,7 +84,7 @@ const { formattedDate } = useFormattedDate(post.value.date)
           :value="post"
         />
 
-        <!-- <USeparator v-if="surround?.length" /> -->
+        <USeparator v-if="surround?.length" />
       </div>
     </div>
   </UContainer>
