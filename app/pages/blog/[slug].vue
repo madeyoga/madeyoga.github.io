@@ -13,7 +13,7 @@ const { data: surround } = await useAsyncData(`${normalizedPath}-surround`, () =
     fields: ['description']
   })
 })
-console.log(surround.value)
+
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
 
