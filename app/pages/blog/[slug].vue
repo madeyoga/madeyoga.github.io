@@ -8,7 +8,7 @@ if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+const { data: surround } = await useAsyncData(`${normalizedPath}-surround`, () => {
   return queryCollectionItemSurroundings('posts', route.path, {
     fields: ['description']
   })
