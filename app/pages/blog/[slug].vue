@@ -13,7 +13,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
     fields: ['description']
   })
 })
-const surroundLength = surround.value?.length 
+console.log(surround.value)
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
 
@@ -86,7 +86,9 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
           :value="post"
         />
 
-        <USeparator v-if="surroundLength" />
+        <USeparator class="my-16" />
+
+        <MySurround :surround="surround" class="mb-16" />
       </div>
     </div>
   </UContainer>

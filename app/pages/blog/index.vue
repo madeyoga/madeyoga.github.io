@@ -27,7 +27,7 @@ useSeoMeta({
       </div>
     </div>
 
-    <div class="mt-8 pb-24 space-y-12">
+    <div class="mt-8 pb-24 space-y-12 grid grid-cols-2">
       <BlogPost
         v-for="(post, index) in posts"
         :key="`${post.path}-${post.title}-${index}`"

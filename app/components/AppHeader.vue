@@ -9,11 +9,6 @@
             </NuxtLink>
           </li>
           <li class="py-2 min-w-0">
-            <NuxtLink to="/#workexperience" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">
-              <span class="truncate">Work Experience</span>
-            </NuxtLink>
-          </li>
-          <li class="py-2 min-w-0">
             <NuxtLink to="/#projects" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">Projects</NuxtLink>
           </li>
           <li class="py-2 min-w-0">

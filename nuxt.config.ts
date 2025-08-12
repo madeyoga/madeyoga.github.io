@@ -16,6 +16,31 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
   compatibilityDate: '2024-11-01',
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 3,
+        },
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark',
+            sepia: 'monokai',
+          },
+          langs: [
+            'php',
+            'python',
+            'c',
+            'cpp',
+            'csharp',
+            'java',
+            'javascript',
+          ]
+        },
+      }
+    }
+  },
   devtools: { enabled: true },
   ssr: true,
   css: ['~/assets/css/main.css'],
