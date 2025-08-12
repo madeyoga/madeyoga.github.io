@@ -17,12 +17,14 @@ const { data: surround } = await useAsyncData(`${normalizedPath}-surround`, () =
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
 
-useSeoMeta({
+// Ensure the schema.org is rendered
+useSeoMeta(post.value.seo || {
   title,
   ogTitle: title,
   description,
   ogDescription: description
 })
+useSchemaOrg(post.value.schemaOrg || {})
 
 if (post.value?.image?.src) {
   defineOgImage({

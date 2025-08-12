@@ -11,7 +11,6 @@ authors:
 date: 2021-05-11
 badge:
   label: Data Structure
-
 sitemap:
   lastmod: 2025-08-12
 schemaOrg:

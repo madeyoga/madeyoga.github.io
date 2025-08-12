@@ -1,9 +1,10 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 import { asSitemapCollection } from '@nuxtjs/sitemap/content'
+import { asSchemaOrgCollection } from 'nuxt-schema-org/content'
 
 export default defineContentConfig({
   collections: {
-    index: defineCollection(asSitemapCollection({
+    index: defineCollection(asSchemaOrgCollection(asSitemapCollection({
       type: 'page',
       source: 'index.yml',
       schema: z.object({
@@ -52,16 +53,12 @@ export default defineContentConfig({
           }))
         })
       })
-    })),
-    content: defineCollection({
-      type: 'page',
-      source: '**/*.md'
-    }),
-    blog: defineCollection(asSitemapCollection({
+    }))),
+    blog: defineCollection(asSchemaOrgCollection(asSitemapCollection({
       type: 'page',
       source: 'blog.yml'
-    })),
-    posts: defineCollection(asSitemapCollection({
+    }))),
+    posts: defineCollection(asSchemaOrgCollection(asSitemapCollection({
       type: 'page',
       source: 'blog/**/*',
       schema: z.object({
@@ -76,6 +73,6 @@ export default defineContentConfig({
         date: z.date(),
         badge: z.object({ label: z.string().nonempty() })
       })
-    }))
+    }))),
   }
 })
