@@ -108,8 +108,7 @@ export default defineNuxtConfig({
         'simple-icons:youtube',
         'simple-icons:github',
         'simple-icons:linkedin',
-        
-        'ic:baseline-tiktok',
+        'simple-icons:tiktok',
 
         'vscode-icons:file-type-django',
         'vscode-icons:file-type-python',
