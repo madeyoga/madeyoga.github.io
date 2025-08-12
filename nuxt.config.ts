@@ -85,9 +85,40 @@ export default defineNuxtConfig({
   },
   icon: {
     clientBundle: {
+      scan: true,
       icons: [
         'lucide:sun',
         'lucide:moon',
+        'lucide:arrow-left',
+        'lucide:arrow-right',
+        'lucide:check',
+        'lucide:external-link',
+        'lucide:globe',
+        'lucide:smartphone',
+        'lucide:flame',
+        'lucide:list',
+
+        'simple-icons:github',
+        'simple-icons:csharp',
+        'simple-icons:vuedotjs',
+        'simple-icons:nuxt',
+        'simple-icons:tailwindcss',
+        'simple-icons:django',
+        'simple-icons:alpinedotjs',
+        'simple-icons:youtube',
+        'simple-icons:github',
+        'simple-icons:linkedin',
+        
+        'ic:baseline-tiktok',
+
+        'vscode-icons:file-type-django',
+        'vscode-icons:file-type-python',
+        'vscode-icons:file-type-vue',
+        'vscode-icons:file-type-nuxt',
+        'vscode-icons:file-type-html',
+        'vscode-icons:file-type-css2',
+        'vscode-icons:file-type-js-official',
+        'vscode-icons:file-type-tailwind',
       ],
     }
   }
