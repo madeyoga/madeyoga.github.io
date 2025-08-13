@@ -10,12 +10,15 @@ export default defineNuxtConfig({
   ],
   site: { 
     url: 'https://madeyoga.github.io', 
-    name: 'Made Yoga Mahardika | Portofolio' 
-  }, 
+    name: 'Made Yoga Mahardika | Blog' 
+  },
   future: {
     compatibilityVersion: 4
   },
   compatibilityDate: '2024-11-01',
+  sitemap: {
+    xsl: false,
+  },
   content: {
     build: {
       markdown: {
@@ -47,10 +50,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss(),
-    ],
-    define: {
-      "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": true,
-    }
+    ]
   },
   mdc: {
     components: {
@@ -78,7 +78,6 @@ export default defineNuxtConfig({
         '/robots.txt',
         '/sitemap.xml',
         '/blog',
-        '/blog/asian-cuisine',
       ],
       crawlLinks: true,
     }
