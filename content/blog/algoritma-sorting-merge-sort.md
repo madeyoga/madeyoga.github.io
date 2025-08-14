@@ -41,17 +41,11 @@ Dibanding algoritma sorting lainnya seperti [Bubble Sort](https://articlearn.id/
 
 ## Implementasi Algoritma Merge Sort
 Berikut implementasi algoritma Merge Sort di beberapa bahasa pemrograman:
-- [Apa itu Merge Sort?](#apa-itu-merge-sort)
-- [Implementasi Algoritma Merge Sort](#implementasi-algoritma-merge-sort)
-	- [C](#c)
-	- [C++](#c-1)
-	- [C#](#c-2)
-	- [Java](#java)
-	- [JavaScript](#javascript)
-	- [Python](#python)
-	- [PHP](#php)
 
-### C
+
+::tabs
+
+::div{label="C"}
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -163,9 +157,9 @@ int main()
 	return 0;
 }
 ```
+::
 
-### C++
-Using `std::vector`
+::div{label="C++"}
 ```cpp
 #include <iostream>
 #include <vector>
@@ -227,9 +221,9 @@ std::vector<int> merge_sort(std::vector<int> arr)
 	return temp_vector;
 }
 ```
+::
 
-### C#
-
+::div{label="C#"}
 ```csharp
 public static void Main(string[] args)
 {
@@ -300,9 +294,9 @@ private static void MergeSort(int[] input, int left, int right)
     }
 }
 ```
+::
 
-### Java
-Using `ArrayList`
+::div{label="Java"}
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -382,8 +376,9 @@ public class MergeSort {
 }
 
 ```
+::
 
-### JavaScript
+::div{label="JavaScript"}
 ```javascript
 function mergeSort(array) {
 	if (array.length == 1) {
@@ -449,8 +444,9 @@ sortedArray = mergeSort(array);
 console.log(sortedArray);
 
 ```
+::
 
-### Python
+::div{label="Python"}
 ```python
 def merge_sort(arr):
     if len(arr) == 1:
@@ -488,8 +484,9 @@ def merge_sort(arr):
 
     return temp_list
 ```
+::
 
-### PHP
+::div{label="PHP"}
 ```php
 function merge_sort($array){
 	if(count($array) == 1 ) {
@@ -526,3 +523,6 @@ function merge_sort($array){
 	return $temp_array;
 }
 ```
+::
+
+::

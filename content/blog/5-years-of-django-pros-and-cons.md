@@ -2,7 +2,7 @@
 title: "What 5 Years with Django Taught Me: Pros and Cons"
 description: After half a decade of building apps with Django, here’s my honest take on its strengths, weaknesses, and the lessons I’ve learned along the way.
 image:
-  src: https://res.cloudinary.com/dhqbr2d4l/image/upload/v1754981879/cumulation-154203_640_uxyxwc.png
+  src: /images/chrome_2025-07-24_14-44-25.jpg
 authors:
   - name: Made Y
     to: https://madeyoga.github.io
@@ -54,6 +54,18 @@ By the end of that project, I had a site where people could upload an image, the
       ::
     ::
   ::
+
+  ::div{icon="i-simple-icons-blogger" label="Blogging Platform"}
+    ::pictures
+      ::div
+      ![xamarind blogging platform](https://res.cloudinary.com/dhqbr2d4l/image/upload/v1755150579/xamarind1_k8uvjt.webp)
+      ::
+      ::div
+      ![xamarind blogging platform article page](https://res.cloudinary.com/dhqbr2d4l/image/upload/v1755150579/xamarind2_w2dnvj.webp)
+      ::
+    ::
+  ::
+  
 ::
 
 
@@ -83,6 +95,10 @@ class Migration(migrations.Migration):
 Management commands feel like little superpowers baked into the framework. They let me run Python scripts directly inside the Django environment, which is perfect for tasks like populating fields, importing / exporting data, fixing incorrect values, or even creating quick backups. Whenever I need to tweak or move data, management commands are my go-to tool. For example, Here’s a management command that generates slugs for any blog post that doesn’t have one:
 
 ```python
+# blog/management/commands/fix_missing_slug.py
+
+# python manage.py fix_missing_slug
+
 from django.core.management.base import BaseCommand
 from django.utils.text import slugify
 from blog.models import Article
