@@ -81,8 +81,8 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
       </div>
     </div>
 
-    <div>
-      <div>
+    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
+      <div class="lg:col-span-8">
         <ContentRenderer
           v-if="post"
           :value="post"
@@ -92,6 +92,10 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
 
         <MySurround :surround="surround" class="mb-16" />
       </div>
+
+      <nav class="sticky top-[64px] z-10 bg-default/75 lg:bg-[initial] backdrop-blur -mx-4 px-4 sm:px-6 sm:-mx-6 overflow-y-auto max-h-[calc(100vh-64px)] lg:col-span-2 order-first lg:order-last">
+        <Toc :toc="post?.body.toc"></Toc>
+      </nav>
     </div>
   </UContainer>
 </template>

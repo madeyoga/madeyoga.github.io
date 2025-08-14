@@ -55,12 +55,10 @@ i = 4. 6 akan dipindah ke posisi setelah 5, dan elemen sisahnya dari 11 hingga 1
 Referensi: https://www.geeksforgeeks.org/insertion-sort/
 
 ## Berikut implementasi algoritma Insertion Sort di beberapa bahasa pemrograman
-- [C/C++](#cc)
-- [C#](#c)
-- [Java](#java)
-- [Python](#python)
 
-## C/C++
+::tabs
+
+::div{label="C/C++"}
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
@@ -119,9 +117,9 @@ int main()
 	return 0;
 }
 ```
+::
 
-## C#
-
+::div{label="C#"}
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -187,8 +185,9 @@ namespace Test
     }
 }
 ```
+::
 
-## Java
+::div{label="Java"}
 ```java
 import java.util.Random;
 
@@ -232,8 +231,9 @@ public class InsertionSort {
     }
 }
 ```
+::
 
-## Python
+::div{label="Python"}
 ```python
 import numpy as np
 from random import shuffle
@@ -261,7 +261,9 @@ print(random_array)
 
 print(insertion_sort(random_array))
 ```
+::
 
+::
 
 Link github https://github.com/madeyoga/SortingAlgorithms
 

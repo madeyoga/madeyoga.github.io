@@ -30,14 +30,15 @@ schemaOrg:
 
 **Merge Sort** adalah algoritma [Divide and Conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm). Algoritma Merge Sort membagi array input menjadi dua bagian. Secara **terus menerus** (recursive), memanggil fungsi dirinya sendiri untuk **membagi array menjadi 2 bagian hingga didapat array berisi 1 elemen**. Berikutnya dua bagian array tersebut diurutkan dan digabungkan secara bersamaan hingga membentuk 1 array yang telah terurut. Berikut visualisasi algoritma merge sort:
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/499px-Merge_sort_algorithm_diagram.svg.png)
+![merge sort algorithm diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/499px-Merge_sort_algorithm_diagram.svg.png)
 <small>Source: [Wikipedia](https://en.wikipedia.org/wiki/File:Merge_sort_algorithm_diagram.svg)</small>
 
 1. **Ilustrasi warna merah**: algoritma merge sort terus membagi array menjadi 2 bagian.
 2. **Ilustrasi warna abu-abu**: algoritma telah **selesai membagi array**, dan didapat array berisi 1 elemen (Tidak bisa dibagi lagi). Pada contoh tersebut terdapat 7 array berisi 1 elemen.
 3. **Ilustrasi warna hijau**: algoritma mulai membandingkan elemen dari ke 2 bagian array untuk diurut dan digabungkan.
 
-Dibanding algoritma sorting lainnya seperti [Bubble Sort](https://articlearn.id/article/d9c6ad4a-algoritma-sorting-bubble-sort/?list=QyiCae3e), [Insertion Sort](https://articlearn.id/article/527c548c-algoritma-sorting-insertion-sort/?list=QyiCae3e), dan [Selection Sort](https://articlearn.id/article/f427a277-algoritma-sorting-selection-sort/?list=QyiCae3e). Algoritma Merge Sort sangat cepat dan dapat digunakan untuk mengurutkan array dalam ukuran yang besar, dengan [time complexity](https://en.wikipedia.org/wiki/Time_complexity) O(nLogn).
+Dibanding algoritma sorting lainnya seperti [Bubble Sort](#), [Insertion Sort](/blog/algortima-sorting-insertion-sort), dan [Selection Sort](#). Algoritma Merge Sort sangat cepat dan dapat digunakan untuk mengurutkan array dalam ukuran yang besar, dengan [time complexity](https://en.wikipedia.org/wiki/Time_complexity) O(nLogn).
+
 
 ## Implementasi Algoritma Merge Sort
 Berikut implementasi algoritma Merge Sort di beberapa bahasa pemrograman:
@@ -54,107 +55,107 @@ Berikut implementasi algoritma Merge Sort di beberapa bahasa pemrograman:
 
 void merge_sort_c(int* arr, int left, int right)
 {
-	if (right > left)
-	{
-		int middle = left + (right - left) / 2;
+  if (right > left)
+  {
+    int middle = left + (right - left) / 2;
 
-		merge_sort_c(arr, left, middle);
-		merge_sort_c(arr, middle + 1, right);
+    merge_sort_c(arr, left, middle);
+    merge_sort_c(arr, middle + 1, right);
 
-		// prepare for merge
-		const int left_length = middle - left + 1;
-		const int right_length = right - middle;
+    // prepare for merge
+    const int left_length = middle - left + 1;
+    const int right_length = right - middle;
 
-		// temporary subarray
-		int* left_array = new int[left_length];
-		int* right_array = new int[right_length];
-		for (int i = 0; i < left_length; i++) 
-		{
-			left_array[i] = arr[left + i];
-		}
-		for (int i = 0; i < right_length; i++)
-		{
-			right_array[i] = arr[middle + i + 1];
-		}
+    // temporary subarray
+    int* left_array = new int[left_length];
+    int* right_array = new int[right_length];
+    for (int i = 0; i < left_length; i++) 
+    {
+      left_array[i] = arr[left + i];
+    }
+    for (int i = 0; i < right_length; i++)
+    {
+      right_array[i] = arr[middle + i + 1];
+    }
 
-		// merge
-		int left_pointer = 0;
-		int right_pointer = 0;
-		int main_pointer = left;
+    // merge
+    int left_pointer = 0;
+    int right_pointer = 0;
+    int main_pointer = left;
 
-		while (left_pointer < left_length && right_pointer < right_length)
-		{
-			int left_value = left_array[left_pointer];
-			int right_value = right_array[right_pointer];
+    while (left_pointer < left_length && right_pointer < right_length)
+    {
+      int left_value = left_array[left_pointer];
+      int right_value = right_array[right_pointer];
 
-			if (left_value < right_value)
-			{
-				arr[main_pointer] = left_value;
-				left_pointer += 1;
-			}
-			else
-			{
-				arr[main_pointer] = right_value;
-				right_pointer += 1;
-			}
-			main_pointer += 1;
-		}
+      if (left_value < right_value)
+      {
+        arr[main_pointer] = left_value;
+        left_pointer += 1;
+      }
+      else
+      {
+        arr[main_pointer] = right_value;
+        right_pointer += 1;
+      }
+      main_pointer += 1;
+    }
 
-		while (left_pointer < left_length)
-		{
-			arr[main_pointer] = left_array[left_pointer];
-			left_pointer += 1;
-			main_pointer += 1;
-		}
+    while (left_pointer < left_length)
+    {
+      arr[main_pointer] = left_array[left_pointer];
+      left_pointer += 1;
+      main_pointer += 1;
+    }
 
-		while (right_pointer < right_length)
-		{
-			arr[main_pointer] = right_array[right_pointer];
-			right_pointer += 1;
-			main_pointer += 1;
-		}
+    while (right_pointer < right_length)
+    {
+      arr[main_pointer] = right_array[right_pointer];
+      right_pointer += 1;
+      main_pointer += 1;
+    }
 
-		// Free memory
-		delete[] left_array, right_array;
-	}
+    // Free memory
+    delete[] left_array, right_array;
+  }
 }
 
 
 int main()
 {
-	int arr_length = 1000000;
+  int arr_length = 1000000;
 
-	int* arr = new int[arr_length]; // (int*) malloc(arr_length * sizeof(int));
+  int* arr = new int[arr_length]; // (int*) malloc(arr_length * sizeof(int));
 
-	srand(time(0));
+  srand(time(0));
 
-	// Add random numbers to array
-	for (int i = 0; i < arr_length; i++)
-	{
-		// Get number in range 0 - arr_length;
-		int num = (rand() % (arr_length - 0 + 1)) + 0;
-		arr[i] = num;
+  // Add random numbers to array
+  for (int i = 0; i < arr_length; i++)
+  {
+    // Get number in range 0 - arr_length;
+    int num = (rand() % (arr_length - 0 + 1)) + 0;
+    arr[i] = num;
 
-		//printf("%d ", arr[i]);
-	}
+    //printf("%d ", arr[i]);
+  }
 
-	printf("\n");
+  printf("\n");
 
-	clock_t t;
-	t = clock();
+  clock_t t;
+  t = clock();
 
-	printf("Sorting %d data...\n\n", arr_length);
+  printf("Sorting %d data...\n\n", arr_length);
 
-	merge_sort_c(arr, 0, arr_length - 1);
+  merge_sort_c(arr, 0, arr_length - 1);
 
-	t = clock() - t;
-	double time_taken = ((double)t) / CLOCKS_PER_SEC; // calculate the elapsed time
-	printf("Sorting took %f seconds to complete\n\n", time_taken);
+  t = clock() - t;
+  double time_taken = ((double)t) / CLOCKS_PER_SEC; // calculate the elapsed time
+  printf("Sorting took %f seconds to complete\n\n", time_taken);
 
-	delete[] arr;
-	arr = NULL;
+  delete[] arr;
+  arr = NULL;
 
-	return 0;
+  return 0;
 }
 ```
 ::
@@ -526,3 +527,7 @@ function merge_sort($array){
 ::
 
 ::
+
+Link github https://github.com/madeyoga/SortingAlgorithms
+
+Semoga bermanfaat :pray:

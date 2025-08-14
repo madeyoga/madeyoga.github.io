@@ -61,6 +61,7 @@ export default defineNuxtConfig({
         p: 'MyProseP',
         li: 'MyProseLi',
         ul: 'MyProseUl',
+        pre: 'MyProsePre',
       }
     }
   },
