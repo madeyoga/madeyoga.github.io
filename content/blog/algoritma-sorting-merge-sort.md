@@ -5,7 +5,7 @@ image:
   src: https://res.cloudinary.com/dhqbr2d4l/image/upload/v1754981879/cumulation-154203_640_uxyxwc.png
 authors:
   - name: Made Y
-    to: https://madeyoga.github.io
+    to: /
     avatar:
       src: /images/profile2.jpg
 date: 2021-05-11
@@ -37,7 +37,7 @@ schemaOrg:
 2. **Ilustrasi warna abu-abu**: algoritma telah **selesai membagi array**, dan didapat array berisi 1 elemen (Tidak bisa dibagi lagi). Pada contoh tersebut terdapat 7 array berisi 1 elemen.
 3. **Ilustrasi warna hijau**: algoritma mulai membandingkan elemen dari ke 2 bagian array untuk diurut dan digabungkan.
 
-Dibanding algoritma sorting lainnya seperti [Bubble Sort](#), [Insertion Sort](/blog/algortima-sorting-insertion-sort), dan [Selection Sort](#). Algoritma Merge Sort sangat cepat dan dapat digunakan untuk mengurutkan array dalam ukuran yang besar, dengan [time complexity](https://en.wikipedia.org/wiki/Time_complexity) O(nLogn).
+Dibanding algoritma sorting lainnya seperti [Bubble Sort](#), [Insertion Sort](https://madeyoga.github.io/blog/algoritma-sorting-insertion-sort/), dan [Selection Sort](#). Algoritma Merge Sort sangat cepat dan dapat digunakan untuk mengurutkan array dalam ukuran yang besar, dengan [time complexity](https://en.wikipedia.org/wiki/Time_complexity) O(nLogn).
 
 
 ## Implementasi Algoritma Merge Sort

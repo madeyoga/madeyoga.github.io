@@ -5,7 +5,7 @@ image:
   src: /images/chrome_2025-07-24_14-44-25.jpg
 authors:
   - name: Made Y
-    to: https://madeyoga.github.io
+    to: /
     avatar:
       src: /images/profile2.jpg
 date: 2025-08-13

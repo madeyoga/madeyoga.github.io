@@ -5,7 +5,7 @@ image:
   src: https://res.cloudinary.com/dhqbr2d4l/image/upload/v1754981879/cumulation-154203_640_uxyxwc.png
 authors:
   - name: Made Y
-    to: https://madeyoga.github.io
+    to: /
     avatar:
       src: /images/profile2.jpg
 date: 2021-05-11
