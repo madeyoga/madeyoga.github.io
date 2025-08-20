@@ -33,7 +33,7 @@ function copyCode() {
 
   const codeElement = slotWrapper.value.querySelector('code')
   if (codeElement) {
-    const text = codeElement.innerText
+    const text = codeElement.textContent
     navigator.clipboard.writeText(text).then(() => {
       toast.add({
         title: 'Copied to clipboard!',
