@@ -13,6 +13,8 @@ seo:
   keywords: django, django review, django pros and cons, python web framework, django developer experience
 badge:
   label: Django
+sitemap:
+  lastmod: 2025-08-20
 schemaOrg:
   - type: "BlogPosting"
     headline: "5 Years with Django: The Good, The Bad, and What I Wish I Knew Earlier"
@@ -122,16 +124,16 @@ class Command(BaseCommand):
 ### 3. The Django Admin
 This is what first caught my attention back in my CodeIgniter days. Django can turn your models into a fully functional CRUD interface instantly. It’s incredibly useful for development and testing, but it’s not just for that; I’ve built entire internal tools with customized Django Admin. With the right tweaks (and a little help from packages like [Django Unfold](https://unfoldadmin.com/){.text-primary} for a modern UI), you can make it both powerful and beautiful. It makes building apps with an administration fast and efficient.
 
+![customized django admin dashboard](/images/chrome_2025-07-24_14-44-25.jpg)
 
 ### 4. Time to Market 
 When people talk about rapid development, Django is one of the few frameworks that actually delivers. Between the admin, ORM, and built-in features, I can go from idea to a working prototype in a fraction of the time it would take with many other stacks. It truly comes “batteries included”: authentication, forms, and user management are already there out of the box. And when I’ve needed something more specialized, like APIs, or payments, the community has always had excellent, battle-tested libraries ready to go. Whatever the challenge, there’s almost always a solution at hand.
 
 
-## The Not-So-Great Parts (Cons)
+## The Not-So-Great Parts (Cons of Django)
 
 ### 1. The “Spoiled Kid” Effect 
-Spending years with a highly opinionated framework like Django make me a little spoiled. I realized this when I had to learn another web framework for work, ASP.NET Core. Django (and Python in general) spoils you with free, open-source, maintained community libraries for almost anything you can imagine. In contrast, in the other hand, you might not even find a library that does exactly what you need; and if you do, there’s a chance it’s freemium or commercial, which makes you appreciate Django’s open-source ecosystem even more. It’s not Django’s fault, but it does make switching stacks a bit of a shock.
-
+Spending years with a highly opinionated framework like Django make me a little spoiled. I realized this when I had to learn another (more barebone) web framework for work, aspnetcore. Django (and Python in general) spoils you with free, open-source, maintained community libraries for almost anything you can imagine. In contrast, in the other hand, you might not even find a library that does exactly what you need; and if you do, there’s a chance it’s freemium or commercial, which makes you appreciate Django’s open-source ecosystem even more. It’s not Django’s fault, but it does make switching stacks a bit of a shock.
 
 ::picture-and-caption
 
@@ -142,6 +144,10 @@ Spending years with a highly opinionated framework like Django make me a little 
 ![caveman](https://i.kym-cdn.com/entries/icons/original/000/038/301/cavemancover.jpg){.rounded-lg .my-0}
 ::
 ::
+
+Another frustration comes when I need to run quick, one-off tasks. In Django, I can whip up a management command, drop it into my app, and run it inside the full project environment with a simple `python manage.py mycommand`. It’s effortless. Everything loads with the same settings, database, and context I already use. In a more barebone web framework like aspnetcore, there’s no such luxury. I often end up creating clunky python scripts, console apps, or temporarily jamming code into controllers just to execute a simple job. **Once you’ve lived with Django’s workflow, you really feel the pain of not having it elsewhere.**
+
+And then there’s the setup. Django’s “batteries-included” approach spoils you so much that working without it feels exhausting. Authentication, ORM, admin, migrations, they’re all just there in Django. But in a more barebone web framework, I suddenly find myself wiring up middleware, configuring dependency injection, and hunting for packages just to get to the same baseline Django gives me on day one. **Once you’ve been spoiled by Django’s defaults, going back to the “manual labor” world of other frameworks is a real test of patience.**
 
 
 ### 2. Performance (or the Reputation of It)
