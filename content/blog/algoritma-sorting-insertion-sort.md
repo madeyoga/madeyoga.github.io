@@ -1,6 +1,6 @@
 ---
 title: Algoritma Sorting - Insertion Sort
-description: "Cara coding algoritma Insertion Sort menggunakan C/C++, C#, Java, Python."
+description: "Cara coding algoritma sorting Insertion Sort menggunakan C/C++, C#, Java, Python."
 image:
   src: https://res.cloudinary.com/dhqbr2d4l/image/upload/v1754981879/cumulation-154203_640_uxyxwc.png
 authors:
@@ -12,7 +12,7 @@ date: 2021-05-11
 badge:
   label: Data Structure
 sitemap:
-  lastmod: 2025-08-12
+  lastmod: 2025-08-28
 schemaOrg:
   - type: "BlogPosting"
     headline: "Algoritma Sorting - Insertion Sort"
@@ -31,26 +31,6 @@ Image by [OpenClipart-Vectors](https://pixabay.com/users/openclipart-vectors-303
 Meskipun **Insertion Sort** adalah algoritma O(n2), kesederhanaannya, overhead rendah, lokalitas referensi yang baik, dan efisiensinya menjadikannya pilihan yang baik dalam dua kasus:
 1. Ukuran array kecil,
 2. Sebagai algoritma penyelesaian akhir untuk algoritma O (n logn) seperti mergesort dan quicksort.
-
-## Contoh proses
-- **12**, 11, 13, 5, 6
-
-Contoh iterasikan i = 1 (elemen kedua pada array) hingga index 4 (elemen terakhir pada array)
-i = 1. Karena 11 lebih kecil banding 12, maka masukan 11 dan geser posisi 12.
-
-- **11**, **12**, 13, 5, 6
-
-i = 2. 13 akan berada tetap pada posisinya, karena 13 lebih besar dari semua elemen array sebelumnya (11 dan 12).
-
-- **11**, **12**, **13**, 5, 6
-
-i = 3. 5 akan di pindah ke posisi paling awal, dan semua elemen sisahnya akan di geser 1x dari posisinya sekarang.
-
-- **5**, **11**, **12**, **13**, 6
-
-i = 4. 6 akan dipindah ke posisi setelah 5, dan elemen sisahnya dari 11 hingga 13 akan di geser 1x dari posisinya sekarang.
-
-- **5**, **6**, **11**, **12**, **13**
 
 Referensi: https://www.geeksforgeeks.org/insertion-sort/
 
@@ -265,6 +245,6 @@ print(insertion_sort(random_array))
 
 ::
 
-Link github https://github.com/madeyoga/SortingAlgorithms
+Link github https://github.com/nano-devs/SortingAlgorithms
 
 Semoga bermanfaat :pray:
