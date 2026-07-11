@@ -1,0 +1,119 @@
+title:
+  en: Services
+  id: Layanan
+description:
+  en: I help businesses build software that solves real problems. Here's what I offer.
+  id: Saya membantu bisnis membangun software yang menyelesaikan masalah nyata. Berikut yang saya tawarkan.
+
+items:
+  - icon: i-lucide-globe
+    title:
+      en: Web Development
+      id: Pengembangan Web
+    description:
+      en: Fullstack websites and web applications built with modern frameworks like Nuxt, .NET, and Django.
+      id: Website dan aplikasi web fullstack dibangun dengan framework modern seperti Nuxt, .NET, dan Django.
+    deliverables:
+      - en: Responsive company profiles and landing pages
+        id: Company profile dan landing page responsif
+      - en: Custom web applications (ERP, POS, Inventory)
+        id: Aplikasi web kustom (ERP, POS, Inventaris)
+      - en: SEO-optimized, fast-loading pages
+        id: Halaman SEO-friendly dengan loading cepat
+
+  - icon: i-lucide-settings
+    title:
+      en: Custom Software
+      id: Software Kustom
+    description:
+      en: Tailor-made business systems — from accounting to inventory management, built to fit your exact needs.
+      id: Sistem bisnis yang dibuat khusus — dari akuntansi hingga manajemen inventaris, dibangun sesuai kebutuhan Anda.
+    deliverables:
+      - en: Business process automation
+        id: Otomatisasi proses bisnis
+      - en: Accounting and financial systems
+        id: Sistem akuntansi dan keuangan
+      - en: Inventory and stock management
+        id: Manajemen inventaris dan stok
+
+  - icon: i-lucide-palette
+    title:
+      en: Landing Pages
+      id: Landing Page
+    description:
+      en: High-converting, beautifully designed landing pages for your product, company, or campaign.
+      id: Landing page dengan desain menarik dan konversi tinggi untuk produk, perusahaan, atau campaign Anda.
+    deliverables:
+      - en: SEO-optimized content and structure
+        id: Konten dan struktur SEO-friendly
+      - en: Mobile-responsive, fast performance
+        id: Responsif mobile dengan performa cepat
+      - en: Integrated analytics and tracking
+        id: Integrasi analytics dan tracking
+
+  - icon: i-lucide-lightbulb
+    title:
+      en: Consulting
+      id: Konsultasi
+    description:
+      en: Need help choosing the right tech stack or reviewing your architecture? I provide honest, practical advice.
+      id: Butuh bantuan memilih tech stack atau review arsitektur? Saya memberikan saran yang jujur dan praktis.
+    deliverables:
+      - en: Tech stack advisory and planning
+        id: Konsultasi pemilihan tech stack
+      - en: Code review and architecture audit
+        id: Review kode dan audit arsitektur
+      - en: Project scoping and estimation
+        id: Scoping dan estimasi proyek
+
+process:
+  - step: 1
+    icon: i-lucide-search
+    title:
+      en: Discovery
+      id: Discovery
+    description:
+      en: We discuss your goals, requirements, and constraints. I ask questions to understand your business.
+      id: Kita diskusikan tujuan, kebutuhan, dan batasan Anda. Saya akan bertanya untuk memahami bisnis Anda.
+  - step: 2
+    icon: i-lucide-pencil
+    title:
+      en: Plan
+      id: Perencanaan
+    description:
+      en: I create a clear project plan with milestones, tech choices, and timeline.
+      id: Saya buat rencana proyek yang jelas dengan milestone, pilihan teknologi, dan timeline.
+  - step: 3
+    icon: i-lucide-code
+    title:
+      en: Build
+      id: Pengembangan
+    description:
+      en: I build iteratively with regular check-ins, so you see progress and can give feedback early.
+      id: Saya bangun secara iteratif dengan update berkala, sehingga Anda bisa melihat progres dan memberi feedback.
+  - step: 4
+    icon: i-lucide-rocket
+    title:
+      en: Launch
+      id: Peluncuran
+    description:
+      en: Deployment, testing, and go-live with documentation and training if needed.
+      id: Deployment, testing, dan go-live dengan dokumentasi dan training jika diperlukan.
+  - step: 5
+    icon: i-lucide-wrench
+    title:
+      en: Support
+      id: Dukungan
+    description:
+      en: Post-launch support and maintenance to keep things running smoothly.
+      id: Dukungan dan maintenance pasca-launch untuk menjaga semuanya berjalan lancar.
+
+sitemap:
+  lastmod: 2026-07-11
+  title: Services
+schemaOrg:
+  - type: "Service"
+    name: "Software Development Services"
+    provider:
+      type: "Person"
+      name: "Made Yoga Mahardika"

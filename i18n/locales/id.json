@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "services": "Layanan",
+    "projects": "Proyek",
+    "blog": "Blog",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Halo, Saya Made Yoga.",
+    "title": "Fullstack Software Developer",
+    "tagline": "Saya membuat software yang membantu bisnis Anda — dari sistem back-office hingga platform pelanggan.",
+    "cta_work": "Lihat Karya Saya",
+    "cta_contact": "Hubungi Saya",
+    "location": "Samarinda, Indonesia"
+  },
+  "section": {
+    "techstack": "Tech Stack",
+    "experience": "Pengalaman Kerja",
+    "projects": "Proyek",
+    "projects_description": "Selama bertahun-tahun, saya telah membangun pengalaman digital yang fokus pada kejelasan, kegunaan, dan desain yang matang. Berikut beberapa proyek favorit saya.",
+    "view_all_projects": "Lihat Semua Proyek",
+    "services": "Yang Saya Kerjakan",
+    "contact": "Kontak"
+  },
+  "stats": {
+    "years": "Tahun Pengalaman",
+    "projects": "Proyek Selesai",
+    "clients": "Klien Puas"
+  },
+  "cta": {
+    "title": "Siap membangun sesuatu?",
+    "description": "Mari diskusikan proyek Anda dan temukan solusi yang tepat untuk bisnis Anda.",
+    "button": "Hubungi Saya"
+  },
+  "footer": {
+    "tagline": "Fullstack software developer berbasis di Samarinda, Indonesia.",
+    "copyright": "Made Yoga Mahardika. Hak cipta dilindungi."
+  },
+  "services": {
+    "web_dev_title": "Pengembangan Web",
+    "web_dev_desc": "Website dan aplikasi web fullstack dibangun dengan framework modern seperti Nuxt, .NET, dan Django.",
+    "custom_sw_title": "Software Kustom",
+    "custom_sw_desc": "Sistem bisnis yang dibuat khusus — ERP, POS, manajemen inventaris.",
+    "landing_title": "Landing Page",
+    "landing_desc": "Landing page dengan konversi tinggi dan desain menarik untuk produk, perusahaan, atau campaign Anda.",
+    "consulting_title": "Konsultasi",
+    "consulting_desc": "Saran tech stack yang jujur, review kode, dan perencanaan arsitektur."
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "values": "Nilai Saya",
+    "cta": "Tertarik untuk bekerja sama?"
+  },
+  "language": "Bahasa"
+}

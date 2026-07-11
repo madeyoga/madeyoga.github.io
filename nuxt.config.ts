@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
-    '@nuxtjs/html-validator'
+    '@nuxtjs/html-validator',
+    '@nuxtjs/i18n'
   ],
   site: { 
     url: 'https://madeyoga.github.io', 
@@ -16,6 +17,19 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
   compatibilityDate: '2024-11-01',
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'id', name: 'Bahasa Indonesia', file: 'id.json' }
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
   sitemap: {
     xsl: false,
     discoverImages: false,
@@ -51,7 +65,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss(),
-    ]
+    ],
+    optimizeDeps: {
+      include: [
+        '@unhead/schema-org/vue',
+      ]
+    }
   },
   mdc: {
     components: {
@@ -65,6 +84,9 @@ export default defineNuxtConfig({
         pre: 'MyProsePre',
       }
     }
+  },
+  ui: {
+    prose: true
   },
   components: [
     '~/components',
@@ -98,6 +120,16 @@ export default defineNuxtConfig({
         'lucide:smartphone',
         'lucide:flame',
         'lucide:list',
+        'lucide:chevron-down',
+        'lucide:mail',
+        'lucide:search',
+        'lucide:settings',
+        'lucide:palette',
+        'lucide:lightbulb',
+        'lucide:pencil',
+        'lucide:code',
+        'lucide:rocket',
+        'lucide:wrench',
 
         'simple-icons:github',
         'simple-icons:csharp',
@@ -110,6 +142,9 @@ export default defineNuxtConfig({
         'simple-icons:github',
         'simple-icons:linkedin',
         'simple-icons:tiktok',
+        'simple-icons:dotnet',
+        'simple-icons:typescript',
+        'simple-icons:postgresql',
 
         'vscode-icons:file-type-django',
         'vscode-icons:file-type-python',

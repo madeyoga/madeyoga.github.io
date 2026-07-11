@@ -1,6 +1,6 @@
 sitemap:
   lastmod: 2025-08-09
-title: "Made Yoga Mahardika | Web Developer | Python Django | Nuxt"
+title: "Made Yoga Mahardika | Software Engineer .NET Nuxt"
 hero:
   intro: Hey, I'm Made Yoga.
   title: "[Hey, I'm Made Yoga.]{.dark:text-green-400 .text-green-800} Fullstack Software Developer."
@@ -13,8 +13,14 @@ techstack:
     icon: i-vscode-icons-file-type-django
   - title: Python
     icon: i-vscode-icons-file-type-python
+  - title: .NET
+    icon: i-simple-icons-dotnet
   - title: CSharp
     icon: i-simple-icons-csharp
+  - title: TypeScript
+    icon: i-simple-icons-typescript
+  - title: PostgreSQL
+    icon: i-simple-icons-postgresql
   - title: Vue
     icon: i-vscode-icons-file-type-vue
   - title: Nuxt
@@ -28,13 +34,19 @@ techstack:
   - title: Tailwind
     icon: i-vscode-icons-file-type-tailwind
 experiences:
-  - timeframe: 2022 - 2025
+  - timeframe: 2022 - 2026
     title: Backend Software Developer
     company: Superjaya
     domainName: superjaya.id
     url: https://superjaya.id
     jobtype: Freelance
-  - timeframe: 2021 - 2025
+  - timeframe: 2025 - Present
+    title: Fullstack Software Developer
+    company: Prima (Medicine Store System)
+    domainName: Internal
+    url: ''
+    jobtype: Freelance
+  - timeframe: 2021 - 2026
     title: Fullstack Software Developer
     company: PT Media Bersama Sukses
     domainName: mbscctv.com
@@ -47,7 +59,8 @@ experiences:
     url: https://nasionalrubber.co.id/
     jobtype: Freelance
 projects:
-  - title: mbscctv.com
+  - slug: mbscctv
+    title: mbscctv.com
     description: Developed a modern landing page for a security system company, featuring a product catalog and blog section.
       The website is fully responsive and optimized for SEO to improve visibility and user engagement.
     link: https://mbscctv.com
@@ -70,7 +83,8 @@ projects:
         title: Responsive Mobile-Friendly Design
       - icon: i-lucide-check
         title: SEO Optimized
-  - title: nasionalrubber.co.id
+  - slug: nasionalrubber
+    title: nasionalrubber.co.id
     description: Developed a simple and fully responsive landing page for a rubber industry company in Indonesia.
       The site features multilingual support (i18n) to cater international clients and enhance accessibility across regions.
     link: https://nasionalrubber.co.id/
@@ -87,7 +101,8 @@ projects:
         title: Multi-language Support (i18n)
       - icon: i-lucide-smartphone
         title: Mobile-Friendly Design
-  - title: Point of Sale & Inventory Management System
+  - slug: pos-system
+    title: Point of Sale & Inventory Management System
     description: A custom-built point of sale and inventory management system designed for small to medium-sized retail stores. 
       This application runs entirely on the store's local network, ensuring fast, offline-capable operations without reliance on external servers.
     link: 

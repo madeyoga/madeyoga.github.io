@@ -1,0 +1,39 @@
+slug: Prima
+title: Prima
+client: Indonesian Pharmacy Chain
+description: ASP.NET Core backend system for pharmacy management — accounting, inventory tracking, billing, and invoicing.
+image: /images/chrome_2025-08-06_12-32-28.jpg
+link: ""
+techstack:
+  - icon: i-simple-icons-dotnet
+    title: .NET 10
+  - icon: i-simple-icons-csharp
+    title: C#
+  - icon: i-simple-icons-postgresql
+    title: PostgreSQL
+features:
+  - icon: i-lucide-check
+    title: Accounting & financial tracking
+  - icon: i-lucide-check
+    title: Inventory & stock management
+  - icon: i-lucide-check
+    title: Billing & invoicing system
+  - icon: i-lucide-check
+    title: Multi-role access control
+  - icon: i-lucide-check
+    title: Real-time reporting & analytics
+problem:
+  en: A growing pharmacy chain needed a robust backend system to manage accounting, inventory, and billing across multiple branches. Their existing manual processes were error-prone and couldn't scale.
+  id: Jaringan apotek yang berkembang membutuhkan sistem backend yang kuat untuk mengelola akuntansi, inventaris, dan penagihan di beberapa cabang. Proses manual yang ada rawan kesalahan dan tidak bisa diskalakan.
+solution:
+  en: Designed and built a complete ASP.NET Core backend with Entity Framework Core and PostgreSQL. The system handles multi-branch accounting, real-time inventory tracking with stock alerts, automated billing, and role-based access control. 
+  id: Merancang dan membangun backend ASP.NET Core lengkap dengan Entity Framework Core dan PostgreSQL. Sistem menangani akuntansi multi-cabang, pelacakan inventaris real-time dengan peringatan stok, penagihan otomatis, dan kontrol akses berbasis peran. 
+results:
+  en: The pharmacy chain now operates with centralized data across all branches. Manual errors reduced significantly, and inventory tracking became automated. The system scales to support future branch expansion.
+  id: Jaringan apotek sekarang beroperasi dengan data terpusat di semua cabang. Kesalahan manual berkurang signifikan, dan pelacakan inventaris menjadi otomatis. Sistem dapat diskalakan untuk mendukung ekspansi cabang di masa depan.
+
+sitemap:
+  lastmod: 2026-07-11
+schemaOrg:
+  - type: "CreativeWork"
+    name: "Prima"

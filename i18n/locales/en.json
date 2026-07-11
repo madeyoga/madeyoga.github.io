@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hey, I'm Made Yoga.",
+    "title": "Fullstack Software Developer",
+    "tagline": "I build software that drives business — from back-office systems to customer-facing platforms.",
+    "cta_work": "See My Work",
+    "cta_contact": "Work With Me",
+    "location": "Samarinda, Indonesia"
+  },
+  "section": {
+    "techstack": "Tech Stack",
+    "experience": "Work Experience",
+    "projects": "Projects",
+    "projects_description": "Over the years, I've built digital experiences that focus on clarity, usability, and thoughtful design. Here are some of my favorite projects.",
+    "view_all_projects": "View All Projects",
+    "services": "What I Do",
+    "contact": "Contact"
+  },
+  "stats": {
+    "years": "Years Experience",
+    "projects": "Projects Delivered",
+    "clients": "Happy Clients"
+  },
+  "cta": {
+    "title": "Ready to build something?",
+    "description": "Let's discuss your project and find the right solution for your business.",
+    "button": "Get in Touch"
+  },
+  "footer": {
+    "tagline": "Fullstack software developer based in Samarinda, Indonesia.",
+    "copyright": "Made Yoga Mahardika. All rights reserved."
+  },
+  "services": {
+    "web_dev_title": "Web Development",
+    "web_dev_desc": "Fullstack websites and web apps built with modern frameworks like Nuxt, .NET, and Django.",
+    "custom_sw_title": "Custom Software",
+    "custom_sw_desc": "Tailor-made business systems — ERP, POS, inventory management.",
+    "landing_title": "Landing Pages",
+    "landing_desc": "High-converting, beautifully designed pages for your product, company, or campaign.",
+    "consulting_title": "Consulting",
+    "consulting_desc": "Honest tech stack advice, code review, and architecture planning."
+  },
+  "about": {
+    "title": "About Me",
+    "values": "My Values",
+    "cta": "Interested in working together?"
+  },
+  "language": "Language"
+}

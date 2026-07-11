@@ -1,0 +1,39 @@
+slug: pos-system
+title: Point of Sale & Inventory Management System
+client: Indonesian Retail Store
+description: A custom-built point of sale and inventory management system for small to medium-sized retail stores. Runs entirely on local network.
+image: /images/chrome_2025-07-24_14-44-25.jpg
+link: ""
+techstack:
+  - icon: i-simple-icons-django
+    title: Django
+  - icon: i-simple-icons-tailwindcss
+    title: Tailwind
+  - icon: i-simple-icons-alpinedotjs
+    title: Alpine
+features:
+  - icon: i-lucide-check
+    title: Dashboard and analytics
+  - icon: i-lucide-check
+    title: Real-time sales tracking
+  - icon: i-lucide-check
+    title: Product and stock management
+  - icon: i-lucide-check
+    title: User access control
+  - icon: i-lucide-check
+    title: Invoicing / printable receipts
+problem:
+  en: Small retail stores needed an affordable, offline-capable POS system that didn't rely on cloud services or expensive subscription fees. Existing solutions were either too complex or required constant internet connectivity.
+  id: Toko ritel kecil membutuhkan sistem POS terjangkau yang bisa berjalan offline tanpa bergantung pada layanan cloud atau biaya berlangganan mahal. Solusi yang ada terlalu kompleks atau memerlukan koneksi internet konstan.
+solution:
+  en: Built a Django-based POS system that runs on the store's local network. Features include real-time sales tracking, inventory management with low-stock alerts, user role management, and printable receipts — all without internet dependency.
+  id: Membangun sistem POS berbasis Django yang berjalan di jaringan lokal toko. Fitur termasuk pelacakan penjualan real-time, manajemen inventaris dengan peringatan stok rendah, manajemen peran pengguna, dan struk yang dapat dicetak — semuanya tanpa ketergantungan internet.
+results:
+  en: The client eliminated monthly POS subscription costs and gained full control over their sales and inventory data. The system handles hundreds of daily transactions reliably.
+  id: Klien menghilangkan biaya berlangganan POS bulanan dan mendapatkan kontrol penuh atas data penjualan dan inventaris. Sistem menangani ratusan transaksi harian dengan andal.
+
+sitemap:
+  lastmod: 2025-08-09
+schemaOrg:
+  - type: "CreativeWork"
+    name: "Point of Sale & Inventory Management System"

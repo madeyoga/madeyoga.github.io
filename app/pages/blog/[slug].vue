@@ -22,26 +22,17 @@ useSeoMeta(post.value.seo || {
   title,
   ogTitle: title,
   description,
-  ogDescription: description
+  ogDescription: description,
+  ogImage: post.value.image.src
 })
 useSchemaOrg(post.value.schemaOrg || {})
-
-if (post.value?.image?.src) {
-  defineOgImage({
-    url: post.value.image.src
-  })
-} else {
-  defineOgImageComponent('Saas', {
-    headline: 'Blog'
-  })
-}
 
 const { formattedDate } = useFormattedDate(post.value?.date || new Date())
 </script>
 
 <template>
   <UContainer>
-    <div class="relative border-b border-default py-8">
+    <div class="relative border-b border-default">
       <div class="mb-2.5 text-sm font-semibold text-primary flex items-center gap-1.5">
         <UBadge
           v-bind="post!.badge"
@@ -81,8 +72,13 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
       </div>
     </div>
 
-    <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
-      <div class="lg:col-span-8">
+    <div class="relative flex flex-col lg:block">
+      <!-- Mobile TOC: collapsible, above content -->
+      <div class="mb-8 lg:hidden">
+        <Toc :toc="post?.body.toc" />
+      </div>
+
+      <div class="lg:max-w-[65ch]">
         <ContentRenderer
           v-if="post"
           :value="post"
@@ -93,8 +89,10 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
         <MySurround :surround="surround" class="mb-16" />
       </div>
 
-      <nav class="sticky top-[64px] z-10 bg-default/75 lg:bg-[initial] backdrop-blur -mx-4 px-4 sm:px-6 sm:-mx-6 overflow-y-auto max-h-[calc(100vh-64px)] lg:col-span-2 order-first lg:order-last">
-        <Toc :toc="post?.body.toc"></Toc>
+      <!-- Desktop TOC: fixed sidebar on the right -->
+      <nav class="hidden lg:block fixed right-[max(1rem,calc((100vw-47.5rem)/2-16rem))] top-24 w-52 max-h-[calc(100vh-8rem)] overflow-y-auto">
+        <p class="text-xs font-semibold text-muted uppercase tracking-wider mb-3">On this page</p>
+        <TocContent v-if="post?.body.toc" :links="post.body.toc.links" />
       </nav>
     </div>
   </UContainer>

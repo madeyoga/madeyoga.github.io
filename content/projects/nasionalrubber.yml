@@ -1,0 +1,33 @@
+slug: nasionalrubber
+title: nasionalrubber.co.id
+client: PT. Nasional Bhirawa Tama
+description: Simple and fully responsive landing page for a rubber industry company in Indonesia with multilingual support.
+image: /images/chrome_2025-07-23_15-56-12.jpg
+link: https://nasionalrubber.co.id/
+techstack:
+  - icon: i-simple-icons-vuedotjs
+    title: Vue
+  - icon: i-simple-icons-nuxt
+    title: Nuxt
+  - icon: i-simple-icons-tailwindcss
+    title: Tailwind
+features:
+  - icon: i-lucide-globe
+    title: Multi-language Support (i18n)
+  - icon: i-lucide-smartphone
+    title: Mobile-Friendly Design
+problem:
+  en: A rubber industry company needed a corporate website with multilingual support to serve both Indonesian and international clients. The site needed to be simple, professional, and easy to navigate.
+  id: Perusahaan industri karet membutuhkan website perusahaan dengan dukungan multi-bahasa untuk melayani klien Indonesia dan internasional. Situs harus sederhana, profesional, dan mudah dinavigasi.
+solution:
+  en: Developed a Nuxt-based landing page with built-in i18n support for English and Indonesian. Clean, responsive design focused on showcasing the company's profile and products.
+  id: Mengembangkan landing page berbasis Nuxt dengan dukungan i18n untuk Bahasa Inggris dan Bahasa Indonesia. Desain bersih dan responsif fokus pada menampilkan profil perusahaan dan produk.
+results:
+  en: The bilingual site now serves both local and international clients effectively, with improved professional credibility.
+  id: Situs bilingual sekarang melayani klien lokal dan internasional secara efektif, dengan kredibilitas profesional yang meningkat.
+
+sitemap:
+  lastmod: 2025-08-09
+schemaOrg:
+  - type: "CreativeWork"
+    name: "nasionalrubber.co.id"

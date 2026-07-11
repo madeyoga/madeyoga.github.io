@@ -15,7 +15,7 @@ useSeoMeta({
 
 <template>
   <UContainer>
-    <div class="relative border-b border-default py-[50px]">
+    <div class="relative border-b border-default">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <h1 class="text-3xl sm:text-4xl text-pretty font-bold text-highlighted">
           {{ title }}
