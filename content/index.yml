@@ -35,18 +35,18 @@ techstack:
     icon: i-vscode-icons-file-type-tailwind
 experiences:
   - timeframe: 2022 - 2026
-    title: Backend Software Developer
+    title: Fullstack Software Developer
     company: Superjaya
     domainName: superjaya.id
     url: https://superjaya.id
     jobtype: Freelance
   - timeframe: 2025 - Present
-    title: Fullstack Software Developer
+    title: Backend Developer
     company: Prima (Medicine Store System)
     domainName: Internal
     url: ''
     jobtype: Freelance
-  - timeframe: 2021 - 2026
+  - timeframe: 2021 - 2022
     title: Fullstack Software Developer
     company: PT Media Bersama Sukses
     domainName: mbscctv.com

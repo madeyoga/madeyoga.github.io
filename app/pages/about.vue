@@ -12,7 +12,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="min-h-screen max-w-[47.5rem] mx-auto pt-10 border-default sm:border-x">
+  <div class="min-h-screen max-w-190 mx-auto pt-10 border-default sm:border-x">
     <div class="px-4 sm:px-6 pt-18">
       <AppHeader />
 
@@ -21,11 +21,11 @@ useSeoMeta({
 
         <!-- Personal -->
         <section class="flex flex-col md:flex-row gap-10 mb-20">
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <img
               :src="page.personal.image"
               :alt="page.personal.name"
-              class="border border-gray-400 w-[160px] h-[160px] object-cover rounded-full"
+              class="border border-gray-400 w-40 h-40 object-cover rounded-full"
             />
           </div>
 

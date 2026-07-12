@@ -12,7 +12,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="min-h-screen max-w-[47.5rem] mx-auto pt-10 border-default sm:border-x">
+  <div class="min-h-screen max-w-190 mx-auto pt-10 border-default sm:border-x">
     <div class="px-4 sm:px-6 pt-18">
       <AppHeader />
 
@@ -28,7 +28,7 @@ useSeoMeta({
             class="p-6 rounded-lg border border-gray-200 dark:border-gray-700"
           >
             <div class="flex items-start gap-4">
-              <UIcon :name="item.icon" class="w-10 h-10 text-green-800 dark:text-green-400 flex-shrink-0 mt-1" />
+              <UIcon :name="item.icon" class="w-10 h-10 text-green-800 dark:text-green-400 shrink-0 mt-1" />
               <div>
                 <h3 class="text-xl font-semibold dark:text-white mb-2">{{ t(item.title) }}</h3>
                 <p class="text-muted text-[15px] leading-relaxed mb-4">{{ t(item.description) }}</p>
@@ -38,7 +38,7 @@ useSeoMeta({
                     :key="t(d)"
                     class="flex items-start gap-2 text-sm text-muted"
                   >
-                    <UIcon name="i-lucide-check" class="w-4 h-4 text-green-800 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                    <UIcon name="i-lucide-check" class="w-4 h-4 text-green-800 dark:text-green-400 shrink-0 mt-0.5" />
                     {{ t(d) }}
                   </li>
                 </ul>

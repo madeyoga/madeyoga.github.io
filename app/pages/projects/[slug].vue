@@ -25,7 +25,7 @@ useSeoMeta({
     <div class="px-4 sm:px-6 pt-18">
       <AppHeader />
 
-      <main class="py-16">
+      <main class="py-16" v-if="project">
         <!-- Back Link -->
         <NuxtLink :to="localePath('/projects')" class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-green-800 dark:hover:text-green-400 transition-colors mb-8">
           <UIcon name="i-lucide-arrow-left" class="w-4 h-4" />
@@ -107,6 +107,10 @@ useSeoMeta({
         </section>
 
         <CTABanner />
+      </main>
+
+      <main class="py-16" v-else>
+        NULL PROJECT
       </main>
 
       <AppFooter />

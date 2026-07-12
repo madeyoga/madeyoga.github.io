@@ -20,7 +20,7 @@ const isDark = computed({
 </script>
 
 <template>
-  <div class="min-h-screen max-w-[47.5rem] mx-auto pt-10 border-default sm:border-x">
+  <div class="min-h-screen max-w-190 mx-auto pt-10 border-default sm:border-x">
     <div class="px-4 sm:px-6 pt-18">
 
       <AppHeader />
@@ -29,12 +29,12 @@ const isDark = computed({
         <!-- Hero -->
         <section id="hero" class="py-16 flex flex-col md:flex-row gap-10">
           <div class="flex items-center justify-center">
-            <img src="/images/profile2.jpg" alt="profile" class="border border-gray-400 w-[128px] h-[128px] min-w-[128px] min-h-[128px] object-cover rounded-full">
+            <img src="/images/profile2.jpg" alt="profile" class="border border-gray-400 w-32 h-32 min-w-32 min-h-32 object-cover rounded-full">
           </div>
 
           <div class="flex flex-col gap-6 justify-center h-full">
             <div>
-              <h1 class="text-center md:text-start font-bold text-3xl dark:text-muted leading-[1.5]">
+              <h1 class="text-center md:text-start font-bold text-3xl dark:text-muted leading-normal">
                 <span class="dark:text-green-400 text-green-800">{{ $t('hero.greeting') }}</span><br>{{ $t('hero.title') }}
               </h1>
               <p class="text-center md:text-start text-muted mt-3 text-[15px] leading-relaxed">
@@ -77,7 +77,7 @@ const isDark = computed({
                   :key="`hero-link-${link.url}`"
                   :aria-label="`Visit ${link.icon.split('-').pop()} profile`"
                 >
-                  <UIcon :name="link.icon" class="w-[24px] h-[24px]" />
+                  <UIcon :name="link.icon" class="w-6 h-6" />
                 </a>
               </div>
             </div>
@@ -97,7 +97,7 @@ const isDark = computed({
               :key="`techstack-${tech.title}`"
               :title="tech.title"
             >
-              <UIcon :name="tech.icon" class="w-[48px] h-[48px]" />
+              <UIcon :name="tech.icon" class="w-12 h-12" />
             </TechStackCard>
           </div>
         </section>
@@ -198,7 +198,7 @@ const isDark = computed({
         </section>
 
         <!-- CTA Banner -->
-        <CTABanner />
+        <!-- <CTABanner /> -->
       </main>
 
       <AppFooter />
