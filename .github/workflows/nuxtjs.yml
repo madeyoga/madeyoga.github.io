@@ -10,13 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - run: corepack enable
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-      # Pick your own package manager and build script
-      - run: npm install
-      - run: npx nuxt build --preset github_pages
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      # Static GitHub Pages site — generate avoids the github-pages Nitro preset
+      # that nuxt-og-image does not recognize.
+      - run: pnpm generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -27,6 +27,10 @@
     "@iconify-json/vscode-icons": "1.2.23",
     "baseline-browser-mapping": "2.10.42"
   },
+  "overrides": {
+    "@unhead/vue": "^3.2.3",
+    "unhead": "^3.2.3"
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
@@ -36,6 +40,8 @@
       "vue-demi"
     ],
     "overrides": {
+      "@unhead/vue": "^3.2.3",
+      "unhead": "^3.2.3",
       "nuxt-og-image@<6.2.5": ">=6.2.5",
       "esbuild@>=0.27.3 <0.28.1": ">=0.28.1"
     }
