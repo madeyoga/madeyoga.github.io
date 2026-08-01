@@ -57,7 +57,7 @@ useSeoMeta({
               :key="step.step"
               class="flex items-start gap-4"
             >
-              <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
+              <div class="shrink-0 w-10 h-10 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
                 <span class="text-green-800 dark:text-green-400 font-bold text-sm">{{ step.step }}</span>
               </div>
               <div>
