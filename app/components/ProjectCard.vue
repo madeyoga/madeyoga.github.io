@@ -7,7 +7,10 @@ const props = defineProps([
   'image',
   'techstack',
   'features',
-  'slug'
+  'slug',
+  'category',
+  'repo',
+  'docs'
 ])
 </script>
 
@@ -23,7 +26,7 @@ const props = defineProps([
       <span class="sr-only">{{ props.title }}</span>
     </NuxtLink>
 
-    <div class="rounded-lg w-full border border-gray-200 dark:border-gray-700 p-5 flex flex-col gap-5 transition-colors" :class="props.slug ? 'group-hover:border-green-400 dark:group-hover:border-green-600' : ''">
+    <div class="rounded-lg w-full border border-default p-5 flex flex-col gap-5 transition-colors" :class="props.slug ? 'group-hover:border-primary' : ''">
       <div class="relative overflow-hidden rounded-xl">
         <img
           :src="props.image"
@@ -32,8 +35,20 @@ const props = defineProps([
           class="w-full aspect-video object-cover"
           :class="props.slug ? 'group-hover:scale-105 transition-transform duration-300' : ''"
         />
-        <div v-if="props.link && props.slug" class="absolute top-3 right-3 z-20">
+        <div v-if="(props.link || props.repo) && props.slug" class="absolute top-3 right-3 z-20 flex gap-2">
           <UButton
+            v-if="props.repo"
+            icon="i-simple-icons-github"
+            size="sm"
+            color="neutral"
+            variant="solid"
+            :to="props.repo"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Open GitHub repository"
+          />
+          <UButton
+            v-else-if="props.link"
             icon="i-lucide-external-link"
             size="sm"
             color="neutral"
@@ -46,7 +61,12 @@ const props = defineProps([
         </div>
       </div>
 
-      <h3 class="font-semibold dark:text-white text-xl tracking-wide">{{ props.title }}</h3>
+      <div>
+        <p v-if="props.category === 'opensource'" class="text-xs text-primary font-medium mb-1">
+          {{ $t('section.open_source') }}
+        </p>
+        <h3 class="font-semibold dark:text-white text-xl tracking-wide">{{ props.title }}</h3>
+      </div>
 
       <p class="dark:text-muted text-pretty text-[15px]">
         {{ props.description }}
@@ -59,7 +79,7 @@ const props = defineProps([
           size="md"
           color="neutral"
           variant="outline"
-          class="justify-center rounded-full gap-1.5"
+          class="justify-center gap-1.5"
         >
           <UIcon :name="tech.icon" class="w-4 h-4" />
           {{ tech.title }}
@@ -77,8 +97,21 @@ const props = defineProps([
         </ul>
       </div>
 
-      <div v-if="props.link && !props.slug" class="mt-4 relative z-20">
+      <div v-if="(props.link || props.repo) && !props.slug" class="mt-4 relative z-20 flex flex-wrap gap-2">
         <UButton
+          v-if="props.repo"
+          icon="i-simple-icons-github"
+          size="md"
+          color="neutral"
+          variant="outline"
+          :to="props.repo"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          GitHub
+        </UButton>
+        <UButton
+          v-if="props.link"
           icon="i-lucide-external-link"
           size="md"
           color="neutral"

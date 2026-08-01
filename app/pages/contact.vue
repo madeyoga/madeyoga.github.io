@@ -23,7 +23,7 @@ useSeoMeta({
             <h2 class="uppercase tracking-widest dark:text-white font-bold text-sm pb-4">Email</h2>
             <a
               href="mailto:madeybog@gmail.com?subject=Project%20Inquiry"
-              class="text-green-800 dark:text-green-400 text-lg font-medium hover:underline"
+              class="text-primary text-lg font-medium hover:underline"
               aria-label="Send email to Made Yoga Mahardika"
             >
               madeybog@gmail.com
@@ -35,19 +35,19 @@ useSeoMeta({
           <div>
             <h2 class="uppercase tracking-widest dark:text-white font-bold text-sm pb-4">Social</h2>
             <div class="space-y-3">
-              <a href="https://github.com/madeyoga" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-green-800 dark:hover:text-green-400 transition-colors" aria-label="Visit GitHub profile">
+              <a href="https://github.com/madeyoga" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit GitHub profile">
                 <UIcon name="i-simple-icons-github" class="w-5 h-5" />
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/made-mahardika-4a205a379/" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-green-800 dark:hover:text-green-400 transition-colors" aria-label="Visit LinkedIn profile">
+              <a href="https://www.linkedin.com/in/made-mahardika-4a205a379/" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit LinkedIn profile">
                 <UIcon name="i-simple-icons-linkedin" class="w-5 h-5" />
                 <span>LinkedIn</span>
               </a>
-              <a href="https://www.youtube.com/@madey02" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-green-800 dark:hover:text-green-400 transition-colors" aria-label="Visit YouTube channel">
+              <a href="https://www.youtube.com/@madey02" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit YouTube channel">
                 <UIcon name="i-simple-icons-youtube" class="w-5 h-5" />
                 <span>YouTube</span>
               </a>
-              <a href="https://www.tiktok.com/@boggg_" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-green-800 dark:hover:text-green-400 transition-colors" aria-label="Visit TikTok profile">
+              <a href="https://www.tiktok.com/@boggg_" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit TikTok profile">
                 <UIcon name="i-simple-icons-tiktok" class="w-5 h-5" />
                 <span>TikTok</span>
               </a>

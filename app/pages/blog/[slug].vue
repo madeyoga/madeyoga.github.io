@@ -1,18 +1,37 @@
 <script setup lang="ts">
 const route = useRoute()
+const { locales, defaultLocale } = useI18n()
 
-const normalizedPath = route.path.replace(/\/$/, '') // remove trailing slash
-const { data: post } = await useAsyncData(normalizedPath, () => queryCollection('posts').path(route.path).first())
+/** Content collection paths are locale-agnostic; strip i18n prefix for queries. */
+const contentPath = computed(() => {
+  let path = route.path.replace(/\/$/, '') || '/'
+  for (const loc of locales.value) {
+    const code = typeof loc === 'string' ? loc : loc.code
+    if (code === defaultLocale) continue
+    if (path === `/${code}`) return '/'
+    if (path.startsWith(`/${code}/`)) {
+      path = path.slice(code.length + 1)
+      break
+    }
+  }
+  return path
+})
+
+const { data: post } = await useAsyncData(
+  () => `blog-post-${contentPath.value}`,
+  () => queryCollection('posts').path(contentPath.value).first()
+)
 
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
 
-const { data: surround } = await useAsyncData(`${normalizedPath}-surround`, () => {
-  return queryCollectionItemSurroundings('posts', route.path, {
+const { data: surround } = await useAsyncData(
+  () => `blog-surround-${contentPath.value}`,
+  () => queryCollectionItemSurroundings('posts', contentPath.value, {
     fields: ['description']
   })
-})
+)
 
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description

@@ -4,8 +4,8 @@ personal:
     en: Fullstack Software Developer
     id: Fullstack Software Developer
   bio:
-    en: I build software that drives business — from back-office systems to customer-facing platforms.
-    id: Saya membangun software yang menggerakkan bisnis — dari sistem back-office hingga platform pelanggan.
+    en: I build software that drives business — from back-office systems to customer-facing platforms. I also maintain AuthEndpoints, an open-source auth library for ASP.NET Core, and explore AI agents and LLM tooling in public experiments.
+    id: Saya membangun software yang menggerakkan bisnis — dari sistem back-office hingga platform pelanggan. Saya juga mengelola AuthEndpoints, pustaka auth open source untuk ASP.NET Core, dan mengeksplorasi AI agents serta tooling LLM lewat eksperimen terbuka.
   image: /images/profile2.jpg
   location:
     en: Samarinda, Indonesia
@@ -19,13 +19,13 @@ personal:
       url: https://www.youtube.com/@madey02
 
 values:
-  - icon: i-lucide-check
+  - icon: i-lucide-shield-check
     title:
-      en: Strong Ownership
-      id: Tanggung Jawab Tinggi
+      en: Integrity
+      id: Integritas
     description:
-      en: I treat your project like my own, taking full accountability from planning to deployment and beyond.
-      id: Saya menganggap proyek Anda seperti milik sendiri, bertanggung jawab penuh dari perencanaan hingga rilis dan seterusnya.
+      en: I make sure clients profit from the apps I build — their problem must be solved, and the software must earn its keep.
+      id: Saya memastikan klien mendapat keuntungan dari aplikasi yang saya bangun — masalah mereka harus terselesaikan, dan software harus layak untuk bisnis mereka.
   - icon: i-lucide-check
     title:
       en: Value-Driven Solutions
@@ -41,8 +41,34 @@ values:
       en: Flexible to changing requirements and quick to adopt the best tools or workflows for your needs.
       id: Fleksibel terhadap perubahan kebutuhan dan cepat beradaptasi dengan alat atau metode terbaik sesuai kebutuhan Anda.
 
+experiences:
+  - timeframe: 2022 - 2026
+    title: Fullstack Software Developer
+    company: Superjaya
+    domainName: superjaya.id
+    url: https://superjaya.id
+    jobtype: Freelance
+  - timeframe: 2025 - Present
+    title: Backend Developer
+    company: Prima (Medicine Store System)
+    domainName: Internal
+    url: ''
+    jobtype: Freelance
+  - timeframe: 2021 - 2022
+    title: Fullstack Software Developer
+    company: PT Media Bersama Sukses
+    domainName: mbscctv.com
+    url: https://mbscctv.com
+    jobtype: Freelance
+  - timeframe: 2024 - 2024
+    title: Frontend Software Developer
+    company: PT. Nasional Bhirawa Tama
+    domainName: nasionalrubber.co.id
+    url: https://nasionalrubber.co.id/
+    jobtype: Freelance
+
 sitemap:
-  lastmod: 2026-07-11
+  lastmod: 2026-08-01
 title: About Me
 schemaOrg:
   - type: "AboutPage"

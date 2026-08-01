@@ -130,6 +130,8 @@ export default defineNuxtConfig({
         'lucide:code',
         'lucide:rocket',
         'lucide:wrench',
+        'lucide:shield-check',
+        'lucide:arrow-right',
 
         'simple-icons:github',
         'simple-icons:csharp',
@@ -143,8 +145,11 @@ export default defineNuxtConfig({
         'simple-icons:linkedin',
         'simple-icons:tiktok',
         'simple-icons:dotnet',
+        'simple-icons:nuget',
         'simple-icons:typescript',
         'simple-icons:postgresql',
+        'lucide:book-open',
+
 
         'vscode-icons:file-type-django',
         'vscode-icons:file-type-python',

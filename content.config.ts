@@ -24,19 +24,20 @@ export default defineContentConfig({
           icon: z.string(),
           title: z.string()
         })),
-        experiences: z.array(z.object({
-          timeframe: z.string(),
+        lab: z.array(z.object({
           title: z.string(),
-          company: z.string(),
-          domainName: z.string().optional(),
-          url: z.string().optional(),
-          jobtype: z.string()
-        })),
+          status: z.enum(['exploring', 'shipping', 'paused']).default('exploring'),
+          description: z.string(),
+          link: z.string().optional()
+        })).optional(),
         projects: z.array(z.object({
           slug: z.string(),
           title: z.string(),
+          category: z.enum(['work', 'opensource']).default('work'),
           description: z.string(),
           link: z.string().optional(),
+          repo: z.string().optional(),
+          docs: z.string().optional(),
           image: z.string(),
           techstack: z.array(z.object({
             icon: z.string(),
@@ -102,6 +103,14 @@ export default defineContentConfig({
           title: z.object({ en: z.string(), id: z.string() }),
           description: z.object({ en: z.string(), id: z.string() })
         })),
+        experiences: z.array(z.object({
+          timeframe: z.string(),
+          title: z.string(),
+          company: z.string(),
+          domainName: z.string().optional(),
+          url: z.string().optional(),
+          jobtype: z.string()
+        })).optional(),
       })
     }),
     services: defineCollection({
@@ -134,11 +143,14 @@ export default defineContentConfig({
         schemaOrg: defineSchemaOrgSchema(),
         slug: z.string(),
         title: z.string(),
+        category: z.enum(['work', 'opensource']).default('work'),
         client: z.string().optional(),
         description: z.string(),
         longDescription: z.object({ en: z.string(), id: z.string() }).optional(),
         image: z.string(),
         link: z.string().optional(),
+        repo: z.string().optional(),
+        docs: z.string().optional(),
         techstack: z.array(z.object({ icon: z.string(), title: z.string() })),
         features: z.array(z.object({ icon: z.string(), title: z.string() })),
         problem: z.object({ en: z.string(), id: z.string() }).optional(),

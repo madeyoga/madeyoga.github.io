@@ -8,10 +8,12 @@
     "contact": "Kontak"
   },
   "hero": {
+    "name": "Made Yoga",
     "greeting": "Halo, Saya Made Yoga.",
     "title": "Fullstack Software Developer",
-    "tagline": "Saya membuat software yang membantu bisnis Anda — dari sistem back-office hingga platform pelanggan.",
-    "cta_work": "Lihat Karya Saya",
+    "tagline": "Saya membangun tools open source untuk .NET dan mengeksplorasi AI agents & LLM — eksperimen jujur, resep praktis, dan software yang benar-benar rilis.",
+    "cta_work": "Open Source",
+    "cta_blog": "Baca Blog",
     "cta_contact": "Hubungi Saya",
     "location": "Samarinda, Indonesia"
   },
@@ -19,10 +21,27 @@
     "techstack": "Tech Stack",
     "experience": "Pengalaman Kerja",
     "projects": "Proyek",
-    "projects_description": "Selama bertahun-tahun, saya telah membangun pengalaman digital yang fokus pada kejelasan, kegunaan, dan desain yang matang. Berikut beberapa proyek favorit saya.",
+    "projects_description": "Pustaka open source yang saya kelola, plus karya klien yang sudah dipakai bisnis nyata.",
+    "open_source_description": "Pustaka open source yang saya kelola untuk developer lain.",
+    "client_work": "Karya Klien",
+    "open_source": "Open Source",
+    "lab": "Lab",
+    "lab_description": "Yang sedang saya eksplorasi — agents, tooling, dan dasar LLM. Belum semua eksperimen bersifat publik.",
+    "ai": "Membangun dengan AI & LLM",
+    "ai_description": "Insight, resep, tools, dan eksperimen yang jujur.",
     "view_all_projects": "Lihat Semua Proyek",
+    "view_blog": "Lihat semua tulisan",
+    "read_more": "Baca selengkapnya",
+    "view_client_work": "Lihat semua karya klien",
+    "offerings": "Yang Saya Tawarkan",
+    "process": "Cara Saya Bekerja",
     "services": "Yang Saya Kerjakan",
     "contact": "Kontak"
+  },
+  "lab": {
+    "exploring": "Mengeksplorasi",
+    "shipping": "Aktif",
+    "paused": "Ditunda"
   },
   "stats": {
     "years": "Tahun Pengalaman",

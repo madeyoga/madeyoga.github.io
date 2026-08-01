@@ -1,8 +1,9 @@
+@import "@fontsource-variable/plus-jakarta-sans";
 @import "tailwindcss";
 @import "@nuxt/ui";
 
 html {
-    font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
 }
@@ -10,11 +11,16 @@ html {
 :root {
   --ui-bg: var(--ui-color-neutral-50);
   --ui-text: var(--ui-color-neutral-900);
-
+  --brand-atmosphere: linear-gradient(
+    165deg,
+    var(--ui-color-neutral-50) 0%,
+    color-mix(in oklab, var(--ui-color-primary-100) 45%, var(--ui-color-neutral-50)) 45%,
+    var(--ui-color-neutral-50) 100%
+  );
 
   ::selection {
-    color: #282a30;
-    background-color: #c8c8c8;
+    color: var(--ui-color-neutral-950);
+    background-color: color-mix(in oklab, var(--ui-color-primary-300) 70%, white);
   }
 }
 
@@ -22,19 +28,74 @@ html {
   --ui-bg: var(--ui-color-neutral-950);
   --ui-text: var(--ui-color-neutral-50);
   --ui-border: var(--ui-color-neutral-900);
+  --brand-atmosphere: linear-gradient(
+    165deg,
+    var(--ui-color-neutral-950) 0%,
+    color-mix(in oklab, var(--ui-color-primary-950) 55%, var(--ui-color-neutral-950)) 40%,
+    var(--ui-color-neutral-950) 100%
+  );
 
   ::selection {
-    color: #ffffff;
-    background-color: #474747;
+    color: var(--ui-color-neutral-50);
+    background-color: color-mix(in oklab, var(--ui-color-primary-700) 55%, black);
   }
 }
 
+body {
+  background-image: var(--brand-atmosphere);
+  background-attachment: fixed;
+  background-color: var(--ui-bg);
+}
+
 .dark pre {
-  background-color: var(--color-slate-900);
+  background-color: var(--color-zinc-900);
 }
 
 pre {
-  background-color: var(--color-slate-100);
+  background-color: var(--color-zinc-100);
   padding: 24px;
   overflow-x: auto;
+}
+
+@keyframes brand-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brand-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-brand-fade-in {
+  animation: brand-fade-in 0.5s ease-out both;
+}
+
+.animate-brand-fade-up {
+  animation: brand-fade-up 0.55s ease-out both;
+}
+
+.animate-brand-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-brand-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-brand-delay-3 {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-brand-fade-in,
+  .animate-brand-fade-up {
+    animation: none;
+  }
 }

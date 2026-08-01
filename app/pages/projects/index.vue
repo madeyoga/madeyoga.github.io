@@ -1,10 +1,17 @@
 <script setup>
 const { data: projects } = await useAsyncData('projects_list', () => queryCollection('projectsDetail').all())
 
+const workProjects = computed(() =>
+  (projects.value || []).filter(p => (p.category || 'work') === 'work')
+)
+const openSourceProjects = computed(() =>
+  (projects.value || []).filter(p => p.category === 'opensource')
+)
+
 useSeoMeta({
   title: 'Projects',
   ogTitle: 'Projects — Made Yoga Mahardika',
-  description: 'Portfolio of software development projects — web apps, custom systems, and landing pages.',
+  description: 'Open-source software and client work — libraries like AuthEndpoints, plus web apps, custom systems, and landing pages.',
 })
 </script>
 
@@ -19,18 +26,47 @@ useSeoMeta({
           {{ $t('section.projects_description') }}
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <CaseStudyCard
-            v-for="project in projects"
-            :key="project.slug"
-            :slug="project.slug"
-            :title="project.title"
-            :description="project.description"
-            :image="project.image"
-            :techstack="project.techstack"
-            :client="project.client"
-          />
-        </div>
+        <section v-if="openSourceProjects.length" class="mb-16">
+          <h2 class="uppercase tracking-widest dark:text-white font-bold text-lg mb-6">
+            {{ $t('section.open_source') }}
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <CaseStudyCard
+              v-for="project in openSourceProjects"
+              :key="project.slug"
+              :slug="project.slug"
+              :title="project.title"
+              :description="project.description"
+              :image="project.image"
+              :techstack="project.techstack"
+              :client="project.client"
+              :category="project.category"
+              :repo="project.repo"
+              :docs="project.docs"
+            />
+          </div>
+        </section>
+
+        <section v-if="workProjects.length" class="mb-16">
+          <h2 class="uppercase tracking-widest dark:text-white font-bold text-lg mb-6">
+            {{ $t('section.client_work') }}
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <CaseStudyCard
+              v-for="project in workProjects"
+              :key="project.slug"
+              :slug="project.slug"
+              :title="project.title"
+              :description="project.description"
+              :image="project.image"
+              :techstack="project.techstack"
+              :client="project.client"
+              :category="project.category || 'work'"
+              :repo="project.repo"
+              :docs="project.docs"
+            />
+          </div>
+        </section>
 
         <CTABanner class="mt-16" />
       </main>

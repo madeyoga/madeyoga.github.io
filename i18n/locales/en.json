@@ -8,10 +8,12 @@
     "contact": "Contact"
   },
   "hero": {
+    "name": "Made Yoga",
     "greeting": "Hey, I'm Made Yoga.",
     "title": "Fullstack Software Developer",
-    "tagline": "I build software that drives business — from back-office systems to customer-facing platforms.",
-    "cta_work": "See My Work",
+    "tagline": "I build open-source tools for .NET and explore AI agents & LLMs — honest experiments, practical recipes, and software that ships.",
+    "cta_work": "Open Source",
+    "cta_blog": "Read the Blog",
     "cta_contact": "Work With Me",
     "location": "Samarinda, Indonesia"
   },
@@ -19,10 +21,27 @@
     "techstack": "Tech Stack",
     "experience": "Work Experience",
     "projects": "Projects",
-    "projects_description": "Over the years, I've built digital experiences that focus on clarity, usability, and thoughtful design. Here are some of my favorite projects.",
+    "projects_description": "Open-source libraries I maintain, plus client work that shipped for real businesses.",
+    "open_source_description": "Open-source libraries I maintain for other developers.",
+    "client_work": "Client Work",
+    "open_source": "Open Source",
+    "lab": "Lab",
+    "lab_description": "What I'm exploring right now — agents, tooling, and LLM fundamentals. Not every experiment is public yet.",
+    "ai": "Building with AI & LLMs",
+    "ai_description": "Insights, recipes, tools, and honest experiments.",
     "view_all_projects": "View All Projects",
+    "view_blog": "View all posts",
+    "read_more": "Read more",
+    "view_client_work": "See all client work",
+    "offerings": "What I Offer",
+    "process": "How I Work",
     "services": "What I Do",
     "contact": "Contact"
+  },
+  "lab": {
+    "exploring": "Exploring",
+    "shipping": "Shipping",
+    "paused": "Paused"
   },
   "stats": {
     "years": "Years Experience",

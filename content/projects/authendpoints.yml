@@ -1,0 +1,43 @@
+slug: authendpoints
+title: AuthEndpoints
+category: opensource
+client: Open Source
+description: A composable authentication endpoints library for ASP.NET Core — registration, login, 2FA, password reset, and passkeys bootstrapped in minutes.
+image: /images/authendpoints-3-0-rc.png
+link: https://madeyoga.github.io/AuthEndpoints/
+repo: https://github.com/madeyoga/AuthEndpoints
+docs: https://madeyoga.github.io/AuthEndpoints/
+techstack:
+  - icon: i-simple-icons-dotnet
+    title: .NET
+  - icon: i-simple-icons-csharp
+    title: C#
+  - icon: i-simple-icons-nuget
+    title: NuGet
+features:
+  - icon: i-lucide-check
+    title: Composable auth endpoints & modules
+  - icon: i-lucide-check
+    title: Cookie, bearer, or Simple JWT sign-in
+  - icon: i-lucide-check
+    title: Passkeys (WebAuthn) support
+  - icon: i-lucide-check
+    title: Hardening on by default
+  - icon: i-lucide-check
+    title: Optional GitHub & Google OAuth
+problem:
+  en: Building ASP.NET Core APIs usually means rewriting the same auth lifecycle every time — register, login, email confirmation, password reset, 2FA, and session management — with a different user model each project.
+  id: Membangun API ASP.NET Core biasanya berarti menulis ulang siklus auth yang sama setiap kali — registrasi, login, konfirmasi email, reset password, 2FA, dan manajemen sesi — dengan model user yang berbeda di setiap proyek.
+solution:
+  en: AuthEndpoints packages that work into a composable library on top of ASP.NET Core Identity. Pick the modules you need, configure the token strategy, and map a secure auth layer in minutes instead of a week of copy-paste.
+  id: AuthEndpoints mengemas pekerjaan itu menjadi pustaka composable di atas ASP.NET Core Identity. Pilih modul yang dibutuhkan, konfigurasikan strategi token, dan petakan lapisan auth yang aman dalam hitungan menit alih-alih seminggu copy-paste.
+results:
+  en: Released AuthEndpoints 3.0 RC with passkeys, opinionated hardening defaults, and public docs — turning auth setup from a project phase into a setup step for .NET developers.
+  id: Merilis AuthEndpoints 3.0 RC dengan passkeys, default hardening yang opinionated, dan dokumentasi publik — mengubah setup auth dari fase proyek menjadi langkah setup bagi developer .NET.
+
+sitemap:
+  lastmod: 2026-08-01
+schemaOrg:
+  - type: "SoftwareSourceCode"
+    name: "AuthEndpoints"
+    codeRepository: "https://github.com/madeyoga/AuthEndpoints"

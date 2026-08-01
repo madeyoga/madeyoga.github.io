@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const localePath = useLocalePath()
-const { locale } = useI18n()
+const { locale, t: i18nT } = useI18n()
 
 const slug = computed(() => route.params.slug as string)
 const { data: project } = await useAsyncData(`project-${slug.value}`, () =>
@@ -12,6 +12,8 @@ if (!project.value) {
 }
 
 const t = (obj: any) => obj?.[locale.value] || obj?.en || ''
+const isOpenSource = computed(() => project.value?.category === 'opensource')
+const openSourceLabel = computed(() => i18nT('section.open_source'))
 
 useSeoMeta({
   title: project.value?.title || 'Project',
@@ -27,7 +29,7 @@ useSeoMeta({
 
       <main class="py-16" v-if="project">
         <!-- Back Link -->
-        <NuxtLink :to="localePath('/projects')" class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-green-800 dark:hover:text-green-400 transition-colors mb-8">
+        <NuxtLink :to="localePath('/projects')" class="inline-flex items-center gap-1.5 text-sm text-muted hover:text-primary transition-colors mb-8">
           <UIcon name="i-lucide-arrow-left" class="w-4 h-4" />
           Back to Projects
         </NuxtLink>
@@ -36,17 +38,44 @@ useSeoMeta({
         <img
           :src="project.image"
           :alt="project.title"
-          class="w-full rounded-xl mb-8 border border-gray-200 dark:border-gray-700"
+          class="w-full rounded-xl mb-8 border border-default"
         />
 
         <!-- Title & Client -->
         <div class="mb-8">
-          <p v-if="project.client" class="text-green-800 dark:text-green-400 font-medium text-sm mb-2">{{ project.client }}</p>
+          <p class="text-primary font-medium text-sm mb-2">
+            {{ isOpenSource ? openSourceLabel : project.client }}
+          </p>
           <h1 class="text-3xl font-bold dark:text-white mb-3">{{ project.title }}</h1>
           <p class="text-muted text-[15px] leading-relaxed">{{ project.description }}</p>
 
-          <div v-if="project.link" class="mt-4">
+          <div class="mt-4 flex flex-wrap gap-3">
             <UButton
+              v-if="project.repo"
+              icon="i-simple-icons-github"
+              size="md"
+              color="primary"
+              variant="solid"
+              :to="project.repo"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              GitHub
+            </UButton>
+            <UButton
+              v-if="project.docs"
+              icon="i-lucide-book-open"
+              size="md"
+              color="neutral"
+              variant="outline"
+              :to="project.docs"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Docs
+            </UButton>
+            <UButton
+              v-else-if="project.link"
               icon="i-lucide-external-link"
               size="md"
               color="neutral"
@@ -68,7 +97,7 @@ useSeoMeta({
             size="md"
             color="neutral"
             variant="outline"
-            class="rounded-full gap-1.5"
+            class="gap-1.5"
           >
             <UIcon :name="tech.icon" class="w-4 h-4" />
             {{ tech.title }}
