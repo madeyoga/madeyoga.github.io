@@ -1,33 +1,19 @@
 # 💼 My Developer Portfolio
 
-This is my personal portfolio website, built using [Nuxt 4](https://nuxt.com/) and deployed on GitHub Pages.
+This is my personal portfolio website, built using [Nuxt 4](https://nuxt.com/) and deployed on Cloudflare Workers.
 
 The site showcases techstack, selected projects, work experience, and contact information.
 
-🔗 **Live site:** [https://madeyoga.github.io](https://madeyoga.github.io)  
+🔗 **Live site:** [https://webporto.m26416083.workers.dev](https://webporto.m26416083.workers.dev)
 
 Feel free to fork and customize.
 
-## Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-### Setup
+## Setup
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ### Development Server
@@ -35,51 +21,17 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ### Production
 
-Build the application for production:
+Generate the static site and deploy to Cloudflare Workers:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm deploy
 ```
 
-Locally preview production build:
+CI deploys on every push to `main`. Add a GitHub Actions secret named `CLOUDFLARE_API_TOKEN` with **Edit Cloudflare Workers** permission.
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

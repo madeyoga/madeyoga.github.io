@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "webporto",
+  "account_id": "16ca8021bb7f8f99197f36ef8501e4d0",
+  "compatibility_date": "2026-08-15",
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./.output/public",
+    "not_found_handling": "404-page"
+  }
+}

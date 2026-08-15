@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
   site: { 
-    url: 'https://madeyoga.github.io', 
+    url: 'https://webporto.m26416083.workers.dev', 
     name: 'Made Yoga Mahardika | Blog' 
   },
   future: {
