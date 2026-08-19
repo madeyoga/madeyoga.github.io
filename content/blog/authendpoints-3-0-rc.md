@@ -89,7 +89,7 @@ Mention which stack you used (cookies, JWT, passkeys) and what you were trying t
 dotnet add package AuthEndpoints --version 3.0.0-rc.3
 ```
 
-Install the package, or open the demo and click through the flows. If something feels awkward, breaks, or is missing, open an issue — that's how 3.0 stable gets shaped.
+Install the package, or open the demo and click through the flows. If something feels awkward, breaks, or is missing, open an issue, since that's how 3.0 stable gets shaped.
 
 - **Demo app**: [madeyoga/AuthEndpointsDemo](https://github.com/madeyoga/AuthEndpointsDemo), an ASP.NET Core API plus a Nuxt 4 / Nuxt UI playground, so you can click through the flows without writing a frontend first.
 - **Feedback**: open an issue on [madeyoga/AuthEndpoints](https://github.com/madeyoga/AuthEndpoints/issues).

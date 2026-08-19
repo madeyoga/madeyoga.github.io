@@ -2,7 +2,7 @@ slug: mbscctv
 title: mbscctv.com
 category: work
 client: PT Media Bersama Sukses
-description: Modern landing page for a security system company, featuring a product catalog and blog section.
+description: Company profile and landing page for a security systems firm, with a product catalog and a blog.
 image: /images/chrome_2025-07-22_15-11-17.jpg
 link: https://mbscctv.com
 techstack:
@@ -14,24 +14,24 @@ techstack:
     title: Tailwind
 features:
   - icon: i-lucide-check
-    title: Modern Git-based CMS
+    title: Git-based CMS
   - icon: i-lucide-check
-    title: Markdown-powered Blog
+    title: Markdown blog
   - icon: i-lucide-check
-    title: Dynamic Online Catalog
+    title: Online catalog
   - icon: i-lucide-check
-    title: Responsive Mobile-Friendly Design
+    title: Works on mobile
   - icon: i-lucide-check
-    title: SEO Optimized
+    title: SEO
 problem:
-  en: The client needed a modern, professional online presence to showcase their security products and services. Their existing website was outdated and difficult to update.
-  id: Klien membutuhkan kehadiran online yang modern dan profesional untuk memamerkan produk dan layanan keamanan mereka. Website lama mereka sudah ketinggalan zaman dan sulit diperbarui.
+  en: The client's old site looked dated and was hard to update. They needed a way to show their security products and services online.
+  id: Website lama klien kelihatan ketinggalan zaman dan sulit diperbarui. Mereka butuh cara untuk menampilkan produk dan layanan keamanan secara online.
 solution:
-  en: Built a Nuxt-powered landing page with a Git-based CMS, allowing the team to easily update product listings and write blog posts using Markdown. Fully responsive design ensures great experience on all devices.
-  id: Membangun landing page berbasis Nuxt dengan CMS berbasis Git, memungkinkan tim untuk dengan mudah memperbarui daftar produk dan menulis blog menggunakan Markdown. Desain responsif penuh memastikan pengalaman yang baik di semua perangkat.
+  en: We rebuilt it on Nuxt with a Git-based CMS. Product listings and blog posts are plain Markdown now, so the team updates content without touching code.
+  id: Kami membangun ulang situsnya dengan Nuxt dan CMS berbasis Git. Daftar produk dan postingan blog sekarang berupa Markdown biasa, jadi tim bisa update konten tanpa menyentuh kode.
 results:
-  en: Improved online visibility with SEO optimization. The client can now manage content independently without technical knowledge.
-  id: Visibilitas online meningkat dengan optimasi SEO. Klien sekarang dapat mengelola konten secara mandiri tanpa pengetahuan teknis.
+  en: Search visibility improved, and the client now manages the catalog and blog on their own.
+  id: Visibilitas pencarian membaik, dan klien sekarang mengelola katalog serta blog sendiri.
 
 sitemap:
   lastmod: 2025-08-09

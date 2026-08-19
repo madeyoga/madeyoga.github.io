@@ -1,6 +1,6 @@
 ---
 title: "Experimenting with Hermes Agent + DeepSeek-V4-Flash-0731 for ASP.NET Core and Nuxt"
-description: Lab notes on running Hermes Agent with DeepSeek-V4-Flash-0731 beta — teaching .NET and Nuxt via skills, wiring Nuxt and Nuxt UI MCPs, and what still feels rough.
+description: Lab notes on running Hermes Agent with DeepSeek-V4-Flash-0731 beta, teaching .NET and Nuxt via skills, wiring Nuxt and Nuxt UI MCPs, and what still feels rough.
 image:
   src: https://res.cloudinary.com/fpfvgqrg/image/upload/v1785599903/logo_w9akfu.png
 authors:
@@ -39,7 +39,7 @@ Flash-0731 is DeepSeek's public-beta Flash checkpoint (re-post-trained for agent
 
 ## Cost note (why I'm willing to experiment)
 
-Per DeepSeek's API pricing as of this write-up, `deepseek-v4-flash` is about **$0.14 / $0.28** per 1M input/output tokens (cache hits much lower). In practice my Hermes days land roughly in the **pocket-change** range — far below a Max-style subscription or a heavy Opus API day.
+Per DeepSeek's API pricing as of this write-up, `deepseek-v4-flash` is about **$0.14 / $0.28** per 1M input/output tokens (cache hits much lower). In practice my Hermes days land roughly in the **pocket-change** range, far below a Max-style subscription or a heavy Opus API day.
 
 I'm also watching DeepSeek's own agent-harness claims for Flash-0731. On their chart it lands **ahead of GLM-5.2** and **close to Claude Opus 4.8** on several agent-style benches, vendor-reported numbers, not my independent re-run, but enough signal that a cheap Flash tier is worth poking for coding-agent work:
 
@@ -67,8 +67,8 @@ Select / configure the DeepSeek provider and use model id **`deepseek-v4-flash`*
 
 Out of the box, the model doesn't know my folder layout, Nuxt UI v4 quirks, or how I want commits and PRs written. Two layers fix that:
 
-- **Skills** — project conventions (APIs, git/PR style)
-- **MCP** — live docs and tools (Nuxt/Nuxt UI docs, git + GitHub actions)
+- **Skills**: project conventions (APIs, git/PR style)
+- **MCP**: live docs and tools (Nuxt/Nuxt UI docs, git + GitHub actions)
 
 ### Skills for .NET
 
@@ -126,13 +126,13 @@ public static class SomeFeatureApi
 ```
 ````
 
-After that, prompts like “add a feature slice for invoices” land closer to the house style instead of generic controller soup.
+After that, prompts like "add a feature slice for invoices" land closer to the house style instead of generic controller soup.
 
 ### Skills for git / PRs
 
 I want the agent to ship the boring git loop without inventing commit noise. A git skill covers house rules: short why-focused commit messages, `Co-authored-by` lines when Hermes wrote most of the diff, PR title/body shape (summary + test plan), no force-push to main, don't commit secrets.
 
-That way “commit this and open a PR” produces something I'd actually submit, not a wall of AI filler.
+That way "commit this and open a PR" produces something I'd actually submit, not a wall of AI filler.
 
 ### Nuxt + Nuxt UI MCPs (live docs)
 
@@ -145,7 +145,7 @@ hermes mcp add nuxtui --url "https://ui.nuxt.com/mcp"
 
 Then `hermes mcp test nuxt` / `hermes mcp test nuxtui` (or `/reload-mcp` in a session).
 
-With those connected, asking “how do I use `UBadge` with an icon in Nuxt UI v4?” can pull real component metadata instead of a confident wrong API. Same for Nuxt routing, content, and module docs.
+With those connected, asking "how do I use `UBadge` with an icon in Nuxt UI v4?" can pull real component metadata instead of a confident wrong API. Same for Nuxt routing, content, and module docs.
 
 Day-to-day difference I've noticed: without MCP, Flash will happily invent prop names. With MCP, the UI glue is boring in a good way, which is what I want from a cheap agent.
 

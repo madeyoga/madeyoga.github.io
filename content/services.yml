@@ -2,8 +2,8 @@ title:
   en: Services
   id: Layanan
 description:
-  en: I help businesses build software that solves real problems. Here's what I offer.
-  id: Saya membantu bisnis membangun software yang menyelesaikan masalah nyata. Berikut yang saya tawarkan.
+  en: I build software that solves real business problems.
+  id: Saya membangun software yang menyelesaikan masalah bisnis yang nyata.
 
 items:
   - icon: i-lucide-globe
@@ -11,23 +11,23 @@ items:
       en: Web Development
       id: Pengembangan Web
     description:
-      en: Fullstack websites and web applications built with modern frameworks like Nuxt, .NET, and Django.
-      id: Website dan aplikasi web fullstack dibangun dengan framework modern seperti Nuxt, .NET, dan Django.
+      en: Fullstack sites and web apps on Nuxt, .NET, and Django.
+      id: Situs dan aplikasi web fullstack di atas Nuxt, .NET, dan Django.
     deliverables:
-      - en: Responsive company profiles and landing pages
-        id: Company profile dan landing page responsif
-      - en: Custom web applications (ERP, POS, Inventory)
-        id: Aplikasi web kustom (ERP, POS, Inventaris)
-      - en: SEO-optimized, fast-loading pages
-        id: Halaman SEO-friendly dengan loading cepat
+      - en: Company profiles and landing pages
+        id: Company profile dan landing page
+      - en: Custom web applications (ERP, POS, inventory)
+        id: Aplikasi web kustom (ERP, POS, inventaris)
+      - en: Pages that load fast and rank on Google
+        id: Halaman yang cepat dimuat dan muncul di Google
 
   - icon: i-lucide-settings
     title:
       en: Custom Software
       id: Software Kustom
     description:
-      en: Tailor-made business systems — from accounting to inventory management, built to fit your exact needs.
-      id: Sistem bisnis yang dibuat khusus — dari akuntansi hingga manajemen inventaris, dibangun sesuai kebutuhan Anda.
+      en: Business systems built around how you actually work, from accounting to inventory.
+      id: Sistem bisnis yang dibangun mengikuti cara kerja Anda, dari akuntansi sampai inventaris.
     deliverables:
       - en: Business process automation
         id: Otomatisasi proses bisnis
@@ -41,25 +41,25 @@ items:
       en: Landing Pages
       id: Landing Page
     description:
-      en: High-converting, beautifully designed landing pages for your product, company, or campaign.
-      id: Landing page dengan desain menarik dan konversi tinggi untuk produk, perusahaan, atau campaign Anda.
+      en: Landing pages built to convert, for a product, company, or campaign.
+      id: Landing page yang dibuat untuk konversi, buat produk, perusahaan, atau campaign.
     deliverables:
-      - en: SEO-optimized content and structure
-        id: Konten dan struktur SEO-friendly
-      - en: Mobile-responsive, fast performance
-        id: Responsif mobile dengan performa cepat
-      - en: Integrated analytics and tracking
-        id: Integrasi analytics dan tracking
+      - en: Content and structure tuned for search
+        id: Konten dan struktur yang dioptimalkan untuk pencarian
+      - en: Fast, and works on phones
+        id: Cepat dan nyaman di HP
+      - en: Analytics and tracking wired in
+        id: Analytics dan tracking terpasang
 
   - icon: i-lucide-lightbulb
     title:
       en: Consulting
       id: Konsultasi
     description:
-      en: Need help choosing the right tech stack or reviewing your architecture? I provide honest, practical advice.
-      id: Butuh bantuan memilih tech stack atau review arsitektur? Saya memberikan saran yang jujur dan praktis.
+      en: Not sure about your tech stack, or want a second pair of eyes on your architecture? I'll tell you straight what I'd do.
+      id: Bingung pilih tech stack, atau mau arsitektur dicek orang lain? Saya akan bilang terus terang apa yang akan saya lakukan.
     deliverables:
-      - en: Tech stack advisory and planning
+      - en: Tech stack advice and planning
         id: Konsultasi pemilihan tech stack
       - en: Code review and architecture audit
         id: Review kode dan audit arsitektur
@@ -73,40 +73,40 @@ process:
       en: Discovery
       id: Discovery
     description:
-      en: We discuss your goals, requirements, and constraints. I ask questions to understand your business.
-      id: Kita diskusikan tujuan, kebutuhan, dan batasan Anda. Saya akan bertanya untuk memahami bisnis Anda.
+      en: We talk through what you need and what's in the way. I ask questions until I understand the business.
+      id: Kita ngobrol soal kebutuhan dan kendala Anda. Saya bertanya sampai paham bisnisnya.
   - step: 2
     icon: i-lucide-pencil
     title:
       en: Plan
       id: Perencanaan
     description:
-      en: I create a clear project plan with milestones, tech choices, and timeline.
-      id: Saya buat rencana proyek yang jelas dengan milestone, pilihan teknologi, dan timeline.
+      en: I lay out a plan with milestones, the stack, and a timeline.
+      id: Saya susun rencana dengan milestone, pilihan teknologi, dan timeline.
   - step: 3
     icon: i-lucide-code
     title:
       en: Build
       id: Pengembangan
     description:
-      en: I build iteratively with regular check-ins, so you see progress and can give feedback early.
-      id: Saya bangun secara iteratif dengan update berkala, sehingga Anda bisa melihat progres dan memberi feedback.
+      en: I build in small steps with regular check-ins, so you see progress and can redirect early.
+      id: Saya bangun bertahap dengan update rutin, jadi Anda bisa lihat progres dan kasih masukan sejak awal.
   - step: 4
     icon: i-lucide-rocket
     title:
       en: Launch
       id: Peluncuran
     description:
-      en: Deployment, testing, and go-live with documentation and training if needed.
-      id: Deployment, testing, dan go-live dengan dokumentasi dan training jika diperlukan.
+      en: I handle deployment, testing, and go-live, plus docs and training if you need them.
+      id: Saya urus deployment, testing, dan go-live, plus dokumentasi dan training kalau perlu.
   - step: 5
     icon: i-lucide-wrench
     title:
       en: Support
       id: Dukungan
     description:
-      en: Post-launch support and maintenance to keep things running smoothly.
-      id: Dukungan dan maintenance pasca-launch untuk menjaga semuanya berjalan lancar.
+      en: Support and maintenance after launch, so things keep working.
+      id: Dukungan dan maintenance setelah launch, biar semuanya tetap jalan.
 
 sitemap:
   lastmod: 2026-07-11

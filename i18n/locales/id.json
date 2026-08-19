@@ -9,9 +9,9 @@
   },
   "hero": {
     "name": "Made Yoga",
-    "greeting": "Halo, Saya Made Yoga.",
+    "greeting": "Halo, saya Made Yoga.",
     "title": "Fullstack Software Developer",
-    "tagline": "Saya membangun tools open source untuk .NET dan mengeksplorasi AI agents & LLM — eksperimen jujur, resep praktis, dan software yang benar-benar rilis.",
+    "tagline": "Saya membangun tools open source untuk .NET dan mengutak-atik AI agents serta LLM. Eksperimen yang saya tulis, software yang memang dirilis.",
     "cta_work": "Open Source",
     "cta_blog": "Baca Blog",
     "cta_contact": "Hubungi Saya",
@@ -26,9 +26,9 @@
     "client_work": "Karya Klien",
     "open_source": "Open Source",
     "lab": "Lab",
-    "lab_description": "Yang sedang saya eksplorasi — agents, tooling, dan dasar LLM. Belum semua eksperimen bersifat publik.",
+    "lab_description": "Yang sedang saya coba: agents, tooling, dasar LLM. Belum semua eksperimennya publik.",
     "ai": "Membangun dengan AI & LLM",
-    "ai_description": "Insight, resep, tools, dan eksperimen yang jujur.",
+    "ai_description": "Catatan soal tools yang saya pakai dan eksperimen yang saya jalankan.",
     "view_all_projects": "Lihat Semua Proyek",
     "view_blog": "Lihat semua tulisan",
     "read_more": "Baca selengkapnya",
@@ -39,33 +39,33 @@
     "contact": "Kontak"
   },
   "lab": {
-    "exploring": "Mengeksplorasi",
+    "exploring": "Eksplorasi",
     "shipping": "Aktif",
     "paused": "Ditunda"
   },
   "stats": {
     "years": "Tahun Pengalaman",
-    "projects": "Proyek Selesai",
-    "clients": "Klien Puas"
+    "projects": "Proyek dirilis",
+    "clients": "Klien"
   },
   "cta": {
-    "title": "Siap membangun sesuatu?",
-    "description": "Mari diskusikan proyek Anda dan temukan solusi yang tepat untuk bisnis Anda.",
+    "title": "Ada proyek?",
+    "description": "Ceritakan apa yang Anda butuhkan. Saya bilang bisa dibantu atau tidak.",
     "button": "Hubungi Saya"
   },
   "footer": {
-    "tagline": "Fullstack software developer berbasis di Samarinda, Indonesia.",
+    "tagline": "Fullstack software developer di Samarinda, Indonesia.",
     "copyright": "Made Yoga Mahardika. Hak cipta dilindungi."
   },
   "services": {
     "web_dev_title": "Pengembangan Web",
-    "web_dev_desc": "Website dan aplikasi web fullstack dibangun dengan framework modern seperti Nuxt, .NET, dan Django.",
+    "web_dev_desc": "Situs dan aplikasi web fullstack di atas Nuxt, .NET, dan Django.",
     "custom_sw_title": "Software Kustom",
-    "custom_sw_desc": "Sistem bisnis yang dibuat khusus — ERP, POS, manajemen inventaris.",
+    "custom_sw_desc": "Sistem bisnis mengikuti cara kerja Anda: ERP, POS, inventaris.",
     "landing_title": "Landing Page",
-    "landing_desc": "Landing page dengan konversi tinggi dan desain menarik untuk produk, perusahaan, atau campaign Anda.",
+    "landing_desc": "Landing page yang dibuat untuk konversi, buat produk, perusahaan, atau campaign.",
     "consulting_title": "Konsultasi",
-    "consulting_desc": "Saran tech stack yang jujur, review kode, dan perencanaan arsitektur."
+    "consulting_desc": "Saran jujur soal tech stack, plus review kode dan perencanaan arsitektur."
   },
   "about": {
     "title": "Tentang Saya",

@@ -4,8 +4,8 @@ personal:
     en: Fullstack Software Developer
     id: Fullstack Software Developer
   bio:
-    en: I build software that drives business — from back-office systems to customer-facing platforms. I also maintain AuthEndpoints, an open-source auth library for ASP.NET Core, and explore AI agents and LLM tooling in public experiments.
-    id: Saya membangun software yang menggerakkan bisnis — dari sistem back-office hingga platform pelanggan. Saya juga mengelola AuthEndpoints, pustaka auth open source untuk ASP.NET Core, dan mengeksplorasi AI agents serta tooling LLM lewat eksperimen terbuka.
+    en: I build software for real businesses, from back-office systems to customer-facing platforms. I also maintain AuthEndpoints, an open-source auth library for ASP.NET Core, and tinker with AI agents and LLM tooling out in the open.
+    id: Saya membangun software untuk bisnis nyata, dari sistem back-office sampai platform pelanggan. Saya juga mengelola AuthEndpoints, pustaka auth open source untuk ASP.NET Core, dan mengutak-atik AI agents serta tooling LLM secara terbuka.
   image: /images/profile2.jpg
   location:
     en: Samarinda, Indonesia
@@ -24,22 +24,22 @@ values:
       en: Integrity
       id: Integritas
     description:
-      en: I make sure clients profit from the apps I build — their problem must be solved, and the software must earn its keep.
-      id: Saya memastikan klien mendapat keuntungan dari aplikasi yang saya bangun — masalah mereka harus terselesaikan, dan software harus layak untuk bisnis mereka.
+      en: I make sure clients profit from the apps I build. Their problem has to get solved, and the software has to earn its keep.
+      id: Saya memastikan klien untung dari aplikasi yang saya bangun. Masalah mereka harus selesai, dan software-nya harus layak untuk bisnis mereka.
   - icon: i-lucide-check
     title:
-      en: Value-Driven Solutions
-      id: Solusi Berorientasi Nilai
+      en: Practical results
+      id: Hasil nyata
     description:
-      en: I don't just write code; I solve business problems and build features that truly bring value to your project.
-      id: Saya tidak sekedar coding; saya menyelesaikan masalah bisnis dan membangun fitur yang memberi nilai nyata bagi proyek Anda.
+      en: I solve business problems first. The code is just how the fix ships.
+      id: Saya menyelesaikan masalah bisnis dulu. Coding cuma cara solusinya dikirim.
   - icon: i-lucide-check
     title:
       en: Adaptability
-      id: Kemampuan Adaptasi
+      id: Adaptif
     description:
-      en: Flexible to changing requirements and quick to adopt the best tools or workflows for your needs.
-      id: Fleksibel terhadap perubahan kebutuhan dan cepat beradaptasi dengan alat atau metode terbaik sesuai kebutuhan Anda.
+      en: Requirements change. I adjust, and I'll pick up whatever tool or workflow fits the job.
+      id: Kebutuhan bisa berubah. Saya menyesuaikan diri dan memakai alat atau metode apa pun yang cocok untuk pekerjaannya.
 
 experiences:
   - timeframe: 2022 - 2026

@@ -2,7 +2,7 @@ slug: pos-system
 title: Point of Sale & Inventory Management System
 category: work
 client: Indonesian Retail Store
-description: A custom-built point of sale and inventory management system for small to medium-sized retail stores. Runs entirely on local network.
+description: Point of sale and inventory system for small retail stores, running on the store's local network.
 image: /images/chrome_2025-07-24_14-44-25.jpg
 link: ""
 techstack:
@@ -16,22 +16,22 @@ features:
   - icon: i-lucide-check
     title: Dashboard and analytics
   - icon: i-lucide-check
-    title: Real-time sales tracking
+    title: Sales tracking
   - icon: i-lucide-check
     title: Product and stock management
   - icon: i-lucide-check
     title: User access control
   - icon: i-lucide-check
-    title: Invoicing / printable receipts
+    title: Invoicing and printable receipts
 problem:
-  en: Small retail stores needed an affordable, offline-capable POS system that didn't rely on cloud services or expensive subscription fees. Existing solutions were either too complex or required constant internet connectivity.
-  id: Toko ritel kecil membutuhkan sistem POS terjangkau yang bisa berjalan offline tanpa bergantung pada layanan cloud atau biaya berlangganan mahal. Solusi yang ada terlalu kompleks atau memerlukan koneksi internet konstan.
+  en: Small stores needed a POS they could afford and run without the internet. Existing options were either too complicated or needed a constant connection.
+  id: Toko kecil butuh POS yang terjangkau dan bisa jalan tanpa internet. Pilihan yang ada terlalu ribet atau butuh koneksi terus-menerus.
 solution:
-  en: Built a Django-based POS system that runs on the store's local network. Features include real-time sales tracking, inventory management with low-stock alerts, user role management, and printable receipts — all without internet dependency.
-  id: Membangun sistem POS berbasis Django yang berjalan di jaringan lokal toko. Fitur termasuk pelacakan penjualan real-time, manajemen inventaris dengan peringatan stok rendah, manajemen peran pengguna, dan struk yang dapat dicetak — semuanya tanpa ketergantungan internet.
+  en: We built a Django POS that runs on the store's local network. Sales tracking, inventory with low-stock alerts, user roles, and printable receipts, all without the internet.
+  id: Kami membangun POS Django yang berjalan di jaringan lokal toko. Pelacakan penjualan, inventaris dengan peringatan stok menipis, peran pengguna, dan struk cetak, semua tanpa internet.
 results:
-  en: The client eliminated monthly POS subscription costs and gained full control over their sales and inventory data. The system handles hundreds of daily transactions reliably.
-  id: Klien menghilangkan biaya berlangganan POS bulanan dan mendapatkan kontrol penuh atas data penjualan dan inventaris. Sistem menangani ratusan transaksi harian dengan andal.
+  en: The client dropped the monthly POS subscription and now owns their sales and inventory data. It handles hundreds of transactions a day.
+  id: Klien berhenti bayar langganan POS bulanan dan sekarang punya kendali penuh atas data penjualan dan inventaris. Sistem ini menangani ratusan transaksi sehari.
 
 sitemap:
   lastmod: 2025-08-09

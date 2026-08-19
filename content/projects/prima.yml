@@ -2,36 +2,36 @@ slug: Prima
 title: Prima - Pharmacy Chain
 category: work
 client: PT Kem Kem Primahusada
-description: ASP.NET Core backend system for pharmacy management — accounting, inventory tracking, billing, and invoicing.
-image: /images/chrome_2025-08-06_12-32-28.jpg
+description: ASP.NET Core backend for a pharmacy chain, covering accounting, inventory, billing, and invoicing.
+image: https://res.cloudinary.com/fpfvgqrg/image/upload/v1787128601/chrome_2025-08-06_12-32-28_qqkuuj.jpg
 link: ""
 techstack:
+  - icon: i-simple-icons-django
+    title: Django
   - icon: i-simple-icons-dotnet
     title: .NET 10
-  - icon: i-simple-icons-csharp
-    title: C#
   - icon: i-simple-icons-postgresql
     title: PostgreSQL
 features:
   - icon: i-lucide-check
-    title: Accounting & financial tracking
+    title: Accounting and finance
   - icon: i-lucide-check
-    title: Inventory & stock management
+    title: Inventory and stock
   - icon: i-lucide-check
-    title: Billing & invoicing system
+    title: Billing and invoicing
   - icon: i-lucide-check
-    title: Multi-role access control
+    title: Access by role
   - icon: i-lucide-check
-    title: Real-time reporting & analytics
+    title: Reporting and analytics
 problem:
-  en: A growing pharmacy chain needed a robust backend system to manage accounting, inventory, and billing across multiple branches. Their existing manual processes were error-prone and couldn't scale.
-  id: Jaringan apotek yang berkembang membutuhkan sistem backend yang kuat untuk mengelola akuntansi, inventaris, dan penagihan di beberapa cabang. Proses manual yang ada rawan kesalahan dan tidak bisa diskalakan.
+  en: A growing pharmacy chain was doing accounting, inventory, and billing by hand across its branches. It was error-prone and didn't scale as they grew.
+  id: Jaringan apotek yang berkembang masih mencatat akuntansi, inventaris, dan penagihan secara manual di tiap cabang. Rawan salah dan tidak ikut tumbuh saat cabang bertambah.
 solution:
-  en: Designed and built a complete ASP.NET Core backend with Entity Framework Core and PostgreSQL. The system handles multi-branch accounting, real-time inventory tracking with stock alerts, automated billing, and role-based access control. 
-  id: Merancang dan membangun backend ASP.NET Core lengkap dengan Entity Framework Core dan PostgreSQL. Sistem menangani akuntansi multi-cabang, pelacakan inventaris real-time dengan peringatan stok, penagihan otomatis, dan kontrol akses berbasis peran. 
+  en: We built an ASP.NET Core backend on Entity Framework Core and PostgreSQL. It handles accounting across branches, inventory with low-stock alerts, automatic billing, and access by role.
+  id: Kami membangun backend ASP.NET Core dengan Entity Framework Core dan PostgreSQL. Ia menangani akuntansi antar-cabang, inventaris dengan peringatan stok menipis, penagihan otomatis, dan akses berdasarkan peran.
 results:
-  en: The pharmacy chain now operates with centralized data across all branches. Manual errors reduced significantly, and inventory tracking became automated. The system scales to support future branch expansion.
-  id: Jaringan apotek sekarang beroperasi dengan data terpusat di semua cabang. Kesalahan manual berkurang signifikan, dan pelacakan inventaris menjadi otomatis. Sistem dapat diskalakan untuk mendukung ekspansi cabang di masa depan.
+  en: Every branch now shares one source of data. Errors dropped, inventory tracks itself, and there's room to add more branches.
+  id: Semua cabang sekarang memakai satu sumber data. Kesalahan menurun, inventaris terpantau otomatis, dan masih ada ruang untuk menambah cabang.
 
 sitemap:
   lastmod: 2026-07-11

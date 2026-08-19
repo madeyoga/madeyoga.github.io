@@ -1,5 +1,5 @@
 sitemap:
-  lastmod: 2026-08-01
+  lastmod: 2026-08-19
 title: "Made Yoga Mahardika | Software Engineer .NET Nuxt"
 hero:
   intro: Hey, I'm Made Yoga.
@@ -16,21 +16,22 @@ techstack:
   - title: Nuxt
     icon: i-vscode-icons-file-type-nuxt
 lab:
+  - title: Hermes Agent Bot Mode
+    status: shipping
+    description: "Three specialist bots (Blogi, Nuxti, Aspi) on Hermes Agent Bot Mode: skills, MCPs, and how they hand work off."
+    link: /blog/hermes-bot-mode
   - title: Hermes Agent + DeepSeek
     status: shipping
-    description: Daily-driver AI coding agent setup for ASP.NET Core and Nuxt — skills, MCP servers, and workflows that actually speed up backend work.
+    description: "Daily-driver AI coding agent setup for ASP.NET Core and Nuxt: skills, MCP servers, and workflows that actually speed up backend work."
     link: /blog/ai-agent-workflow-deepseek-hermes
   - title: Cursor-assisted development
     status: exploring
-    description: Using Cursor as a pair-programming environment for portfolio work, content, and .NET library iteration — learning what sticks in a real workflow.
-  - title: Fine-tuning LLMs with Unsloth
-    status: exploring
-    description: Still exploring how fine-tuning works and how LLMs learn — Unsloth experiments are private for now while I figure out the fundamentals.
+    description: Using Cursor as a pair-programming environment for portfolio work, content, and .NET library iteration. Figuring out what sticks in a real workflow.
 projects:
   - slug: authendpoints
     title: AuthEndpoints
     category: opensource
-    description: A composable authentication endpoints library for ASP.NET Core — registration, login, 2FA, password reset, and passkeys bootstrapped in minutes.
+    description: A composable auth endpoints library for ASP.NET Core. Registration, login, 2FA, password reset, and passkeys, bootstrapped in minutes.
     link: https://madeyoga.github.io/AuthEndpoints/
     repo: https://github.com/madeyoga/AuthEndpoints
     docs: https://madeyoga.github.io/AuthEndpoints/
@@ -59,7 +60,7 @@ contact:
     - title: Youtube
       icon: i-simple-icons-youtube
       url: https://www.youtube.com/@madey02
-    - title: Tiktok 
+    - title: Tiktok
       icon: i-simple-icons-tiktok
       url: https://www.tiktok.com/@boggg_
     - title: Github

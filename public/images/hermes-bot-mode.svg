@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hermes Agent Bot Mode</title>
+  <desc id="desc">Three specialist bots: Blogi, Nuxti, and Aspi</desc>
+  <rect width="1600" height="900" fill="#111827"/>
+  <circle cx="180" cy="160" r="220" fill="#14b8a6" opacity="0.08"/>
+  <circle cx="1480" cy="760" r="280" fill="#14b8a6" opacity="0.06"/>
+  <text x="800" y="210" text-anchor="middle" fill="#99f6e4" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="4">HERMES AGENT</text>
+  <text x="800" y="290" text-anchor="middle" fill="#f9fafb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="72" font-weight="700">Bot Mode</text>
+  <text x="800" y="350" text-anchor="middle" fill="#9ca3af" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28">three specialist teammates</text>
+  <g>
+    <rect x="220" y="470" width="340" height="220" rx="24" fill="#1f2937" stroke="#14b8a6" stroke-width="2"/>
+    <text x="390" y="560" text-anchor="middle" fill="#f9fafb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="36" font-weight="700">Blogi</text>
+    <text x="390" y="610" text-anchor="middle" fill="#99f6e4" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22">content writer</text>
+  </g>
+  <g>
+    <rect x="630" y="470" width="340" height="220" rx="24" fill="#1f2937" stroke="#14b8a6" stroke-width="2"/>
+    <text x="800" y="560" text-anchor="middle" fill="#f9fafb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="36" font-weight="700">Nuxti</text>
+    <text x="800" y="610" text-anchor="middle" fill="#99f6e4" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22">Nuxt UI engineer</text>
+  </g>
+  <g>
+    <rect x="1040" y="470" width="340" height="220" rx="24" fill="#1f2937" stroke="#14b8a6" stroke-width="2"/>
+    <text x="1210" y="560" text-anchor="middle" fill="#f9fafb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="36" font-weight="700">Aspi</text>
+    <text x="1210" y="610" text-anchor="middle" fill="#99f6e4" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22">ASP.NET backend</text>
+  </g>
+</svg>
