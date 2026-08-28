@@ -11,11 +11,17 @@
     "name": "Made Yoga",
     "greeting": "Hey, I'm Made Yoga.",
     "title": "Fullstack Software Developer",
-    "tagline": "I build open-source tools for .NET and tinker with AI agents and LLMs. Experiments I write up, software I ship.",
+    "tagline": "Fullstack software developer in Samarinda. Custom software for businesses, open-source tools for .NET.",
     "cta_work": "Open Source",
     "cta_blog": "Read the Blog",
     "cta_contact": "Work with me",
+    "cta_docs": "Read the docs",
     "location": "Samarinda, Indonesia"
+  },
+  "seo": {
+    "home_title_name": "Made Yoga Mahardika",
+    "home_title_role": "Fullstack Developer in Samarinda",
+    "home_description": "Fullstack software developer in Samarinda. I build custom software for businesses, open-source tools for .NET, and write up the experiments I actually run."
   },
   "section": {
     "techstack": "Tech Stack",
@@ -58,13 +64,13 @@
     "copyright": "Made Yoga Mahardika. All rights reserved."
   },
   "services": {
-    "web_dev_title": "Web Development",
+    "web_dev_title": "Need a site that ranks in Indonesia?",
     "web_dev_desc": "Fullstack sites and web apps on Nuxt, .NET, and Django.",
-    "custom_sw_title": "Custom Software",
+    "custom_sw_title": "Still running the toko, klinik, or gudang on spreadsheets?",
     "custom_sw_desc": "Business systems built around how you work: ERP, POS, inventory.",
-    "landing_title": "Landing Pages",
+    "landing_title": "Need a company profile that actually converts?",
     "landing_desc": "Landing pages built to convert, for a product, company, or campaign.",
-    "consulting_title": "Consulting",
+    "consulting_title": "Want a straight answer before you build?",
     "consulting_desc": "Honest advice on your stack, plus code review and architecture planning."
   },
   "about": {

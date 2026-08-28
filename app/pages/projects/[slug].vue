@@ -3,7 +3,7 @@ const route = useRoute()
 const localePath = useLocalePath()
 const { locale, t: i18nT } = useI18n()
 
-const slug = computed(() => route.params.slug as string)
+const slug = computed(() => String(route.params.slug || '').toLowerCase())
 const { data: project } = await useAsyncData(`project-${slug.value}`, () =>
   queryCollection('projectsDetail').where('slug', '=', slug.value).first()
 )
@@ -12,13 +12,15 @@ if (!project.value) {
 }
 
 const t = (obj: any) => obj?.[locale.value] || obj?.en || ''
+const localize = useLocalizedField()
 const isOpenSource = computed(() => project.value?.category === 'opensource')
 const openSourceLabel = computed(() => i18nT('section.open_source'))
+const description = computed(() => localize(project.value?.description))
 
 useSeoMeta({
   title: project.value?.title || 'Project',
-  ogTitle: `${project.value?.title} — Made Yoga Mahardika`,
-  description: project.value?.description || '',
+  ogTitle: `${project.value?.title} | Made Yoga Mahardika`,
+  description,
 })
 </script>
 
@@ -47,15 +49,27 @@ useSeoMeta({
             {{ isOpenSource ? openSourceLabel : project.client }}
           </p>
           <h1 class="text-3xl font-bold dark:text-white mb-3">{{ project.title }}</h1>
-          <p class="text-muted text-[15px] leading-relaxed">{{ project.description }}</p>
+          <p class="text-muted text-[15px] leading-relaxed">{{ description }}</p>
 
           <div class="mt-4 flex flex-wrap gap-3">
+            <UButton
+              v-if="project.docs"
+              icon="i-lucide-book-open"
+              size="md"
+              color="primary"
+              variant="solid"
+              :to="project.docs"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {{ $t('hero.cta_docs') }}
+            </UButton>
             <UButton
               v-if="project.repo"
               icon="i-simple-icons-github"
               size="md"
-              color="primary"
-              variant="solid"
+              color="neutral"
+              variant="outline"
               :to="project.repo"
               target="_blank"
               rel="noreferrer noopener"
@@ -63,19 +77,7 @@ useSeoMeta({
               GitHub
             </UButton>
             <UButton
-              v-if="project.docs"
-              icon="i-lucide-book-open"
-              size="md"
-              color="neutral"
-              variant="outline"
-              :to="project.docs"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Docs
-            </UButton>
-            <UButton
-              v-else-if="project.link"
+              v-if="project.link && !project.docs"
               icon="i-lucide-external-link"
               size="md"
               color="neutral"
@@ -91,17 +93,34 @@ useSeoMeta({
 
         <!-- Tech Stack -->
         <div class="flex flex-wrap gap-2 mb-10">
-          <UBadge
-            v-for="tech in project.techstack"
-            :key="tech.title"
-            size="md"
-            color="neutral"
-            variant="outline"
-            class="gap-1.5"
-          >
-            <UIcon :name="tech.icon" class="w-4 h-4" />
-            {{ tech.title }}
-          </UBadge>
+          <template v-for="tech in project.techstack" :key="tech.title">
+            <a
+              v-if="tech.url"
+              :href="tech.url"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <UBadge
+                size="md"
+                color="neutral"
+                variant="outline"
+                class="gap-1.5"
+              >
+                <UIcon :name="tech.icon" class="w-4 h-4" />
+                {{ tech.title }}
+              </UBadge>
+            </a>
+            <UBadge
+              v-else
+              size="md"
+              color="neutral"
+              variant="outline"
+              class="gap-1.5"
+            >
+              <UIcon :name="tech.icon" class="w-4 h-4" />
+              {{ tech.title }}
+            </UBadge>
+          </template>
         </div>
 
         <!-- Problem -->

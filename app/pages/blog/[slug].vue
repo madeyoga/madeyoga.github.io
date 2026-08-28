@@ -35,16 +35,38 @@ const { data: surround } = await useAsyncData(
 
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
+const articleImage = post.value?.image?.src
+  ? (post.value.image.src.startsWith('http')
+      ? post.value.image.src
+      : `https://madeyoga.github.io${post.value.image.src}`)
+  : 'https://madeyoga.github.io/og-image.png'
 
-// Ensure the schema.org is rendered
-useSeoMeta(post.value.seo || {
+useSeoMeta({
+  ...(post.value.seo || {}),
   title,
   ogTitle: title,
   description,
   ogDescription: description,
-  ogImage: post.value.image.src
+  ogImage: articleImage,
+  twitterImage: articleImage,
 })
-useSchemaOrg(post.value.schemaOrg || {})
+
+useJsonLdGraph([
+  {
+    '@type': 'Article',
+    '@id': `${canonicalUrl(contentPath.value)}#article`,
+    headline: title,
+    name: title,
+    description,
+    image: articleImage,
+    datePublished: post.value.date,
+    dateModified: post.value.date,
+    inLanguage: 'en',
+    author: { '@id': 'https://madeyoga.github.io/#person' },
+    publisher: { '@id': 'https://madeyoga.github.io/#person' },
+    mainEntityOfPage: { '@id': `${canonicalUrl(contentPath.value)}#webpage` },
+  },
+], 'jsonld-article')
 
 const { formattedDate } = useFormattedDate(post.value?.date || new Date())
 </script>

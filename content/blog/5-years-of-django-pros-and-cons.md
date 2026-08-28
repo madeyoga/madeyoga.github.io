@@ -3,6 +3,7 @@ title: "What 5 Years with Django Taught Me: Pros and Cons"
 description: After half a decade of building apps with Django, here's my honest take on its strengths, weaknesses, and the lessons I've learned along the way.
 image:
   src: /images/chrome_2025-07-24_14-44-25.jpg
+  alt: Custom Django admin dashboard for a parts shop, with revenue and inventory
 authors:
   - name: Made Y
     to: /

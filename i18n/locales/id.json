@@ -11,11 +11,17 @@
     "name": "Made Yoga",
     "greeting": "Halo, saya Made Yoga.",
     "title": "Fullstack Software Developer",
-    "tagline": "Saya membangun tools open source untuk .NET dan mengutak-atik AI agents serta LLM. Eksperimen yang saya tulis, software yang memang dirilis.",
+    "tagline": "Fullstack software developer di Samarinda. Software kustom untuk bisnis, tools open source untuk .NET.",
     "cta_work": "Open Source",
     "cta_blog": "Baca Blog",
     "cta_contact": "Hubungi Saya",
+    "cta_docs": "Read the docs",
     "location": "Samarinda, Indonesia"
+  },
+  "seo": {
+    "home_title_name": "Made Yoga Mahardika",
+    "home_title_role": "Fullstack Developer di Samarinda",
+    "home_description": "Fullstack software developer di Samarinda. Saya bangun software kustom untuk bisnis, tools open source untuk .NET, dan menulis eksperimen yang memang saya jalankan."
   },
   "section": {
     "techstack": "Tech Stack",
@@ -58,13 +64,13 @@
     "copyright": "Made Yoga Mahardika. Hak cipta dilindungi."
   },
   "services": {
-    "web_dev_title": "Pengembangan Web",
+    "web_dev_title": "Perlu situs yang tembus Google Indonesia?",
     "web_dev_desc": "Situs dan aplikasi web fullstack di atas Nuxt, .NET, dan Django.",
-    "custom_sw_title": "Software Kustom",
+    "custom_sw_title": "Toko, klinik, atau gudang masih jalan pakai spreadsheet?",
     "custom_sw_desc": "Sistem bisnis mengikuti cara kerja Anda: ERP, POS, inventaris.",
-    "landing_title": "Landing Page",
+    "landing_title": "Perlu company profile yang benar-benar convert?",
     "landing_desc": "Landing page yang dibuat untuk konversi, buat produk, perusahaan, atau campaign.",
-    "consulting_title": "Konsultasi",
+    "consulting_title": "Mau jawaban terang sebelum dibangun?",
     "consulting_desc": "Saran jujur soal tech stack, plus review kode dan perencanaan arsitektur."
   },
   "about": {

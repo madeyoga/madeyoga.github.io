@@ -25,14 +25,14 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
     </div>
 
     <div class="min-w-0 flex-1 flex flex-col justify-center p-4 sm:p-6 lg:px-0">
-      <a 
-        :href="props.to || '#'" 
-        tabindex="-1" 
-        :aria-label="props.title" 
+      <NuxtLink
+        :to="props.to || '#'"
+        tabindex="-1"
+        :aria-label="props.title"
         class="focus:outline-none peer"
       >
         <span class="absolute inset-0" aria-hidden="true"></span>
-      </a>
+      </NuxtLink>
       <div class="flex items-center gap-2 mb-2">
         <span class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-accented text-default bg-elevated">
           <span class="truncate">{{ props.badge?.label }}</span>

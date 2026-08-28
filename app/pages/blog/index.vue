@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
 const { data: page } = await useAsyncData('blog', () => queryCollection('blog').first())
 const { data: posts } = await useAsyncData('blog_index_posts', () => queryCollection('posts').all())
 
@@ -7,7 +8,7 @@ const description = page.value?.seo?.description || page.value?.description
 
 useSeoMeta({
   title,
-  ogTitle: title,
+  ogTitle: title ? `${title} | Made Yoga Mahardika` : title,
   description,
   ogDescription: description
 })
@@ -31,7 +32,7 @@ useSeoMeta({
       <BlogPost
         v-for="(post, index) in posts"
         :key="`${post.path}-${post.title}-${index}`"
-        :to="post.path"
+        :to="localePath(post.path)"
         :title="post.title"
         :description="post.description"
         :image="post.image"

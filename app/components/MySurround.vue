@@ -4,12 +4,14 @@ import type { ContentNavigationItem } from '@nuxt/content';
 defineProps<{
   surround: ContentNavigationItem[] | undefined,
 }>()
+
+const localePath = useLocalePath()
 </script>
 
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-8" v-if="surround">
     <template v-if="surround[0]">
-      <NuxtLink :to="surround[0].path">
+      <NuxtLink :to="localePath(surround[0].path)">
         <UCard variant="outline">
           <UButton icon="i-lucide-arrow-left" size="md" color="primary" variant="outline" class="rounded-full mb-4" />
           <p class="font-medium text-[15px] text-highlighted mb-1 truncate">{{ surround[0].title }}</p>
@@ -22,7 +24,7 @@ defineProps<{
     </template>
 
     <template v-if="surround[1]">
-      <NuxtLink :to="surround[1].path">
+      <NuxtLink :to="localePath(surround[1].path)">
         <UCard variant="outline" class="text-right">
           <UButton icon="i-lucide-arrow-right" size="md" color="primary" variant="outline" class="rounded-full mb-4" />
           <p class="font-medium text-[15px] text-highlighted mb-1 truncate">{{ surround[1].title }}</p>

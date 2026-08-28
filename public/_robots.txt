@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://webporto.m26416083.workers.dev/sitemap.xml
+Sitemap: https://madeyoga.github.io/sitemap.xml
+Sitemap: https://madeyoga.github.io/AuthEndpoints/sitemap.xml

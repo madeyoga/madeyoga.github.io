@@ -2,7 +2,9 @@ slug: authendpoints
 title: AuthEndpoints
 category: opensource
 client: Open Source
-description: A composable auth endpoints library for ASP.NET Core. Registration, login, 2FA, password reset, and passkeys, bootstrapped in minutes.
+description:
+  en: Ready-made auth endpoints on top of ASP.NET Core Identity. Registration, login, 2FA, password reset, and passkeys, mapped in minutes.
+  id: Endpoint auth siap pakai di atas ASP.NET Core Identity. Registrasi, login, 2FA, reset password, dan passkeys, dipetakan dalam hitungan menit.
 image: /images/authendpoints-3-0-rc.png
 link: https://madeyoga.github.io/AuthEndpoints/
 repo: https://github.com/madeyoga/AuthEndpoints
@@ -14,6 +16,7 @@ techstack:
     title: C#
   - icon: i-simple-icons-nuget
     title: NuGet
+    url: https://www.nuget.org/packages/AuthEndpoints
 features:
   - icon: i-lucide-check
     title: Composable auth endpoints & modules
@@ -32,8 +35,8 @@ solution:
   en: AuthEndpoints turns that work into a composable library on top of ASP.NET Core Identity. Pick your modules, set the token strategy, and map a secure auth layer in minutes instead of a week of copy-paste.
   id: AuthEndpoints mengubahnya menjadi pustaka composable di atas ASP.NET Core Identity. Pilih modul, atur strategi token, dan petakan lapisan auth yang aman dalam hitungan menit, bukan seminggu copy-paste.
 results:
-  en: AuthEndpoints 3.0 RC ships with passkeys, hardened defaults, and public docs. Auth setup becomes a step, not a phase.
-  id: AuthEndpoints 3.0 RC hadir dengan passkeys, default yang sudah diperkuat, dan dokumentasi publik. Setup auth jadi satu langkah, bukan satu fase.
+  en: AuthEndpoints 3.0 ships with passkeys, hardened defaults, and public docs. Auth setup becomes a step, not a phase.
+  id: AuthEndpoints 3.0 hadir dengan passkeys, default yang sudah diperkuat, dan dokumentasi publik. Setup auth jadi satu langkah, bukan satu fase.
 
 sitemap:
   lastmod: 2026-08-01
