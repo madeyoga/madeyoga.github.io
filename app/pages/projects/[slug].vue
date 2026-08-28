@@ -3,7 +3,7 @@ const route = useRoute()
 const localePath = useLocalePath()
 const { locale, t: i18nT } = useI18n()
 
-const slug = computed(() => route.params.slug as string)
+const slug = computed(() => String(route.params.slug || '').toLowerCase())
 const { data: project } = await useAsyncData(`project-${slug.value}`, () =>
   queryCollection('projectsDetail').where('slug', '=', slug.value).first()
 )

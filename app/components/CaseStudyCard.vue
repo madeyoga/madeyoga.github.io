@@ -15,7 +15,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`/projects/${slug}`)" class="block group">
+  <NuxtLink :to="localePath(`/projects/${String(slug).toLowerCase()}`)" class="block group">
     <div class="rounded-lg border border-default overflow-hidden hover:border-primary transition-colors">
       <div class="overflow-hidden">
         <img

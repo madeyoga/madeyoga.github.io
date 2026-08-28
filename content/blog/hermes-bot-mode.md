@@ -56,7 +56,7 @@ Bot Mode ships built into the desktop app and is on by default. No plugin instal
 
 ## Why I split the work
 
-I'm a [fullstack .NET and Nuxt developer](/about). Most weeks that's minimal APIs, EF Core, PostgreSQL, Nuxt pages, and the occasional blog post about the same stack. One profile can do all of that. It just does it with a bloated prompt.
+I'm a [fullstack .NET and Nuxt developer](/services). Most weeks that's minimal APIs, EF Core, PostgreSQL, Nuxt pages, and the occasional blog post about the same stack. One profile can do all of that. It just does it with a bloated prompt.
 
 Skills in Hermes are `SKILL.md` files. The agent keeps a light index and pulls full rules when a skill is invoked, which helps with token burn. Even so, a profile that holds writing skills, Nuxt UI skills, and ASP.NET skills will grab the wrong house style. Coding turns start sounding like blog intros, and writing turns invent Nuxt prop names.
 

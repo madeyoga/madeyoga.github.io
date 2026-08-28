@@ -35,16 +35,36 @@ const { data: surround } = await useAsyncData(
 
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
+const articleImage = post.value?.image?.src
+  ? (post.value.image.src.startsWith('http')
+      ? post.value.image.src
+      : `https://madeyoga.github.io${post.value.image.src}`)
+  : 'https://madeyoga.github.io/og-image.png'
 
-// Ensure the schema.org is rendered
-useSeoMeta(post.value.seo || {
+useSeoMeta({
+  ...(post.value.seo || {}),
   title,
   ogTitle: title,
   description,
   ogDescription: description,
-  ogImage: post.value.image.src
+  ogImage: articleImage,
+  twitterImage: articleImage,
 })
-useSchemaOrg(post.value.schemaOrg || {})
+
+useSchemaOrg([
+  defineArticle({
+    headline: title,
+    name: title,
+    description,
+    image: articleImage,
+    datePublished: post.value.date,
+    dateModified: post.value.date,
+    author: {
+      name: 'Made Yoga Mahardika',
+      url: 'https://madeyoga.github.io',
+    },
+  }),
+])
 
 const { formattedDate } = useFormattedDate(post.value?.date || new Date())
 </script>

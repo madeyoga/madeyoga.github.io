@@ -1,20 +1,22 @@
 <script setup lang="ts">
-const { locale, locales, setLocale } = useI18n()
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 const availableLocales = computed(() => locales.value.map(loc => ({
-  code: loc.code,
-  name: loc.name || loc.code
+  code: typeof loc === 'string' ? loc : loc.code,
+  name: typeof loc === 'string' ? loc : (loc.name || loc.code)
 })))
-
-function switchLocale(code: string) {
-  setLocale(code)
-}
 </script>
 
 <template>
   <ClientOnly>
     <UDropdownMenu
-      :items="availableLocales.map(l => ({ label: l.name, type: 'checkbox' as const, checked: locale === l.code, onSelect: () => switchLocale(l.code) }))"
+      :items="availableLocales.map(l => ({
+        label: l.name,
+        type: 'link' as const,
+        checked: locale === l.code,
+        to: switchLocalePath(l.code),
+      }))"
     >
       <UButton
         color="neutral"

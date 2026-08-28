@@ -1,0 +1,16 @@
+# Made Yoga Mahardika
+
+> Personal site of Made Yoga Mahardika, a fullstack software developer based in Samarinda, Indonesia.
+
+## Site
+
+- [Home](https://madeyoga.github.io/): Profile, open-source work, and current experiments
+- [Blog](https://madeyoga.github.io/blog): Notes on .NET, Nuxt, Django, and AI tooling
+- [Projects](https://madeyoga.github.io/projects): Open-source libraries and client work
+- [AuthEndpoints docs](https://madeyoga.github.io/AuthEndpoints): Documentation for the ASP.NET Core auth library
+
+## Also
+
+- [Services](https://madeyoga.github.io/services)
+- [Contact](https://madeyoga.github.io/contact)
+- [GitHub](https://github.com/madeyoga)

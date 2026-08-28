@@ -1,10 +1,10 @@
-# 💼 My Developer Portfolio
+# My Developer Portfolio
 
-This is my personal portfolio website, built using [Nuxt 4](https://nuxt.com/) and deployed on Cloudflare Workers.
+This is my personal portfolio website, built using [Nuxt 4](https://nuxt.com/). The public site is GitHub Pages; a Cloudflare Workers deploy exists as a duplicate and is noindex.
 
 The site showcases techstack, selected projects, work experience, and contact information.
 
-🔗 **Live site:** [https://webporto.m26416083.workers.dev](https://webporto.m26416083.workers.dev)
+🔗 **Live site:** [https://madeyoga.github.io](https://madeyoga.github.io)
 
 Feel free to fork and customize.
 
@@ -26,12 +26,17 @@ pnpm dev
 
 ### Production
 
-Generate the static site and deploy to Cloudflare Workers:
+Generate the static site:
 
 ```bash
-pnpm deploy
+pnpm generate
 ```
 
-CI deploys on every push to `main`. Add a GitHub Actions secret named `CLOUDFLARE_API_TOKEN` with **Edit Cloudflare Workers** permission.
+CI deploys on every push to `main`:
+
+- GitHub Pages (public / indexable)
+- Cloudflare Workers at `webporto.m26416083.workers.dev` (noindex duplicate)
+
+Add a GitHub Actions secret named `CLOUDFLARE_API_TOKEN` with **Edit Cloudflare Workers** permission to keep the Workers copy in sync.
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

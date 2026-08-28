@@ -5,8 +5,15 @@ const { data: page } = await useAsyncData(() => queryCollection('index').first()
 const { data: posts } = await useAsyncData('home_ai_posts', () => queryCollection('posts').all())
 
 useHead({
-  title: page.value.title
+  title: page.value?.title
 })
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'ProfilePage',
+    name: page.value?.title || 'Made Yoga Mahardika',
+  }),
+])
 
 const openSourceProjects = computed(() =>
   (page.value?.projects || []).filter(p => p.category === 'opensource')

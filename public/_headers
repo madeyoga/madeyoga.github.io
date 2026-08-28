@@ -1,0 +1,10 @@
+# Cloudflare Workers only — GitHub Pages ignores this file.
+# Keep github.io indexable; this duplicate workers.dev copy must not be.
+https://webporto.m26416083.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:preview.webporto.m26416083.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:worker.m26416083.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
