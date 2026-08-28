@@ -19,7 +19,8 @@
     "location": "Samarinda, Indonesia"
   },
   "seo": {
-    "home_title": "Made Yoga Mahardika | Fullstack Developer in Samarinda",
+    "home_title_name": "Made Yoga Mahardika",
+    "home_title_role": "Fullstack Developer in Samarinda",
     "home_description": "Fullstack software developer in Samarinda. I build custom software for businesses, open-source tools for .NET, and write up the experiments I actually run."
   },
   "section": {

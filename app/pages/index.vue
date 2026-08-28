@@ -5,9 +5,12 @@ const { t } = useI18n()
 const { data: page } = await useAsyncData(() => queryCollection('index').first())
 const { data: posts } = await useAsyncData('home_ai_posts', () => queryCollection('posts').all())
 
+// Join in code: vue-i18n treats `|` in messages as a plural separator.
+const homeTitle = computed(() => `${t('seo.home_title_name')} | ${t('seo.home_title_role')}`)
+
 useSeoMeta({
-  title: t('seo.home_title'),
-  ogTitle: t('seo.home_title'),
+  title: homeTitle,
+  ogTitle: homeTitle,
   description: t('seo.home_description'),
   ogDescription: t('seo.home_description'),
 })
