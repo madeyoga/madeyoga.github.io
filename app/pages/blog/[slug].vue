@@ -51,20 +51,22 @@ useSeoMeta({
   twitterImage: articleImage,
 })
 
-useSchemaOrg([
-  defineArticle({
+useJsonLdGraph([
+  {
+    '@type': 'Article',
+    '@id': `${canonicalUrl(contentPath.value)}#article`,
     headline: title,
     name: title,
     description,
     image: articleImage,
     datePublished: post.value.date,
     dateModified: post.value.date,
-    author: {
-      name: 'Made Yoga Mahardika',
-      url: 'https://madeyoga.github.io',
-    },
-  }),
-])
+    inLanguage: 'en',
+    author: { '@id': 'https://madeyoga.github.io/#person' },
+    publisher: { '@id': 'https://madeyoga.github.io/#person' },
+    mainEntityOfPage: { '@id': `${canonicalUrl(contentPath.value)}#webpage` },
+  },
+], 'jsonld-article')
 
 const { formattedDate } = useFormattedDate(post.value?.date || new Date())
 </script>

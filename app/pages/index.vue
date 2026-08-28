@@ -8,13 +8,6 @@ useHead({
   title: page.value?.title
 })
 
-useSchemaOrg([
-  defineWebPage({
-    '@type': 'ProfilePage',
-    name: page.value?.title || 'Made Yoga Mahardika',
-  }),
-])
-
 const openSourceProjects = computed(() =>
   (page.value?.projects || []).filter(p => p.category === 'opensource')
 )

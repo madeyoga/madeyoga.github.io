@@ -6,7 +6,13 @@ const props = defineProps<{
 }>()
 
 const localePath = useLocalePath()
-const isNotFound = computed(() => props.error?.statusCode === 404)
+const isNotFound = computed(() => {
+  const code = Number(props.error?.statusCode || 0)
+  if (code === 404) return true
+  // Static hosts serve 404.html, then the client may fail to parse a missing payload as 500.
+  const msg = `${props.error?.message || ''} ${props.error?.statusMessage || ''}`
+  return /not found|JSON|Unexpected token|<html/i.test(msg)
+})
 const title = computed(() =>
   isNotFound.value ? 'Page not found' : 'Something went wrong'
 )
@@ -30,7 +36,7 @@ useSeoMeta({
 
         <main class="py-24 text-center">
           <p class="text-primary font-semibold text-sm tracking-widest uppercase mb-4">
-            {{ error?.statusCode || 404 }}
+            {{ isNotFound ? 404 : (error?.statusCode || 500) }}
           </p>
           <h1 class="text-3xl sm:text-4xl font-bold text-highlighted mb-4">
             {{ title }}

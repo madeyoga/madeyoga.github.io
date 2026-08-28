@@ -1,5 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
-import { copyFileSync, existsSync, lstatSync, rmSync } from 'node:fs'
+import { copyFileSync, existsSync, lstatSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const siteUrl = 'https://madeyoga.github.io'
@@ -19,24 +19,10 @@ export default defineNuxtConfig({
     indexable: true,
   },
   schemaOrg: {
-    identity: {
-      type: 'Person',
-      name: 'Made Yoga Mahardika',
-      url: siteUrl,
-      image: '/images/profile2.jpg',
-      jobTitle: 'Fullstack Software Developer',
-      email: 'madeybog@gmail.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Samarinda',
-        addressCountry: 'ID',
-      },
-      sameAs: [
-        'https://github.com/madeyoga',
-        'https://www.linkedin.com/in/made-mahardika-4a205a379/',
-        'https://www.youtube.com/@madey02',
-      ],
-    },
+    // nuxt-schema-org's Unhead plugin does not register under the current unhead
+    // override (empty <script type="application/ld+json">). JSON-LD is emitted
+    // from app/plugins/json-ld.ts instead.
+    enabled: false,
   },
   // GitHub Pages has no OG screenshot runtime; use the static 1200x630 file instead.
   ogImage: {
@@ -190,6 +176,20 @@ export default defineNuxtConfig({
           rmSync(sitemapPath, { recursive: true, force: true })
         }
         copyFileSync(indexPath, sitemapPath)
+      }
+
+      const notFoundPath = join(pub, '404.html')
+      if (existsSync(notFoundPath)) {
+        let html = readFileSync(notFoundPath, 'utf8')
+        html = html.replace('<html>', '<html lang="en">')
+        if (!/<title[\s>]/i.test(html)) {
+          html = html.replace('</head>', '<title>Page not found · Made Yoga Mahardika</title></head>')
+        }
+        html = html.replace(
+          '<div id="__nuxt" class="isolate"></div>',
+          `<div id="__nuxt" class="isolate"><div class="min-h-screen max-w-190 mx-auto pt-10 border-default sm:border-x"><div class="px-4 sm:px-6 pt-18"><main class="py-24 text-center"><p class="text-primary font-semibold text-sm tracking-widest uppercase mb-4">404</p><h1 class="text-3xl sm:text-4xl font-bold mb-4">Page not found</h1><p class="text-muted text-[15px] mb-8">That URL is not on this site.</p><p><a href="/" class="text-primary font-medium">Back to home</a></p></main></div></div></div>`
+        )
+        writeFileSync(notFoundPath, html)
       }
     },
   },
