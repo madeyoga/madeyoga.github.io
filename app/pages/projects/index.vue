@@ -1,4 +1,6 @@
 <script setup>
+const { t } = useI18n()
+const localize = useLocalizedField()
 const { data: projects } = await useAsyncData('projects_list', () => queryCollection('projectsDetail').all())
 
 const workProjects = computed(() =>
@@ -9,9 +11,9 @@ const openSourceProjects = computed(() =>
 )
 
 useSeoMeta({
-  title: 'Projects',
-  ogTitle: 'Projects — Made Yoga Mahardika',
-  description: 'Open-source software and client work — libraries like AuthEndpoints, plus web apps, custom systems, and landing pages.',
+  title: t('nav.projects'),
+  ogTitle: `${t('nav.projects')} | Made Yoga Mahardika`,
+  description: t('section.projects_description'),
 })
 </script>
 
@@ -36,7 +38,7 @@ useSeoMeta({
               :key="project.slug"
               :slug="project.slug"
               :title="project.title"
-              :description="project.description"
+              :description="localize(project.description)"
               :image="project.image"
               :techstack="project.techstack"
               :client="project.client"
@@ -57,7 +59,7 @@ useSeoMeta({
               :key="project.slug"
               :slug="project.slug"
               :title="project.title"
-              :description="project.description"
+              :description="localize(project.description)"
               :image="project.image"
               :techstack="project.techstack"
               :client="project.client"

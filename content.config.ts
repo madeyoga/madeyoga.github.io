@@ -22,7 +22,8 @@ export default defineContentConfig({
         }),
         techstack: z.array(z.object({
           icon: z.string(),
-          title: z.string()
+          title: z.string(),
+          url: z.string().optional()
         })),
         lab: z.array(z.object({
           title: z.string(),
@@ -34,14 +35,18 @@ export default defineContentConfig({
           slug: z.string(),
           title: z.string(),
           category: z.enum(['work', 'opensource']).default('work'),
-          description: z.string(),
+          description: z.union([
+            z.string(),
+            z.object({ en: z.string(), id: z.string() })
+          ]),
           link: z.string().optional(),
           repo: z.string().optional(),
           docs: z.string().optional(),
           image: z.string(),
           techstack: z.array(z.object({
             icon: z.string(),
-            title: z.string()
+            title: z.string(),
+            url: z.string().optional()
           })),
           features: z.array(z.object({
             icon: z.string(),
@@ -72,7 +77,7 @@ export default defineContentConfig({
       schema: z.object({
         sitemap: defineSitemapSchema(),
         schemaOrg: defineSchemaOrgSchema(),
-        image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+        image: z.object({ src: z.string().nonempty().editor({ input: 'media' }), alt: z.string().optional() }),
         authors: z.array(
           z.object({
             name: z.string().nonempty(),
@@ -145,13 +150,16 @@ export default defineContentConfig({
         title: z.string(),
         category: z.enum(['work', 'opensource']).default('work'),
         client: z.string().optional(),
-        description: z.string(),
+        description: z.union([
+          z.string(),
+          z.object({ en: z.string(), id: z.string() })
+        ]),
         longDescription: z.object({ en: z.string(), id: z.string() }).optional(),
         image: z.string(),
         link: z.string().optional(),
         repo: z.string().optional(),
         docs: z.string().optional(),
-        techstack: z.array(z.object({ icon: z.string(), title: z.string() })),
+        techstack: z.array(z.object({ icon: z.string(), title: z.string(), url: z.string().optional() })),
         features: z.array(z.object({ icon: z.string(), title: z.string() })),
         problem: z.object({ en: z.string(), id: z.string() }).optional(),
         solution: z.object({ en: z.string(), id: z.string() }).optional(),

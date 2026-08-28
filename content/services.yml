@@ -8,8 +8,8 @@ description:
 items:
   - icon: i-lucide-globe
     title:
-      en: Web Development
-      id: Pengembangan Web
+      en: Need a site that ranks in Indonesia?
+      id: Perlu situs yang tembus Google Indonesia?
     description:
       en: Fullstack sites and web apps on Nuxt, .NET, and Django.
       id: Situs dan aplikasi web fullstack di atas Nuxt, .NET, dan Django.
@@ -23,8 +23,8 @@ items:
 
   - icon: i-lucide-settings
     title:
-      en: Custom Software
-      id: Software Kustom
+      en: Still running the toko, klinik, or gudang on spreadsheets?
+      id: Toko, klinik, atau gudang masih jalan pakai spreadsheet?
     description:
       en: Business systems built around how you actually work, from accounting to inventory.
       id: Sistem bisnis yang dibangun mengikuti cara kerja Anda, dari akuntansi sampai inventaris.
@@ -38,8 +38,8 @@ items:
 
   - icon: i-lucide-palette
     title:
-      en: Landing Pages
-      id: Landing Page
+      en: Need a company profile that actually converts?
+      id: Perlu company profile yang benar-benar convert?
     description:
       en: Landing pages built to convert, for a product, company, or campaign.
       id: Landing page yang dibuat untuk konversi, buat produk, perusahaan, atau campaign.
@@ -53,8 +53,8 @@ items:
 
   - icon: i-lucide-lightbulb
     title:
-      en: Consulting
-      id: Konsultasi
+      en: Want a straight answer before you build?
+      id: Mau jawaban terang sebelum dibangun?
     description:
       en: Not sure about your tech stack, or want a second pair of eyes on your architecture? I'll tell you straight what I'd do.
       id: Bingung pilih tech stack, atau mau arsitektur dicek orang lain? Saya akan bilang terus terang apa yang akan saya lakukan.

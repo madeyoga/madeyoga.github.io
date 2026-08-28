@@ -12,6 +12,8 @@ const props = defineProps([
   'repo',
   'docs'
 ])
+
+const hasExternalCtas = computed(() => !!(props.docs || props.repo || props.link))
 </script>
 
 <template>
@@ -35,30 +37,6 @@ const props = defineProps([
           class="w-full aspect-video object-cover"
           :class="props.slug ? 'group-hover:scale-105 transition-transform duration-300' : ''"
         />
-        <div v-if="(props.link || props.repo) && props.slug" class="absolute top-3 right-3 z-20 flex gap-2">
-          <UButton
-            v-if="props.repo"
-            icon="i-simple-icons-github"
-            size="sm"
-            color="neutral"
-            variant="solid"
-            :to="props.repo"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Open GitHub repository"
-          />
-          <UButton
-            v-else-if="props.link"
-            icon="i-lucide-external-link"
-            size="sm"
-            color="neutral"
-            variant="solid"
-            :to="props.link"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Open project website"
-          />
-        </div>
       </div>
 
       <div>
@@ -73,17 +51,35 @@ const props = defineProps([
       </p>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" v-if="props.techstack">
-        <UBadge
-          v-for="tech in props.techstack"
-          :key="`${props.title} - techstack - ${tech.title} - ${tech.icon}`"
-          size="md"
-          color="neutral"
-          variant="outline"
-          class="justify-center gap-1.5"
-        >
-          <UIcon :name="tech.icon" class="w-4 h-4" />
-          {{ tech.title }}
-        </UBadge>
+        <template v-for="tech in props.techstack" :key="`${props.title} - techstack - ${tech.title} - ${tech.icon}`">
+          <a
+            v-if="tech.url"
+            :href="tech.url"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="relative z-20 justify-self-stretch"
+          >
+            <UBadge
+              size="md"
+              color="neutral"
+              variant="outline"
+              class="w-full justify-center gap-1.5"
+            >
+              <UIcon :name="tech.icon" class="w-4 h-4" />
+              {{ tech.title }}
+            </UBadge>
+          </a>
+          <UBadge
+            v-else
+            size="md"
+            color="neutral"
+            variant="outline"
+            class="justify-center gap-1.5"
+          >
+            <UIcon :name="tech.icon" class="w-4 h-4" />
+            {{ tech.title }}
+          </UBadge>
+        </template>
       </div>
 
       <div class="mt-4" v-if="props.features">
@@ -97,7 +93,19 @@ const props = defineProps([
         </ul>
       </div>
 
-      <div v-if="(props.link || props.repo) && !props.slug" class="mt-4 relative z-20 flex flex-wrap gap-2">
+      <div v-if="hasExternalCtas" class="mt-4 relative z-20 flex flex-wrap gap-2">
+        <UButton
+          v-if="props.docs"
+          icon="i-lucide-book-open"
+          size="md"
+          color="primary"
+          variant="solid"
+          :to="props.docs"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {{ $t('hero.cta_docs') }}
+        </UButton>
         <UButton
           v-if="props.repo"
           icon="i-simple-icons-github"
@@ -111,7 +119,7 @@ const props = defineProps([
           GitHub
         </UButton>
         <UButton
-          v-if="props.link"
+          v-if="props.link && !props.docs"
           icon="i-lucide-external-link"
           size="md"
           color="neutral"

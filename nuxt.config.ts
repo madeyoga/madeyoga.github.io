@@ -18,6 +18,9 @@ export default defineNuxtConfig({
     name: 'Made Yoga Mahardika',
     indexable: true,
   },
+  seo: {
+    titleSeparator: '|',
+  },
   schemaOrg: {
     // nuxt-schema-org's Unhead plugin does not register under the current unhead
     // override (empty <script type="application/ld+json">). JSON-LD is emitted

@@ -1,9 +1,9 @@
 sitemap:
   lastmod: 2026-08-19
-title: "Made Yoga Mahardika | Software Engineer .NET Nuxt"
+title: "Made Yoga Mahardika | Fullstack Developer in Samarinda"
 hero:
   intro: Hey, I'm Made Yoga.
-  title: "[Hey, I'm Made Yoga.]{.text-primary} Fullstack Software Developer."
+  title: "Fullstack software developer in Samarinda. Custom software for businesses, open-source tools for .NET."
   location: Samarinda, Indonesia
   links:
     - icon: i-simple-icons-github
@@ -31,7 +31,9 @@ projects:
   - slug: authendpoints
     title: AuthEndpoints
     category: opensource
-    description: A composable auth endpoints library for ASP.NET Core. Registration, login, 2FA, password reset, and passkeys, bootstrapped in minutes.
+    description:
+      en: Ready-made auth endpoints on top of ASP.NET Core Identity. Registration, login, 2FA, password reset, and passkeys, mapped in minutes.
+      id: Endpoint auth siap pakai di atas ASP.NET Core Identity. Registrasi, login, 2FA, reset password, dan passkeys, dipetakan dalam hitungan menit.
     link: https://madeyoga.github.io/AuthEndpoints/
     repo: https://github.com/madeyoga/AuthEndpoints
     docs: https://madeyoga.github.io/AuthEndpoints/
@@ -43,6 +45,7 @@ projects:
         title: C#
       - icon: i-simple-icons-nuget
         title: NuGet
+        url: https://www.nuget.org/packages/AuthEndpoints
     features:
       - icon: i-lucide-check
         title: Composable auth endpoints & modules

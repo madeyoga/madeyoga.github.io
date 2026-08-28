@@ -1,8 +1,10 @@
 <script setup>
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Contact',
-  ogTitle: 'Contact Made Yoga Mahardika',
-  description: 'Get in touch — available for freelance projects and consulting.',
+  title: t('nav.contact'),
+  ogTitle: `${t('nav.contact')} | Made Yoga Mahardika`,
+  description: t('cta.description'),
 })
 </script>
 

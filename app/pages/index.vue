@@ -1,11 +1,15 @@
 <script setup>
 import ProjectCard from '~/components/ProjectCard.vue'
 
+const { t } = useI18n()
 const { data: page } = await useAsyncData(() => queryCollection('index').first())
 const { data: posts } = await useAsyncData('home_ai_posts', () => queryCollection('posts').all())
 
-useHead({
-  title: page.value?.title
+useSeoMeta({
+  title: t('seo.home_title'),
+  ogTitle: t('seo.home_title'),
+  description: t('seo.home_description'),
+  ogDescription: t('seo.home_description'),
 })
 
 const openSourceProjects = computed(() =>
@@ -17,6 +21,7 @@ const aiPosts = computed(() => {
   return list
     .filter((post) => {
       const label = post.badge?.label?.toLowerCase() || ''
+      if (label.includes('django')) return false
       const haystack = `${post.title || ''} ${post.description || ''} ${label}`.toLowerCase()
       return label.includes('ai') || haystack.includes('llm') || haystack.includes('hermes') || haystack.includes('agent')
     })
@@ -25,6 +30,7 @@ const aiPosts = computed(() => {
 })
 
 const localePath = useLocalePath()
+const localize = useLocalizedField()
 </script>
 
 <template>
@@ -45,10 +51,7 @@ const localePath = useLocalePath()
               <h1 class="text-center md:text-start font-bold text-4xl tracking-tight leading-tight">
                 <span class="text-primary">{{ $t('hero.name') }}</span>
               </h1>
-              <p class="text-center md:text-start font-semibold text-xl mt-2 dark:text-white">
-                {{ $t('hero.title') }}
-              </p>
-              <p class="text-center md:text-start text-muted mt-3 text-[15px] leading-relaxed">
+              <p class="text-center md:text-start font-semibold text-xl mt-2 dark:text-white text-pretty leading-relaxed">
                 {{ $t('hero.tagline') }}
               </p>
             </div>
@@ -122,7 +125,7 @@ const localePath = useLocalePath()
               v-for="project in openSourceProjects"
               :key="project.title"
               :title="project.title"
-              :description="project.description"
+              :description="localize(project.description)"
               :link="project.link"
               :image="project.image"
               :techstack="project.techstack"

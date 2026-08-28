@@ -3,6 +3,7 @@ title: "Experimenting with Hermes Agent + DeepSeek-V4-Flash-0731 for ASP.NET Cor
 description: Lab notes on running Hermes Agent with DeepSeek-V4-Flash-0731 beta, teaching .NET and Nuxt via skills, wiring Nuxt and Nuxt UI MCPs, and what still feels rough.
 image:
   src: https://res.cloudinary.com/fpfvgqrg/image/upload/v1785599903/logo_w9akfu.png
+  alt: Hermes Agent logo
 authors:
   - name: Made Y
     to: /

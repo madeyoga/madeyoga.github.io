@@ -8,7 +8,7 @@ const description = page.value?.seo?.description || page.value?.description
 
 useSeoMeta({
   title,
-  ogTitle: title,
+  ogTitle: title ? `${title} | Made Yoga Mahardika` : title,
   description,
   ogDescription: description
 })

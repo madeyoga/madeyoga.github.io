@@ -12,6 +12,11 @@ useHead(() => ({
   },
   link: [...(i18nHead.value.link || [])],
   meta: [...(i18nHead.value.meta || [])],
+  titleTemplate: (title?: string) => {
+    const site = 'Made Yoga Mahardika'
+    if (!title) return site
+    return title.includes(site) ? title : `${title} | ${site}`
+  },
 }))
 
 useSeoMeta({

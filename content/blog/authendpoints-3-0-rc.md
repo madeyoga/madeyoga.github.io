@@ -3,6 +3,7 @@ title: "AuthEndpoints 3.0 RC: a composable auth endpoints library for ASP.NET Co
 description: "Announcing AuthEndpoints 3.0 RC, an auth library for ASP.NET Core. Composable auth endpoints on top of ASP.NET Core Identity: registration, login, 2FA, password reset, and passkeys bootstrapped in minutes."
 image:
   src: /images/authendpoints-3-0-rc.png
+  alt: Dark blue abstract cover for the AuthEndpoints 3.0 post
 authors:
   - name: Made Y
     to: /

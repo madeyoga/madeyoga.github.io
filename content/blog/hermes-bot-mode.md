@@ -3,6 +3,7 @@ title: "Hermes Agent Bot Mode: how I split work across three specialist bots"
 description: "How I run Hermes Agent Bot Mode with three specialist bots (Blogi, Nuxti, Aspi): what a Bot is, how they message each other, and what still feels unfinished."
 image:
   src: /images/hermes-bot-mode.svg
+  alt: "Hermes Agent Bot Mode with three specialist bots: Blogi, Nuxti, and Aspi"
 authors:
   - name: Made Y
     to: /

@@ -14,7 +14,7 @@ const workProjects = computed(() =>
 
 useSeoMeta({
   title: t(page.value?.title) || 'Services',
-  ogTitle: `${t(page.value?.title) || 'Services'} — Made Yoga Mahardika`,
+  ogTitle: `${t(page.value?.title) || 'Services'} | Made Yoga Mahardika`,
   description: t(about.value?.personal?.bio) || t(page.value?.description) || '',
 })
 </script>
@@ -94,7 +94,7 @@ useSeoMeta({
               <div class="flex items-start gap-4">
                 <UIcon :name="item.icon" class="w-10 h-10 text-primary shrink-0 mt-1" />
                 <div>
-                  <h3 class="text-xl font-semibold dark:text-white mb-2">{{ t(item.title) }}</h3>
+                  <h2 class="text-xl font-semibold dark:text-white mb-2">{{ t(item.title) }}</h2>
                   <p class="text-muted text-[15px] leading-relaxed mb-4">{{ t(item.description) }}</p>
                   <ul class="space-y-2">
                     <li
@@ -180,7 +180,7 @@ useSeoMeta({
               :key="project.slug"
               :slug="project.slug"
               :title="project.title"
-              :description="project.description"
+              :description="t(project.description) || project.description"
               :image="project.image"
               :techstack="project.techstack"
               :client="project.client"
