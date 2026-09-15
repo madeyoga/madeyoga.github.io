@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { data: page } = await useAsyncData('blog', () => queryCollection('blog').first())
-const { data: posts } = await useAsyncData('blog_index_posts', () => queryCollection('posts').all())
+const { data: posts } = await useAsyncData('blog_index_posts', () => queryCollection('posts').order('date', 'DESC').all())
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
