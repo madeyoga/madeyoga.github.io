@@ -39,10 +39,9 @@ That loop works when you are already sitting there. It failed as soon as the day
 
 What broke in practice:
 
-- Bad or flaky internet killed the local agent mid-tool-call. The chat stalled. I had to restart and re-explain context.
-- It felt like micromanaging the agent. I stayed next to the PC to unblock prompts, approve steps, and catch hangs.
-- The PC had to stay on and unlocked. AFK meant the run stalled.
-- Closing the lid or letting the laptop sleep ended the session.
+- Bad or flaky internet killed the local agent mid-tool-call. The chat stalled. 
+- It felt like micromanaging the agent. I stayed next to the PC to unblock prompts and approve steps.
+- The PC had to stay on and unlocked. 
 - The agent was tied to that open workspace. Another device could not continue the same local run.
 
 I was not avoiding agents. I was babysitting a local loop that only worked while I stayed in the chair.
@@ -141,14 +140,6 @@ Proof means concrete artifacts:
 I review those artifacts from Grok Bot or the PR. I do **not** need to open a local agent, open the IDE, or run the project locally just to smoke-test the change.
 
 If verification fails, or there is no proof, I do not trust the merge. CI still matters. Proof sits on top of CI, not instead of it. Secrets, production deploys, and coordinated disclosure stay human-gated.
-
-## What this is not
-
-This is not "I never open an editor." I open the editor when I want a careful diff read, a local experiment, or IDE-only tools.
-
-This is not "cloud agents replace review." I review proof. CI gates merges. I still say when to merge.
-
-This is not a claim that every repo is ready for unattended agents on day one. Without a verification skill and a Feature Map, you are back to summaries and hope.
 
 ## What I would tell another freelancer
 
