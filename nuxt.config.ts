@@ -200,6 +200,12 @@ export default defineNuxtConfig({
         )
         writeFileSync(notFoundPath, html)
       }
+
+      const doubledLocale = join(pub, 'id/id')
+      if (existsSync(doubledLocale)) {
+        // i18n crawl of /id/about and /id/services also emits /id/id/* stub pages.
+        rmSync(doubledLocale, { recursive: true, force: true })
+      }
     },
   },
   icon: {
