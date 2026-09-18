@@ -118,28 +118,6 @@ export default defineContentConfig({
         })).optional(),
       })
     }),
-    services: defineCollection({
-      type: 'page',
-      source: 'services.yml',
-      schema: z.object({
-        sitemap: defineSitemapSchema(),
-        schemaOrg: defineSchemaOrgSchema(),
-        title: z.object({ en: z.string(), id: z.string() }),
-        description: z.object({ en: z.string(), id: z.string() }),
-        items: z.array(z.object({
-          icon: z.string(),
-          title: z.object({ en: z.string(), id: z.string() }),
-          description: z.object({ en: z.string(), id: z.string() }),
-          deliverables: z.array(z.object({ en: z.string(), id: z.string() }))
-        })),
-        process: z.array(z.object({
-          step: z.number(),
-          icon: z.string(),
-          title: z.object({ en: z.string(), id: z.string() }),
-          description: z.object({ en: z.string(), id: z.string() })
-        }))
-      })
-    }),
     projectsDetail: defineCollection({
       type: 'page',
       source: 'projects/*.yml',

@@ -2,7 +2,6 @@
   "nav": {
     "home": "Beranda",
     "about": "Tentang",
-    "services": "Layanan",
     "projects": "Proyek",
     "blog": "Blog",
     "contact": "Kontak"
@@ -11,7 +10,7 @@
     "name": "Made Yoga",
     "greeting": "Halo, saya Made Yoga.",
     "title": "Fullstack Software Developer",
-    "tagline": "Fullstack software developer di Samarinda. Software kustom untuk bisnis, tools open source untuk .NET.",
+    "tagline": "Fullstack software developer di Samarinda. Tools open source untuk .NET, karya klien, dan catatan soal apa yang saya bangun.",
     "cta_work": "Open Source",
     "cta_blog": "Baca Blog",
     "cta_contact": "Hubungi Saya",
@@ -21,7 +20,7 @@
   "seo": {
     "home_title_name": "Made Yoga Mahardika",
     "home_title_role": "Fullstack Developer di Samarinda",
-    "home_description": "Fullstack software developer di Samarinda. Saya bangun software kustom untuk bisnis, tools open source untuk .NET, dan menulis eksperimen yang memang saya jalankan."
+    "home_description": "Fullstack software developer di Samarinda. Tools open source untuk .NET, karya klien, dan tulisan soal eksperimen yang memang saya jalankan."
   },
   "section": {
     "techstack": "Tech Stack",
@@ -39,9 +38,6 @@
     "view_blog": "Lihat semua tulisan",
     "read_more": "Baca selengkapnya",
     "view_client_work": "Lihat semua karya klien",
-    "offerings": "Yang Saya Tawarkan",
-    "process": "Cara Saya Bekerja",
-    "services": "Yang Saya Kerjakan",
     "contact": "Kontak"
   },
   "lab": {
@@ -55,23 +51,16 @@
     "clients": "Klien"
   },
   "cta": {
-    "title": "Ada proyek?",
-    "description": "Ceritakan apa yang Anda butuhkan. Saya bilang bisa dibantu atau tidak.",
-    "button": "Hubungi Saya"
+    "title": "Hubungi saya",
+    "description": "Saya di Samarinda. Email cara tercepat untuk menghubungi saya.",
+    "button": "Kirim email"
+  },
+  "contact": {
+    "note": "Email cara tercepat untuk menghubungi saya."
   },
   "footer": {
     "tagline": "Fullstack software developer di Samarinda, Indonesia.",
     "copyright": "Made Yoga Mahardika. Hak cipta dilindungi."
-  },
-  "services": {
-    "web_dev_title": "Perlu situs yang tembus Google Indonesia?",
-    "web_dev_desc": "Situs dan aplikasi web fullstack di atas Nuxt, .NET, dan Django.",
-    "custom_sw_title": "Toko, klinik, atau gudang masih jalan pakai spreadsheet?",
-    "custom_sw_desc": "Sistem bisnis mengikuti cara kerja Anda: ERP, POS, inventaris.",
-    "landing_title": "Perlu company profile yang benar-benar convert?",
-    "landing_desc": "Landing page yang dibuat untuk konversi, buat produk, perusahaan, atau campaign.",
-    "consulting_title": "Mau jawaban terang sebelum dibangun?",
-    "consulting_desc": "Saran jujur soal tech stack, plus review kode dan perencanaan arsitektur."
   },
   "about": {
     "title": "Tentang Saya",

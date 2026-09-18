@@ -11,6 +11,5 @@
 
 ## Also
 
-- [Services](https://madeyoga.github.io/services)
 - [Contact](https://madeyoga.github.io/contact)
 - [GitHub](https://github.com/madeyoga)
