@@ -7,7 +7,7 @@
       color="neutral"
       variant="solid"
       class="rounded-full px-8"
-      to="mailto:madeybog@gmail.com?subject=Project%20Inquiry"
+      to="mailto:madeybog@gmail.com"
     >
       {{ $t('cta.button') }}
     </UButton>

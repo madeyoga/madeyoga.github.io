@@ -13,7 +13,7 @@ const localePath = useLocalePath()
             </NuxtLink>
           </li>
           <li class="py-2 min-w-0">
-            <NuxtLink :to="localePath('/services')" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">{{ $t('nav.services') }}</NuxtLink>
+            <NuxtLink :to="localePath('/about')" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">{{ $t('nav.about') }}</NuxtLink>
           </li>
           <li class="py-2 min-w-0">
             <NuxtLink :to="localePath('/projects')" class="w-full flex items-center gap-1.5 font-medium text-sm px-2 py-1">{{ $t('nav.projects') }}</NuxtLink>

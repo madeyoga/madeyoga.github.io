@@ -75,10 +75,10 @@ export default defineNuxtConfig({
     ],
   },
   routeRules: {
-    '/about': { redirect: { to: '/services', statusCode: 301 } },
-    '/about/': { redirect: { to: '/services', statusCode: 301 } },
-    '/id/about': { redirect: { to: '/id/services', statusCode: 301 } },
-    '/id/about/': { redirect: { to: '/id/services', statusCode: 301 } },
+    '/services': { redirect: { to: '/projects', statusCode: 301 } },
+    '/services/': { redirect: { to: '/projects', statusCode: 301 } },
+    '/id/services': { redirect: { to: '/id/projects', statusCode: 301 } },
+    '/id/services/': { redirect: { to: '/id/projects', statusCode: 301 } },
   },
   experimental: {
     prerenderErrorPages: true,
@@ -159,6 +159,8 @@ export default defineNuxtConfig({
         '/id/projects/prima',
         '/about',
         '/id/about',
+        '/services',
+        '/id/services',
       ],
       crawlLinks: true,
     }

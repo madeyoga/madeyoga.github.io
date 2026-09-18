@@ -11,7 +11,7 @@ const localePath = useLocalePath()
 
       <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
         <NuxtLink :to="localePath('/')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.home') }}</NuxtLink>
-        <NuxtLink :to="localePath('/services')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.services') }}</NuxtLink>
+        <NuxtLink :to="localePath('/about')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.about') }}</NuxtLink>
         <NuxtLink :to="localePath('/projects')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.projects') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.blog') }}</NuxtLink>
         <NuxtLink :to="localePath('/contact')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.contact') }}</NuxtLink>
