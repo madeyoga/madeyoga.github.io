@@ -1,4 +1,8 @@
 # Cloudflare Workers 301s. GitHub Pages ignores this file.
+/about /services 301
+/about/ /services 301
+/id/about /id/services 301
+/id/about/ /id/services 301
 /services /projects 301
 /services/ /projects 301
 /id/services /id/projects 301

@@ -5,7 +5,6 @@
 ## Site
 
 - [Home](https://madeyoga.github.io/): Profile, open-source work, and current experiments
-- [About](https://madeyoga.github.io/about): Bio, values, and work experience
 - [Blog](https://madeyoga.github.io/blog): Notes on .NET, Nuxt, Django, and AI tooling
 - [Projects](https://madeyoga.github.io/projects): Open-source libraries and client work
 - [AuthEndpoints docs](https://madeyoga.github.io/AuthEndpoints): Documentation for the ASP.NET Core auth library
