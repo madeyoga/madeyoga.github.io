@@ -20,8 +20,8 @@ useHead(() => ({
 }))
 
 useSeoMeta({
-  ogImage: 'https://madeyoga.github.io/og-image.png',
-  twitterImage: 'https://madeyoga.github.io/og-image.png',
+  ogImage: 'https://madeyoga.harten.id/og-image.png',
+  twitterImage: 'https://madeyoga.harten.id/og-image.png',
   twitterCard: 'summary_large_image',
 })
 </script>

@@ -34,9 +34,9 @@ projects:
     description:
       en: Ready-made auth endpoints on top of ASP.NET Core Identity. Registration, login, 2FA, password reset, and passkeys, mapped in minutes.
       id: Endpoint auth siap pakai di atas ASP.NET Core Identity. Registrasi, login, 2FA, reset password, dan passkeys, dipetakan dalam hitungan menit.
-    link: https://madeyoga.github.io/AuthEndpoints/
+    link: https://authendpoints.harten.id/
     repo: https://github.com/madeyoga/AuthEndpoints
-    docs: https://madeyoga.github.io/AuthEndpoints/
+    docs: https://authendpoints.harten.id/
     image: /images/authendpoints-3-0-rc.png
     techstack:
       - icon: i-simple-icons-dotnet
