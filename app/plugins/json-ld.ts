@@ -5,11 +5,11 @@ export default defineNuxtPlugin(() => {
 
   const website = {
     '@type': 'WebSite',
-    '@id': 'https://madeyoga.github.io/#website',
-    url: 'https://madeyoga.github.io/',
+    '@id': 'https://madeyoga.harten.id/#website',
+    url: 'https://madeyoga.harten.id/',
     name: 'Made Yoga Mahardika',
     inLanguage: ['en', 'id'],
-    publisher: { '@id': 'https://madeyoga.github.io/#person' },
+    publisher: { '@id': 'https://madeyoga.harten.id/#person' },
   }
 
   useJsonLdGraph([
@@ -19,8 +19,8 @@ export default defineNuxtPlugin(() => {
       '@type': 'WebPage',
       '@id': `${canonicalUrl(route.path)}#webpage`,
       url: canonicalUrl(route.path),
-      isPartOf: { '@id': 'https://madeyoga.github.io/#website' },
-      about: { '@id': 'https://madeyoga.github.io/#person' },
+      isPartOf: { '@id': 'https://madeyoga.harten.id/#website' },
+      about: { '@id': 'https://madeyoga.harten.id/#person' },
     },
   ])
 })

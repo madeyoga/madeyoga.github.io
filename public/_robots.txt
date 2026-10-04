@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://madeyoga.github.io/sitemap.xml
-Sitemap: https://madeyoga.github.io/AuthEndpoints/sitemap.xml
+Sitemap: https://madeyoga.harten.id/sitemap.xml

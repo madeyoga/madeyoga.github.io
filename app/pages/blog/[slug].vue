@@ -38,8 +38,8 @@ const description = post.value?.seo?.description || post.value?.description
 const articleImage = post.value?.image?.src
   ? (post.value.image.src.startsWith('http')
       ? post.value.image.src
-      : `https://madeyoga.github.io${post.value.image.src}`)
-  : 'https://madeyoga.github.io/og-image.png'
+      : `https://madeyoga.harten.id${post.value.image.src}`)
+  : 'https://madeyoga.harten.id/og-image.png'
 
 useSeoMeta({
   ...(post.value.seo || {}),
@@ -62,8 +62,8 @@ useJsonLdGraph([
     datePublished: post.value.date,
     dateModified: post.value.date,
     inLanguage: 'en',
-    author: { '@id': 'https://madeyoga.github.io/#person' },
-    publisher: { '@id': 'https://madeyoga.github.io/#person' },
+    author: { '@id': 'https://madeyoga.harten.id/#person' },
+    publisher: { '@id': 'https://madeyoga.harten.id/#person' },
     mainEntityOfPage: { '@id': `${canonicalUrl(contentPath.value)}#webpage` },
   },
 ], 'jsonld-article')

@@ -4,7 +4,7 @@ This is my personal portfolio website, built using [Nuxt 4](https://nuxt.com/). 
 
 The site showcases techstack, selected projects, work experience, and contact information.
 
-🔗 **Live site:** [https://madeyoga.github.io](https://madeyoga.github.io)
+🔗 **Live site:** [https://madeyoga.harten.id](https://madeyoga.harten.id)
 
 Feel free to fork and customize.
 

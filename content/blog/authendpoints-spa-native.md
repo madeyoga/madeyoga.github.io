@@ -94,7 +94,7 @@ ReAuth covers step-up. Change email, change password, or other sensitive manage 
 
 I still write email senders, pick passkey domains, and choose cookie vs bearer per client. Identity stays the membership system. AuthEndpoints is the endpoints layer I got tired of copying.
 
-Docs: [madeyoga.github.io/AuthEndpoints](https://madeyoga.github.io/AuthEndpoints). Package: [NuGet AuthEndpoints](https://www.nuget.org/packages/AuthEndpoints/). Source: [github.com/madeyoga/AuthEndpoints](https://github.com/madeyoga/AuthEndpoints).
+Docs: [authendpoints.harten.id](https://authendpoints.harten.id/). Package: [NuGet AuthEndpoints](https://www.nuget.org/packages/AuthEndpoints/). Source: [github.com/madeyoga/AuthEndpoints](https://github.com/madeyoga/AuthEndpoints).
 
 ## Summary
 
@@ -106,4 +106,4 @@ If you are shipping a SPA or native client on Identity and the MapIdentityApi pa
 dotnet add package AuthEndpoints
 ```
 
-Read the [quick start](https://madeyoga.github.io/AuthEndpoints/getting-started/quick-start), star the [repo](https://github.com/madeyoga/AuthEndpoints) if it helps, and open an issue when a route does not match your client.
+Read the [quick start](https://authendpoints.harten.id/getting-started/quick-start), star the [repo](https://github.com/madeyoga/AuthEndpoints) if it helps, and open an issue when a route does not match your client.

@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { copyFileSync, existsSync, lstatSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const siteUrl = 'https://madeyoga.github.io'
+const siteUrl = 'https://madeyoga.harten.id'
 
 export default defineNuxtConfig({
   modules: [
@@ -71,7 +71,6 @@ export default defineNuxtConfig({
   robots: {
     sitemap: [
       `${siteUrl}/sitemap.xml`,
-      `${siteUrl}/AuthEndpoints/sitemap.xml`,
     ],
   },
   routeRules: {

@@ -94,5 +94,5 @@ Install the package, or open the demo and click through the flows. If something 
 
 - **Demo app**: [madeyoga/AuthEndpointsDemo](https://github.com/madeyoga/AuthEndpointsDemo), an ASP.NET Core API plus a Nuxt 4 / Nuxt UI playground, so you can click through the flows without writing a frontend first.
 - **Feedback**: open an issue on [madeyoga/AuthEndpoints](https://github.com/madeyoga/AuthEndpoints/issues).
-- **Docs**: [madeyoga.github.io/AuthEndpoints](https://madeyoga.github.io/AuthEndpoints/) with configuration, composable modules, route tables, and production guidance.
+- **Docs**: [authendpoints.harten.id](https://authendpoints.harten.id/) with configuration, composable modules, route tables, and production guidance.
 - **Repository**: [AuthEndpoints](https://github.com/madeyoga/AuthEndpoints) (MIT).

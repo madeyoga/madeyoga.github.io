@@ -4,12 +4,12 @@
 
 ## Site
 
-- [Home](https://madeyoga.github.io/): Profile, open-source work, and current experiments
-- [Blog](https://madeyoga.github.io/blog): Notes on .NET, Nuxt, Django, and AI tooling
-- [Projects](https://madeyoga.github.io/projects): Open-source libraries and client work
-- [AuthEndpoints docs](https://madeyoga.github.io/AuthEndpoints): Documentation for the ASP.NET Core auth library
+- [Home](https://madeyoga.harten.id/): Profile, open-source work, and current experiments
+- [Blog](https://madeyoga.harten.id/blog): Notes on .NET, Nuxt, Django, and AI tooling
+- [Projects](https://madeyoga.harten.id/projects): Open-source libraries and client work
+- [AuthEndpoints docs](https://authendpoints.harten.id/): Documentation for the ASP.NET Core auth library
 
 ## Also
 
-- [Contact](https://madeyoga.github.io/contact)
+- [Contact](https://madeyoga.harten.id/contact)
 - [GitHub](https://github.com/madeyoga)

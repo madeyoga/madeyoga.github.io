@@ -1,4 +1,4 @@
-const SITE_URL = 'https://madeyoga.github.io'
+const SITE_URL = 'https://madeyoga.harten.id'
 
 export const personJsonLd = {
   '@type': 'Person',
