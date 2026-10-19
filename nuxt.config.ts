@@ -17,6 +17,9 @@ export default defineNuxtConfig({
     url: siteUrl,
     name: 'Made Yoga Mahardika',
     indexable: true,
+    // GitHub Pages serves each route from a directory index and 301s the
+    // slashless URL to it. Canonicals, sitemap locs, and hreflang follow that.
+    trailingSlash: true,
   },
   seo: {
     titleSeparator: '|',
@@ -204,6 +207,23 @@ export default defineNuxtConfig({
       if (existsSync(doubledLocale)) {
         // i18n crawl of /id/about and /id/services also emits /id/id/* stub pages.
         rmSync(doubledLocale, { recursive: true, force: true })
+      }
+
+      // Redirect stubs are a meta-refresh, not a real page. Keep them out of the index.
+      for (const rel of [
+        'services/index.html',
+        'services.html',
+        'id/services/index.html',
+        'id/services.html',
+      ]) {
+        const file = join(pub, rel)
+        if (!existsSync(file) || lstatSync(file).isDirectory()) continue
+        let html = readFileSync(file, 'utf8')
+        if (!html.includes('http-equiv="refresh"') || html.includes('name="robots"')) continue
+        html = html.includes('<head>')
+          ? html.replace('<head>', '<head><meta name="robots" content="noindex">')
+          : `<meta name="robots" content="noindex">${html}`
+        writeFileSync(file, html)
       }
     },
   },
