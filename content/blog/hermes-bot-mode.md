@@ -11,6 +11,7 @@ authors:
       src: /images/profile2.jpg
 date: 2026-08-19
 seo:
+  title: "Hermes Agent Bot Mode with three bots"
   keywords: hermes agent bot mode, hermes agent teammates, multi-agent setup, bot-to-bot messaging, hermes profiles
 badge:
   label: AI Agents

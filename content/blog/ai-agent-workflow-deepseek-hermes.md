@@ -11,6 +11,7 @@ authors:
       src: /images/profile2.jpg
 date: 2026-08-01
 seo:
+  title: "Hermes Agent + DeepSeek for .NET and Nuxt"
   keywords: Hermes agent, DeepSeek-V4-Flash-0731, deepseek-v4-flash, AI coding agent, .NET, Nuxt, Nuxt UI, MCP server, skills
 badge:
   label: AI Agents

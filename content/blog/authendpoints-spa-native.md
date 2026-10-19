@@ -11,6 +11,7 @@ authors:
       src: /images/profile2.jpg
 date: 2026-09-18
 seo:
+  title: "SPA and native auth in ASP.NET Core"
   keywords: ASP.NET Core Identity, AuthEndpoints, SPA authentication, Nuxt auth, React auth, JWT, cookie auth, passkeys, MapIdentityApi, .NET 10
 badge:
   label: ASP.NET

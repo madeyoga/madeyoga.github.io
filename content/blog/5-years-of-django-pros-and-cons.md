@@ -11,6 +11,7 @@ authors:
       src: /images/profile2.jpg
 date: 2025-08-13
 seo:
+  title: "5 Years with Django: Pros and Cons"
   keywords: django, django review, django pros and cons, python web framework, django developer experience
 badge:
   label: Django

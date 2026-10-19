@@ -11,6 +11,8 @@ authors:
       src: /images/profile2.jpg
 date: 2026-08-01
 seo:
+  title: "AuthEndpoints 3.0 RC for ASP.NET Core"
+  description: "AuthEndpoints 3.0 RC: composable auth endpoints on ASP.NET Core Identity. Registration, login, 2FA, password reset, and passkeys, set up in minutes."
   keywords: AuthEndpoints, ASP.NET Core authentication, .NET 10, passkeys, WebAuthn, JWT, ASP.NET Core Identity, NuGet
 badge:
   label: Open Source

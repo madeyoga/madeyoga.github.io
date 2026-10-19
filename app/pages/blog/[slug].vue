@@ -35,6 +35,8 @@ const { data: surround } = await useAsyncData(
 
 const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
+const heading = post.value?.title
+const lede = post.value?.description
 const articleImage = post.value?.image?.src
   ? (post.value.image.src.startsWith('http')
       ? post.value.image.src
@@ -85,11 +87,11 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
       <div>
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <h1 class="text-3xl sm:text-4xl text-pretty font-bold text-highlighted">
-            {{ title }}
+            {{ heading }}
           </h1>
         </div>
         <div class="text-lg text-pretty text-muted mt-4">
-          {{ description }}
+          {{ lede }}
         </div>
         <div class="flex flex-wrap items-center gap-3 mt-4">
           <UButton
