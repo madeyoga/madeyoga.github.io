@@ -20,10 +20,30 @@ export const personJsonLd = {
   ],
 }
 
+/** Same slash rule as nuxt-site-config `fixSlashes` (the canonical resolver). */
+export function withCanonicalSlash(href: string, trailingSlash?: boolean) {
+  try {
+    const url = new URL(href, SITE_URL)
+    const last = url.pathname.split('/').pop() || ''
+    if (/\.[0-9a-z]+$/i.test(last)) return href
+    if (trailingSlash) {
+      if (!url.pathname.endsWith('/')) url.pathname = `${url.pathname}/`
+    } else if (url.pathname.length > 1 && url.pathname.endsWith('/')) {
+      url.pathname = url.pathname.replace(/\/+$/, '')
+    }
+    return url.toString()
+  } catch {
+    return href
+  }
+}
+
 export function canonicalUrl(path: string) {
-  if (!path || path === '/') return `${SITE_URL}/`
-  const trimmed = path.replace(/\/+$/, '')
-  return `${SITE_URL}${trimmed.startsWith('/') ? trimmed : `/${trimmed}`}`
+  const site = useSiteConfig()
+  const origin = String(site.url || SITE_URL).replace(/\/+$/, '')
+  const absolute = /^https?:\/\//i.test(path)
+    ? path
+    : `${origin}${!path || path === '/' ? '/' : path.startsWith('/') ? path : `/${path}`}`
+  return withCanonicalSlash(absolute, site.trailingSlash)
 }
 
 export function useJsonLdGraph(nodes: Record<string, unknown>[], key = 'jsonld-graph') {
