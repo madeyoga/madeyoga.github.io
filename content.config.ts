@@ -77,7 +77,7 @@ export default defineContentConfig({
       schema: z.object({
         sitemap: defineSitemapSchema(),
         schemaOrg: defineSchemaOrgSchema(),
-        image: z.object({ src: z.string().nonempty().editor({ input: 'media' }), alt: z.string().optional() }),
+        image: z.object({ src: z.string().nonempty().editor({ input: 'media' }), alt: z.string().optional() }).optional(),
         authors: z.array(
           z.object({
             name: z.string().nonempty(),

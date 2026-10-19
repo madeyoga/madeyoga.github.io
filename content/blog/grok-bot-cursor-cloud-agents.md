@@ -11,6 +11,8 @@ authors:
       src: /images/profile2.jpg
 date: 2026-09-15
 seo:
+  title: "Remote AI coding: Grok Bot + Cursor"
+  description: "How I moved from local Cursor agents to Grok Bot plus Cursor cloud agents, and closed the trust gap with pstack proof: screenshots, command output, and video."
   keywords: Grok Bot, Cursor cloud agents, remote AI coding, multi-device agent workflow, pstack, poteto-mode, create-verification-skill, GitHub issue automation, verification skill, walk-away coding
 badge:
   label: AI Agents

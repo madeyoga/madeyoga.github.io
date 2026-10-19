@@ -15,12 +15,15 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
 </script>
 
 <template>
-  <article class="relative group/blog-post flex flex-col rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:items-center gap-x-8 p-0 sm:p-0 transition col-span-full">
-    <div class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none shadow-lg rounded-lg">
-      <NuxtImg 
-        :alt="props.image?.alt" 
-        class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover/blog-post:scale-110" 
-        :src="props.image?.src"
+  <article
+    class="relative group/blog-post flex flex-col rounded-lg overflow-hidden gap-x-8 p-0 sm:p-0 transition col-span-full"
+    :class="props.image?.src && 'lg:grid lg:grid-cols-2 lg:items-center'"
+  >
+    <div v-if="props.image?.src" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none shadow-lg rounded-lg">
+      <NuxtImg
+        :alt="props.image.alt"
+        class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover/blog-post:scale-110"
+        :src="props.image.src"
       />
     </div>
 
