@@ -42,12 +42,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col border-t border-default pt-2">
+  <div class="flex min-w-0 max-w-full flex-col border-t border-default pt-2">
     <UButton
       color="neutral"
       variant="ghost"
       trailing-icon="i-lucide-arrow-up"
-      class="-mx-2.5 gap-2 text-muted"
+      class="w-full min-w-0 max-w-full justify-between gap-2 px-0 text-muted"
       @click="backToTop"
     >
       <template #leading>
@@ -75,7 +75,7 @@ onUnmounted(() => {
         </svg>
       </template>
 
-      <span class="flex-1 text-start tabular-nums">
+      <span class="min-w-0 flex-1 truncate text-start tabular-nums">
         {{ minutesLeft ? `${minutesLeft} min left` : 'Finished' }}<span class="sr-only">, back to top</span>
       </span>
     </UButton>

@@ -206,8 +206,8 @@ useHead({
       highlight-variant="circuit"
       :default-open="false"
       aria-label="On this page"
-      class="mt-8 mb-2 min-w-0 lg:col-start-2 lg:row-start-2 lg:mt-0 lg:mb-0 mx-0 px-0 sm:mx-0 sm:px-0 top-20 lg:top-28 lg:max-h-[calc(100vh-8rem)]"
-      :ui="{ container: 'border-b-0 lg:py-0' }"
+      class="mt-8 mb-2 min-w-0 overflow-x-hidden lg:col-start-2 lg:row-start-2 lg:mt-0 lg:mb-0 mx-0 px-0 sm:mx-0 sm:px-0 top-20 lg:top-28 lg:max-h-[calc(100vh-8rem)]"
+      :ui="{ container: 'min-w-0 border-b-0 lg:py-0', bottom: 'min-w-0', link: 'min-w-0' }"
     >
       <template #bottom>
         <BlogReadingProgress :reading-time="readingMinutes" :target="articleBody" />

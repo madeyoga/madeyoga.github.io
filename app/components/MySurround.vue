@@ -9,7 +9,7 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <div v-if="surround" class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+  <div v-if="surround" class="mt-8 mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2">
     <NuxtLink
       v-if="surround[0]"
       :to="localePath(surround[0].path)"

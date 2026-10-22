@@ -9,10 +9,6 @@ html {
 }
 
 :root {
-  /* Flat off-white. nuxt.com leaves light --ui-bg at the Nuxt UI default (#fff). */
-  --ui-bg: var(--ui-color-neutral-50);
-  --ui-text: var(--ui-color-neutral-900);
-
   ::selection {
     color: var(--ui-color-neutral-950);
     background-color: color-mix(in oklab, var(--ui-color-primary-300) 70%, white);
@@ -20,13 +16,11 @@ html {
 }
 
 .dark {
-  /* nuxt.com app/assets/css/main.css: off-black page and one step lighter surfaces. */
+  /* Same dark surfaces as nuxt.com: page on neutral-950, panels one step up. */
   --ui-bg: var(--ui-color-neutral-950);
   --ui-bg-muted: var(--ui-color-neutral-900);
   --ui-bg-elevated: var(--ui-color-neutral-900);
   --ui-bg-accented: var(--ui-color-neutral-800);
-  --ui-text: var(--ui-color-neutral-50);
-  --ui-border: var(--ui-color-neutral-900);
 
   ::selection {
     color: var(--ui-color-neutral-50);
@@ -40,11 +34,11 @@ body {
 }
 
 .dark pre {
-  background-color: var(--color-zinc-900);
+  background-color: var(--color-neutral-900);
 }
 
 pre {
-  background-color: var(--color-zinc-100);
+  background-color: var(--color-neutral-100);
   padding: 24px;
   overflow-x: auto;
 }
