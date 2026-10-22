@@ -63,10 +63,9 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
             >
           </span>
           <div class="">
-            <a 
-              tabindex="-1" 
-              rel="noopener noreferrer" 
-              :aria-label="props.authors[0]?.name" 
+            <a
+              tabindex="-1"
+              :aria-label="props.authors[0]?.name"
               class="focus:outline-none peer">
               <span class="absolute inset-0" aria-hidden="true"></span>
             </a>

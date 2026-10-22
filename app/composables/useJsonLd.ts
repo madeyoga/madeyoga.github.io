@@ -7,7 +7,7 @@ export const personJsonLd = {
   url: SITE_URL,
   image: 'https://media.harten.id/images/madeyoga-avatar.png',
   jobTitle: 'Fullstack Software Developer',
-  email: 'madeybog@gmail.com',
+  email: 'madeyoga@harten.id',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Samarinda',

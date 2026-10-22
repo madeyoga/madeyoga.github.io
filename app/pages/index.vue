@@ -137,7 +137,6 @@ const localize = useLocalizedField()
               :category="project.category"
               :repo="project.repo"
               :docs="project.docs"
-              class="mb-8"
             />
           </div>
         </section>

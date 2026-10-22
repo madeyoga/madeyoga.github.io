@@ -24,11 +24,11 @@ useSeoMeta({
           <div>
             <h2 class="uppercase tracking-widest dark:text-white font-bold text-sm pb-4">Email</h2>
             <a
-              href="mailto:madeybog@gmail.com"
+              href="mailto:madeyoga@harten.id"
               class="text-primary text-lg font-medium hover:underline"
               aria-label="Send email to Made Yoga Mahardika"
             >
-              madeybog@gmail.com
+              madeyoga@harten.id
             </a>
             <p class="text-muted text-sm mt-2">{{ $t('contact.note') }}</p>
           </div>

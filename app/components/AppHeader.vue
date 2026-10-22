@@ -4,7 +4,7 @@ const localePath = useLocalePath()
 
 <template>
   <div class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10 animate-brand-fade-in">
-    <nav class="relative flex gap-1.5 [&>div]:min-w-0 items-center justify-between bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-3 border border-muted/50 shadow-sm shadow-neutral-950/5">
+    <nav aria-label="Primary" class="relative flex gap-1.5 [&>div]:min-w-0 items-center justify-between bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-3 border border-muted/50 shadow-sm shadow-neutral-950/5">
       <div style="position: relative;">
         <ul class="isolate min-w-0 flex items-center">
           <li class="py-2 min-w-0">

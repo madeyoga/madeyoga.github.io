@@ -30,8 +30,8 @@ useSeoMeta({
 
     <div class="mt-8 pb-24 space-y-12 grid grid-cols-2">
       <BlogPost
-        v-for="(post, index) in posts"
-        :key="`${post.path}-${post.title}-${index}`"
+        v-for="post in posts"
+        :key="`${post.path}-${post.title}`"
         :to="localePath(post.path)"
         :title="post.title"
         :description="post.description"
@@ -39,7 +39,6 @@ useSeoMeta({
         :date="post.date"
         :authors="post.authors"
         :badge="post.badge"
-        :class="[index === 0 && 'col-span-full']"
       />
     </div>
   </UContainer>

@@ -9,14 +9,9 @@ html {
 }
 
 :root {
+  /* Flat off-white. nuxt.com leaves light --ui-bg at the Nuxt UI default (#fff). */
   --ui-bg: var(--ui-color-neutral-50);
   --ui-text: var(--ui-color-neutral-900);
-  --brand-atmosphere: linear-gradient(
-    165deg,
-    var(--ui-color-neutral-50) 0%,
-    color-mix(in oklab, var(--ui-color-primary-100) 45%, var(--ui-color-neutral-50)) 45%,
-    var(--ui-color-neutral-50) 100%
-  );
 
   ::selection {
     color: var(--ui-color-neutral-950);
@@ -25,15 +20,13 @@ html {
 }
 
 .dark {
+  /* nuxt.com app/assets/css/main.css: off-black page and one step lighter surfaces. */
   --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-900);
+  --ui-bg-elevated: var(--ui-color-neutral-900);
+  --ui-bg-accented: var(--ui-color-neutral-800);
   --ui-text: var(--ui-color-neutral-50);
   --ui-border: var(--ui-color-neutral-900);
-  --brand-atmosphere: linear-gradient(
-    165deg,
-    var(--ui-color-neutral-950) 0%,
-    color-mix(in oklab, var(--ui-color-primary-950) 55%, var(--ui-color-neutral-950)) 40%,
-    var(--ui-color-neutral-950) 100%
-  );
 
   ::selection {
     color: var(--ui-color-neutral-50);
@@ -42,9 +35,8 @@ html {
 }
 
 body {
-  background-image: var(--brand-atmosphere);
-  background-attachment: fixed;
   background-color: var(--ui-bg);
+  background-image: none;
 }
 
 .dark pre {
