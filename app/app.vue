@@ -42,6 +42,8 @@ useSeoMeta({
   ogImageType: 'image/png',
   twitterImage: 'https://media.harten.id/images/madeyoga-avatar.png',
   twitterCard: 'summary_large_image',
+  twitterSite: '@madey_bog',
+  twitterCreator: '@madey_bog',
 })
 </script>
 

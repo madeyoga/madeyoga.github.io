@@ -236,6 +236,16 @@ useHead({
           </p>
           <p v-if="authorTitle" class="text-sm text-muted">{{ authorTitle }}</p>
           <p v-if="authorBio" class="mt-2 text-sm leading-6 text-default">{{ authorBio }}</p>
+          <a
+            href="https://x.com/madey_bog"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="mt-3 inline-flex items-center gap-1.5 text-sm text-muted hover:text-primary"
+            aria-label="X"
+          >
+            <UIcon name="i-simple-icons-x" class="size-4" />
+            X
+          </a>
         </div>
       </div>
 
