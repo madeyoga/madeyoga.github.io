@@ -54,13 +54,13 @@ const { isoDate, formattedDate } = useFormattedDate(props.date)
       <div class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
         <div data-orientation="horizontal" class="relative group/user flex items-center gap-2">
           <span class="inline-flex items-center justify-center select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0 transform transition-transform duration-200 group-hover/user:scale-115">
-            <NuxtImg 
-              width="32" 
-              height="32" 
-              :alt="props.authors[0]?.name" 
-              role="img" 
-              class="h-full w-full rounded-[inherit] object-cover" 
-              :src="props.authors[0]?.avatar?.src" />
+            <img
+              width="32"
+              height="32"
+              :alt="props.authors[0]?.name"
+              class="h-full w-full rounded-[inherit] object-cover"
+              :src="props.authors[0]?.avatar?.src"
+            >
           </span>
           <div class="">
             <a 

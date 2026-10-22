@@ -5,7 +5,7 @@ authors:
   - name: Made Y
     to: /
     avatar:
-      src: /images/profile2.jpg
+      src: https://media.harten.id/images/madeyoga-avatar.webp
 date: 2026-10-19
 seo:
   keywords: AuthEndpoints, AuthEndpoints 4.0, ASP.NET Core authentication, ASP.NET Core Identity, .NET 10, JWT refresh token, sign-in completer, NuGet

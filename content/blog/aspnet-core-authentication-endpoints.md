@@ -5,7 +5,7 @@ authors:
   - name: Made Y
     to: /
     avatar:
-      src: /images/profile2.jpg
+      src: https://media.harten.id/images/madeyoga-avatar.webp
 date: 2026-10-22
 seo:
   title: "ASP.NET Core Auth Endpoints: Why I Built AuthEndpoints"

@@ -8,7 +8,7 @@ authors:
   - name: Made Y
     to: /
     avatar:
-      src: /images/profile2.jpg
+      src: https://media.harten.id/images/madeyoga-avatar.webp
 date: 2026-08-01
 seo:
   title: "AuthEndpoints 3.0 RC for ASP.NET Core"

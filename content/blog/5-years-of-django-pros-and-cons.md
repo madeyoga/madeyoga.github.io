@@ -8,7 +8,7 @@ authors:
   - name: Made Y
     to: /
     avatar:
-      src: /images/profile2.jpg
+      src: https://media.harten.id/images/madeyoga-avatar.webp
 date: 2025-08-13
 seo:
   title: "5 Years with Django: Pros and Cons"
