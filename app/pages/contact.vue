@@ -41,9 +41,9 @@ useSeoMeta({
                 <UIcon name="i-simple-icons-github" class="w-5 h-5" />
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/made-mahardika-4a205a379/" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit LinkedIn profile">
-                <UIcon name="i-simple-icons-linkedin" class="w-5 h-5" />
-                <span>LinkedIn</span>
+              <a href="https://x.com/madey_bog" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="X">
+                <UIcon name="i-simple-icons-x" class="w-5 h-5" />
+                <span>X</span>
               </a>
               <a href="https://www.youtube.com/@madey02" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit YouTube channel">
                 <UIcon name="i-simple-icons-youtube" class="w-5 h-5" />

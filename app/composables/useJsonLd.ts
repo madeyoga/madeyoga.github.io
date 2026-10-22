@@ -15,7 +15,7 @@ export const personJsonLd = {
   },
   sameAs: [
     'https://github.com/madeyoga',
-    'https://www.linkedin.com/in/made-mahardika-4a205a379/',
+    'https://x.com/madey_bog',
     'https://www.youtube.com/@madey02',
   ],
 }

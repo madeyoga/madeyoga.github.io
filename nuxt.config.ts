@@ -43,6 +43,8 @@ export default defineNuxtConfig({
         { property: 'og:image:height', content: '460' },
         { property: 'og:image:type', content: 'image/png' },
         { name: 'twitter:image', content: profileImagePng },
+        { name: 'twitter:site', content: '@madey_bog' },
+        { name: 'twitter:creator', content: '@madey_bog' },
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico' },
@@ -322,7 +324,7 @@ export default defineNuxtConfig({
         'simple-icons:alpinedotjs',
         'simple-icons:youtube',
         'simple-icons:github',
-        'simple-icons:linkedin',
+        'simple-icons:x',
         'simple-icons:tiktok',
         'simple-icons:dotnet',
         'simple-icons:nuget',
