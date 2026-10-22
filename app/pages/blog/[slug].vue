@@ -241,10 +241,10 @@ useHead({
             target="_blank"
             rel="noreferrer noopener"
             class="mt-3 inline-flex items-center gap-1.5 text-sm text-muted hover:text-primary"
-            aria-label="X"
+            aria-label="Made on X"
           >
             <UIcon name="i-simple-icons-x" class="size-4" />
-            X
+            @madey_bog
           </a>
         </div>
       </div>
