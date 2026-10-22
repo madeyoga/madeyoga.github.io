@@ -44,6 +44,8 @@ const articleImage = post.value?.image?.src
       : `https://madeyoga.harten.id${post.value.image.src}`)
   : profileImagePng
 
+const usesProfileShareImage = articleImage === profileImagePng
+
 useSeoMeta({
   ...(post.value.seo || {}),
   title,
@@ -52,6 +54,11 @@ useSeoMeta({
   ogDescription: description,
   ogImage: articleImage,
   twitterImage: articleImage,
+  // Cover images are not the 460px avatar. Drop the avatar dimensions so
+  // those posts are not described as a square PNG.
+  ogImageWidth: usesProfileShareImage ? 460 : null,
+  ogImageHeight: usesProfileShareImage ? 460 : null,
+  ogImageType: usesProfileShareImage ? 'image/png' : null,
 })
 
 useJsonLdGraph([
