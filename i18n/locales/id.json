@@ -9,8 +9,8 @@
   "hero": {
     "name": "Made Yoga",
     "greeting": "Halo, saya Made Yoga.",
-    "title": "Fullstack Software Developer",
-    "tagline": "Fullstack software developer di Samarinda. Tools open source untuk .NET, karya klien, dan catatan soal apa yang saya bangun.",
+    "title": "Software Engineer",
+    "tagline": "Software engineer di Samarinda. Tools open source untuk .NET, karya klien, dan catatan soal apa yang saya bangun.",
     "cta_work": "Open Source",
     "cta_blog": "Baca Blog",
     "cta_contact": "Hubungi Saya",
@@ -19,8 +19,8 @@
   },
   "seo": {
     "home_title_name": "Made Yoga Mahardika",
-    "home_title_role": "Fullstack Developer di Samarinda",
-    "home_description": "Fullstack software developer di Samarinda. Tools open source untuk .NET, karya klien, dan tulisan soal eksperimen yang memang saya jalankan."
+    "home_title_role": "Software Engineer di Samarinda",
+    "home_description": "Software engineer di Samarinda. Tools open source untuk .NET, karya klien, dan tulisan soal eksperimen yang memang saya jalankan."
   },
   "section": {
     "techstack": "Tech Stack",
@@ -59,7 +59,7 @@
     "note": "Email cara tercepat untuk menghubungi saya."
   },
   "footer": {
-    "tagline": "Fullstack software developer di Samarinda, Indonesia.",
+    "tagline": "Software engineer di Samarinda, Indonesia.",
     "copyright": "Made Yoga Mahardika. Hak cipta dilindungi."
   },
   "about": {
