@@ -37,11 +37,14 @@ const title = post.value?.seo?.title || post.value?.title
 const description = post.value?.seo?.description || post.value?.description
 const heading = post.value?.title
 const lede = post.value?.description
+const profileImagePng = 'https://media.harten.id/images/madeyoga-avatar.png'
 const articleImage = post.value?.image?.src
   ? (post.value.image.src.startsWith('http')
       ? post.value.image.src
       : `https://madeyoga.harten.id${post.value.image.src}`)
-  : 'https://madeyoga.harten.id/og-image.png'
+  : profileImagePng
+
+const usesProfileShareImage = articleImage === profileImagePng
 
 useSeoMeta({
   ...(post.value.seo || {}),
@@ -51,6 +54,11 @@ useSeoMeta({
   ogDescription: description,
   ogImage: articleImage,
   twitterImage: articleImage,
+  // Cover images are not the 460px avatar. Drop the avatar dimensions so
+  // those posts are not described as a square PNG.
+  ogImageWidth: usesProfileShareImage ? 460 : null,
+  ogImageHeight: usesProfileShareImage ? 460 : null,
+  ogImageType: usesProfileShareImage ? 'image/png' : null,
 })
 
 useJsonLdGraph([
@@ -107,6 +115,7 @@ const { formattedDate } = useFormattedDate(post.value?.date || new Date())
               v-bind="author.avatar"
               alt="Author avatar"
               size="2xs"
+              :as="{ img: 'img' }"
             />
 
             {{ author.name }}

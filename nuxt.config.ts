@@ -3,6 +3,7 @@ import { copyFileSync, existsSync, lstatSync, readFileSync, rmSync, writeFileSyn
 import { join } from 'node:path'
 
 const siteUrl = 'https://madeyoga.harten.id'
+const profileImagePng = 'https://media.harten.id/images/madeyoga-avatar.png'
 
 export default defineNuxtConfig({
   modules: [
@@ -30,17 +31,18 @@ export default defineNuxtConfig({
     // from app/plugins/json-ld.ts instead.
     enabled: false,
   },
-  // GitHub Pages has no OG screenshot runtime; use the static 1200x630 file instead.
+  // GitHub Pages has no OG screenshot runtime. Share images use the hosted avatar.
   ogImage: {
     enabled: false,
   },
   app: {
     head: {
       meta: [
-        { property: 'og:image', content: `${siteUrl}/og-image.png` },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { name: 'twitter:image', content: `${siteUrl}/og-image.png` },
+        { property: 'og:image', content: profileImagePng },
+        { property: 'og:image:width', content: '460' },
+        { property: 'og:image:height', content: '460' },
+        { property: 'og:image:type', content: 'image/png' },
+        { name: 'twitter:image', content: profileImagePng },
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico' },

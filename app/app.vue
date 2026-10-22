@@ -36,8 +36,11 @@ useHead(() => ({
 }))
 
 useSeoMeta({
-  ogImage: 'https://madeyoga.harten.id/og-image.png',
-  twitterImage: 'https://madeyoga.harten.id/og-image.png',
+  ogImage: 'https://media.harten.id/images/madeyoga-avatar.png',
+  ogImageWidth: 460,
+  ogImageHeight: 460,
+  ogImageType: 'image/png',
+  twitterImage: 'https://media.harten.id/images/madeyoga-avatar.png',
   twitterCard: 'summary_large_image',
 })
 </script>

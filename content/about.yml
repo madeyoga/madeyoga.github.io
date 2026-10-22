@@ -6,7 +6,7 @@ personal:
   bio:
     en: I build software for real businesses, from back-office systems to customer-facing platforms. I also maintain AuthEndpoints, an open-source auth library for ASP.NET Core, and tinker with AI agents and LLM tooling out in the open.
     id: Saya membangun software untuk bisnis nyata, dari sistem back-office sampai platform pelanggan. Saya juga mengelola AuthEndpoints, pustaka auth open source untuk ASP.NET Core, dan mengutak-atik AI agents serta tooling LLM secara terbuka.
-  image: /images/profile2.jpg
+  image: https://media.harten.id/images/madeyoga-avatar.webp
   location:
     en: Samarinda, Indonesia
     id: Samarinda, Indonesia

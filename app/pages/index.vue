@@ -46,7 +46,7 @@ const localize = useLocalizedField()
         <!-- Hero -->
         <section id="hero" class="py-16 flex flex-col md:flex-row gap-10">
           <div class="flex items-center justify-center animate-brand-fade-up">
-            <img src="/images/profile2.jpg" alt="Made Yoga Mahardika" class="border border-default w-32 h-32 min-w-32 min-h-32 object-cover rounded-full">
+            <img src="https://media.harten.id/images/madeyoga-avatar.webp" alt="Made Yoga Mahardika" width="460" height="460" class="border border-default w-32 h-32 min-w-32 min-h-32 object-cover rounded-full">
           </div>
 
           <div class="flex flex-col gap-6 justify-center h-full">
