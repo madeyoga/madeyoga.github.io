@@ -109,12 +109,29 @@ export default defineNuxtConfig({
             'c',
             'cpp',
             'csharp',
+            'cs',
             'java',
             'javascript',
+            'bash',
+            'shell',
+            'json',
+            'ts',
+            'yaml',
+            'vue',
+            'xml',
           ]
         },
       }
     }
+  },
+  htmlValidator: {
+    failOnError: true,
+    options: {
+      rules: {
+        // SEO titles keep the site name. That string is longer than 70 characters on purpose.
+        'long-title': 'off',
+      },
+    },
   },
   devtools: { enabled: true },
   ssr: true,
@@ -135,9 +152,7 @@ export default defineNuxtConfig({
       map: {
         h2: 'MyProseH2',
         h3: 'MyProseH3',
-        p: 'MyProseP',
-        li: 'MyProseLi',
-        ul: 'MyProseUl',
+        code: 'MyProseCode',
         pre: 'MyProsePre',
       }
     }
@@ -174,6 +189,34 @@ export default defineNuxtConfig({
     }
   },
   hooks: {
+    'nitro:init'(nitro) {
+      // Fallback shells are emitted before the app head. Give them a language
+      // and a title, and run before html-validate reads the same payload.
+      const ensureDocumentShell = (route: { contents?: string, fileName?: string }) => {
+        if (!route.contents || !route.fileName?.endsWith('.html')) return
+        let html = route.contents
+        if (html.includes('<html>') && !html.includes('<html lang=')) {
+          html = html.replace('<html>', '<html lang="en">')
+        }
+        if (html.includes('</head>') && !/<title[\s>]/i.test(html)) {
+          const title = route.fileName === '404.html'
+            ? 'Page not found · Made Yoga Mahardika'
+            : 'Made Yoga Mahardika'
+          html = html.replace('</head>', `<title>${title}</title></head>`)
+        }
+        if (html.includes('</html>') && !/<body[\s>]/i.test(html)) {
+          html = html.replace('</html>', '<body></body></html>')
+        }
+        route.contents = html
+      }
+      nitro.hooks.hook('prerender:generate', ensureDocumentShell)
+      const hooks = nitro.hooks as { _hooks?: Record<string, unknown[]> }
+      const list = hooks._hooks?.['prerender:generate']
+      if (list && list.length > 1) {
+        const fn = list.pop()
+        if (fn) list.unshift(fn)
+      }
+    },
     close() {
       // If i18n still emitted a sitemap index, make /sitemap.xml a real XML file
       // instead of the HTML meta-refresh directory GitHub Pages would serve.
@@ -203,6 +246,18 @@ export default defineNuxtConfig({
           `<div id="__nuxt" class="isolate"><div class="min-h-screen max-w-190 mx-auto pt-10 border-default sm:border-x"><div class="px-4 sm:px-6 pt-18"><main class="py-24 text-center"><p class="text-primary font-semibold text-sm tracking-widest uppercase mb-4">404</p><h1 class="text-3xl sm:text-4xl font-bold mb-4">Page not found</h1><p class="text-muted text-[15px] mb-8">That URL is not on this site.</p><p><a href="/" class="text-primary font-medium">Back to home</a></p></main></div></div></div>`
         )
         writeFileSync(notFoundPath, html)
+      }
+
+      const spaShellPath = join(pub, '200.html')
+      if (existsSync(spaShellPath)) {
+        let html = readFileSync(spaShellPath, 'utf8')
+        if (html.includes('<html>') && !html.includes('<html lang=')) {
+          html = html.replace('<html>', '<html lang="en">')
+        }
+        if (!/<title[\s>]/i.test(html)) {
+          html = html.replace('</head>', '<title>Made Yoga Mahardika</title></head>')
+        }
+        writeFileSync(spaShellPath, html)
       }
 
       const doubledLocale = join(pub, 'id/id')
@@ -236,8 +291,10 @@ export default defineNuxtConfig({
         'lucide:sun',
         'lucide:moon',
         'lucide:arrow-left',
+        'lucide:arrow-up',
         'lucide:arrow-right',
         'lucide:check',
+        'lucide:copy',
         'lucide:external-link',
         'lucide:globe',
         'lucide:smartphone',

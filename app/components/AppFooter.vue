@@ -9,7 +9,7 @@ const localePath = useLocalePath()
         <p class="text-sm text-muted text-pretty">{{ $t('footer.tagline') }}</p>
       </div>
 
-      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+      <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
         <NuxtLink :to="localePath('/')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.home') }}</NuxtLink>
         <NuxtLink :to="localePath('/projects')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.projects') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog')" class="text-muted hover:text-primary transition-colors">{{ $t('nav.blog') }}</NuxtLink>
@@ -30,7 +30,7 @@ const localePath = useLocalePath()
         <a href="https://www.youtube.com/@madey02" target="_blank" rel="noreferrer noopener" title="Visit YouTube channel" aria-label="Visit YouTube channel">
           <UIcon name="i-simple-icons-youtube" class="w-5 h-5 text-muted hover:text-primary transition-colors" />
         </a>
-        <a href="mailto:madeybog@gmail.com" title="Send email to Made Yoga Mahardika" aria-label="Send email to Made Yoga Mahardika">
+        <a href="mailto:madeyoga@harten.id" title="Send email to Made Yoga Mahardika" aria-label="Send email to Made Yoga Mahardika">
           <UIcon name="i-lucide-mail" class="w-5 h-5 text-muted hover:text-primary transition-colors" />
         </a>
       </div>

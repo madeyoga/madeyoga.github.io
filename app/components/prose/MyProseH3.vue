@@ -1,5 +1,5 @@
 <template>
-  <h3 :id="props.id" class="relative text-xl text-highlighted font-bold mt-8 mb-3 scroll-mt-[calc(32px+45px+var(--ui-header-height))] lg:scroll-mt-[calc(32px+var(--ui-header-height))] [&>a]:focus-visible:outline-primary [&>a>code]:border-dashed hover:[&>a>code]:border-primary hover:[&>a>code]:text-primary [&>a>code]:text-lg/6 [&>a>code]:font-bold [&>a>code]:transition-colors">
+  <h3 :id="props.id" class="relative mt-10 mb-3 scroll-mt-32 text-xl font-semibold tracking-tight text-highlighted lg:scroll-mt-28 [&>a]:rounded-sm [&>a]:focus-visible:outline-primary [&>a>code]:border-0 [&>a>code]:bg-transparent [&>a>code]:p-0 [&>a>code]:text-[0.92em] [&>a>code]:font-semibold">
     <a
       v-if="props.id && generate"
       :href="`#${props.id}`"

@@ -115,19 +115,33 @@ Run it, and you have `POST /auth/register`, `POST /auth/login`, `POST /auth/logo
 
 ## What you get
 
-**Sessions.** Cookie sessions for browser apps. JWT with a rotating refresh token for clients that need a bearer token. Identity bearer tokens for mobile apps, on the 3.x facade. In 4, the JWT refresh token can also come back in the JSON body for native apps and CLIs that have no cookie. Cookie transport stays the default.
+### Sessions
 
-**2FA.** Authenticator codes and recovery codes through `/auth/manage/2fa`.
+Cookie sessions for browser apps. JWT with a rotating refresh token for clients that need a bearer token. Identity bearer tokens for mobile apps, on the 3.x facade. In 4, the JWT refresh token can also come back in the JSON body for native apps and CLIs that have no cookie. Cookie transport stays the default.
 
-**Passkeys.** Set `Passkeys.ServerDomain` and the password facade maps passkey sign-in and passkey management under `/auth/passkeys`. Users can add, rename and remove them.
+### 2FA
 
-**Step-up (ReAuth).** Before a sensitive change, the user proves who they are again with a password, an authenticator code, a recovery code, a passkey, or an email code. You can require it on your own routes too.
+Authenticator codes and recovery codes through `/auth/manage/2fa`.
 
-**Other sign-in options.** Emailed one-time codes, plus GitHub and Google sign-in (currently plain oauth flow, not oidc). 
+### Passkeys
 
-**Protection.** Rate limits, CSRF checks on cookie routes that change state, lockout, and checks at startup. Every `Map*` call throws at startup when its `Add*` call is missing, so a broken setup fails before the first request.
+Set `Passkeys.ServerDomain` and the password facade maps passkey sign-in and passkey management under `/auth/passkeys`. Users can add, rename and remove them.
 
-**Modules.** If the facade maps more than you want, you can compose smaller modules and map only the routes you need on your own prefixes.
+### Step-up (ReAuth)
+
+Before a sensitive change, the user proves who they are again with a password, an authenticator code, a recovery code, a passkey, or an email code. You can require it on your own routes too.
+
+### Other sign-in options
+
+Emailed one-time codes, plus GitHub and Google sign-in (currently plain oauth flow, not oidc).
+
+### Protection
+
+Rate limits, CSRF checks on cookie routes that change state, lockout, and checks at startup. Every `Map*` call throws at startup when its `Add*` call is missing, so a broken setup fails before the first request.
+
+### Modules
+
+If the facade maps more than you want, you can compose smaller modules and map only the routes you need on your own prefixes.
 
 If you already use the 3.x `AddAuthEndpoints` and `MapAuthEndpoints`, they still work in 4. Some setups need a database migration, and a few smaller APIs changed. Read the [upgrade guide](https://authendpoints.harten.id/getting-started/upgrading-to-4/) before you bump the version.
 
