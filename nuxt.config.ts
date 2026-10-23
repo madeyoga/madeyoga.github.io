@@ -160,6 +160,7 @@ export default defineNuxtConfig({
         h3: 'MyProseH3',
         code: 'MyProseCode',
         pre: 'MyProsePre',
+        th: 'MyProseTh',
       }
     }
   },
