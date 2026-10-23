@@ -96,6 +96,11 @@ export default defineNuxtConfig({
   },
   experimental: {
     prerenderErrorPages: true,
+    defaults: {
+      nuxtLink: {
+        trailingSlash: 'append',
+      },
+    },
   },
   content: {
     build: {
