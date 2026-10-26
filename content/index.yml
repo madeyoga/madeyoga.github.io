@@ -10,6 +10,10 @@ hero:
       url: https://github.com/madeyoga
     - icon: i-simple-icons-x
       url: https://x.com/madey_bog
+    - icon: i-simple-icons-linkedin
+      url: https://www.linkedin.com/in/madeyoga/
+    - icon: i-simple-icons-devdotto
+      url: https://dev.to/madeyoga
 techstack:
   - title: .NET
     icon: i-simple-icons-dotnet
@@ -74,3 +78,9 @@ contact:
     - title: X
       icon: i-simple-icons-x
       url: https://x.com/madey_bog
+    - title: LinkedIn
+      icon: i-simple-icons-linkedin
+      url: https://www.linkedin.com/in/madeyoga/
+    - title: dev.to
+      icon: i-simple-icons-devdotto
+      url: https://dev.to/madeyoga

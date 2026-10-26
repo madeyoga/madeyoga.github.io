@@ -7,7 +7,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "name": "Made Yoga",
+    "name": "Made Yoga (Oga)",
+    "founder": "Founder of {studio}, a software studio in Samarinda.",
     "greeting": "Hey, I'm Made Yoga.",
     "title": "Software Engineer",
     "tagline": "Software engineer in Samarinda. Open-source tools for .NET, selected client work, and notes on what I actually build.",

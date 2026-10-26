@@ -17,6 +17,10 @@ personal:
       url: https://x.com/madey_bog
     - icon: i-simple-icons-youtube
       url: https://www.youtube.com/@madey02
+    - icon: i-simple-icons-linkedin
+      url: https://www.linkedin.com/in/madeyoga/
+    - icon: i-simple-icons-devdotto
+      url: https://dev.to/madeyoga
 
 values:
   - icon: i-lucide-shield-check

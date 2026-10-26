@@ -336,6 +336,8 @@ export default defineNuxtConfig({
         'simple-icons:github',
         'simple-icons:x',
         'simple-icons:tiktok',
+        'simple-icons:linkedin',
+        'simple-icons:devdotto',
         'simple-icons:dotnet',
         'simple-icons:nuget',
         'simple-icons:typescript',

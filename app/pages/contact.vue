@@ -49,6 +49,14 @@ useSeoMeta({
                 <UIcon name="i-simple-icons-youtube" class="w-5 h-5" />
                 <span>YouTube</span>
               </a>
+              <a href="https://www.linkedin.com/in/madeyoga/" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit LinkedIn profile">
+                <UIcon name="i-simple-icons-linkedin" class="w-5 h-5" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://dev.to/madeyoga" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit dev.to profile">
+                <UIcon name="i-simple-icons-devdotto" class="w-5 h-5" />
+                <span>dev.to</span>
+              </a>
               <a href="https://www.tiktok.com/@boggg_" target="_blank" rel="noreferrer noopener" class="flex items-center gap-3 text-muted hover:text-primary transition-colors" aria-label="Visit TikTok profile">
                 <UIcon name="i-simple-icons-tiktok" class="w-5 h-5" />
                 <span>TikTok</span>

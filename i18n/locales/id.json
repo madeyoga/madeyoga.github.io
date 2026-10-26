@@ -7,7 +7,8 @@
     "contact": "Kontak"
   },
   "hero": {
-    "name": "Made Yoga",
+    "name": "Made Yoga (Oga)",
+    "founder": "Pendiri {studio}, studio software di Samarinda.",
     "greeting": "Halo, saya Made Yoga.",
     "title": "Software Engineer",
     "tagline": "Software engineer di Samarinda. Tools open source untuk .NET, karya klien, dan catatan soal apa yang saya bangun.",
