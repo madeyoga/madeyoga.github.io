@@ -8,10 +8,9 @@
   },
   "hero": {
     "name": "Made Yoga (Oga)",
-    "founder": "Founder of {studio}, a software studio in Samarinda.",
     "greeting": "Hey, I'm Made Yoga.",
     "title": "Software Engineer",
-    "tagline": "Software engineer in Samarinda. Open-source tools for .NET, selected client work, and notes on what I actually build.",
+    "tagline": "Software engineer in Samarinda. I maintain {authendpoints}, an ASP.NET Core auth library, and build with .NET, Nuxt, Cursor, and Grok Bot. Founder of {studio}.",
     "cta_work": "Open Source",
     "cta_blog": "Read the Blog",
     "cta_contact": "Get in touch",
@@ -21,7 +20,7 @@
   "seo": {
     "home_title_name": "Made Yoga Mahardika",
     "home_title_role": "Software Engineer in Samarinda",
-    "home_description": "Software engineer in Samarinda. Open-source tools for .NET, selected client work, and write-ups of experiments I actually run."
+    "home_description": "Software engineer in Samarinda. Maintainer of AuthEndpoints (ASP.NET Core auth) and founder of Harten Digital. Notes on what I actually build."
   },
   "section": {
     "techstack": "Tech Stack",
