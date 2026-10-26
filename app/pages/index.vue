@@ -60,7 +60,7 @@ const localize = useLocalizedField()
                     <a href="https://authendpoints.harten.id" target="_blank" rel="noopener" class="text-primary hover:underline">AuthEndpoints</a>
                   </template>
                   <template #studio>
-                    <a href="https://harten.id" target="_blank" rel="noopener" class="text-primary hover:underline">Harten Digital</a>
+                    <a href="https://harten.id" target="_blank" rel="noopener" class="text-primary hover:underline">Harten Studio</a>
                   </template>
                 </i18n-t>
               </p>
