@@ -3,7 +3,7 @@ sitemap:
 title: "Made Yoga Mahardika | Software Engineer in Samarinda"
 hero:
   intro: Hey, I'm Made Yoga.
-  title: "Software engineer in Samarinda. I maintain AuthEndpoints, an ASP.NET Core auth library, and build with .NET, Nuxt, Cursor, and Grok Bot. Founder of Harten."
+  title: "Software engineer in Samarinda. I maintain AuthEndpoints, an ASP.NET Core auth library, and build with .NET, Nuxt, Cursor, and Grok Bot. Founder of Harten Systems."
   location: Samarinda, Indonesia
   links:
     - icon: i-simple-icons-github
