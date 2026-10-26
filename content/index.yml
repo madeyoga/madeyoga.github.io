@@ -3,13 +3,17 @@ sitemap:
 title: "Made Yoga Mahardika | Software Engineer in Samarinda"
 hero:
   intro: Hey, I'm Made Yoga.
-  title: "Software engineer in Samarinda. Open-source tools for .NET, selected client work, and notes on what I actually build."
+  title: "Software engineer in Samarinda. I maintain AuthEndpoints, an ASP.NET Core auth library, and build with .NET, Nuxt, Cursor, and Grok Bot. Founder of Harten Systems."
   location: Samarinda, Indonesia
   links:
     - icon: i-simple-icons-github
       url: https://github.com/madeyoga
     - icon: i-simple-icons-x
       url: https://x.com/madey_bog
+    - icon: i-simple-icons-linkedin
+      url: https://www.linkedin.com/in/madeyoga/
+    - icon: i-simple-icons-devdotto
+      url: https://dev.to/madeyoga
 techstack:
   - title: .NET
     icon: i-simple-icons-dotnet
@@ -74,3 +78,9 @@ contact:
     - title: X
       icon: i-simple-icons-x
       url: https://x.com/madey_bog
+    - title: LinkedIn
+      icon: i-simple-icons-linkedin
+      url: https://www.linkedin.com/in/madeyoga/
+    - title: dev.to
+      icon: i-simple-icons-devdotto
+      url: https://dev.to/madeyoga

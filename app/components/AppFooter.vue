@@ -30,6 +30,12 @@ const localePath = useLocalePath()
         <a href="https://www.youtube.com/@madey02" target="_blank" rel="noreferrer noopener" title="Visit YouTube channel" aria-label="Visit YouTube channel">
           <UIcon name="i-simple-icons-youtube" class="w-5 h-5 text-muted hover:text-primary transition-colors" />
         </a>
+        <a href="https://www.linkedin.com/in/madeyoga/" target="_blank" rel="noreferrer noopener" title="Visit LinkedIn profile" aria-label="Visit LinkedIn profile">
+          <UIcon name="i-simple-icons-linkedin" class="w-5 h-5 text-muted hover:text-primary transition-colors" />
+        </a>
+        <a href="https://dev.to/madeyoga" target="_blank" rel="noreferrer noopener" title="Visit dev.to profile" aria-label="Visit dev.to profile">
+          <UIcon name="i-simple-icons-devdotto" class="w-5 h-5 text-muted hover:text-primary transition-colors" />
+        </a>
         <a href="mailto:madeyoga@harten.id" title="Send email to Made Yoga Mahardika" aria-label="Send email to Made Yoga Mahardika">
           <UIcon name="i-lucide-mail" class="w-5 h-5 text-muted hover:text-primary transition-colors" />
         </a>

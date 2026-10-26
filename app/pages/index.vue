@@ -55,7 +55,14 @@ const localize = useLocalizedField()
                 <span class="text-primary">{{ $t('hero.name') }}</span>
               </h1>
               <p class="text-center md:text-start font-semibold text-xl mt-2 dark:text-white text-pretty leading-relaxed">
-                {{ $t('hero.tagline') }}
+                <i18n-t keypath="hero.tagline" scope="global">
+                  <template #authendpoints>
+                    <a href="https://authendpoints.harten.id" target="_blank" rel="noopener" class="text-primary hover:underline">AuthEndpoints</a>
+                  </template>
+                  <template #studio>
+                    <a href="https://harten.id" target="_blank" rel="noopener" class="text-primary hover:underline">Harten Systems</a>
+                  </template>
+                </i18n-t>
               </p>
             </div>
 

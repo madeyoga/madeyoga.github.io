@@ -7,10 +7,10 @@
     "contact": "Kontak"
   },
   "hero": {
-    "name": "Made Yoga",
+    "name": "Made Yoga (Oga)",
     "greeting": "Halo, saya Made Yoga.",
     "title": "Software Engineer",
-    "tagline": "Software engineer di Samarinda. Tools open source untuk .NET, karya klien, dan catatan soal apa yang saya bangun.",
+    "tagline": "Software engineer di Samarinda. Saya mengelola {authendpoints}, pustaka auth untuk ASP.NET Core, dan membangun dengan .NET, Nuxt, Cursor, dan Grok Bot. Pendiri {studio}.",
     "cta_work": "Open Source",
     "cta_blog": "Baca Blog",
     "cta_contact": "Hubungi Saya",
@@ -20,7 +20,7 @@
   "seo": {
     "home_title_name": "Made Yoga Mahardika",
     "home_title_role": "Software Engineer di Samarinda",
-    "home_description": "Software engineer di Samarinda. Tools open source untuk .NET, karya klien, dan tulisan soal eksperimen yang memang saya jalankan."
+    "home_description": "Software engineer di Samarinda. Pengelola AuthEndpoints (auth ASP.NET Core) dan pendiri Harten Systems. Catatan soal apa yang benar-benar saya bangun."
   },
   "section": {
     "techstack": "Tech Stack",
