@@ -44,7 +44,7 @@ That July the repo got a fork from [David Fowler](https://github.com/davidfowl),
 
 The opening post quoted developers saying "I'm learning authentication by trial-and-error" and called it frightening. A consultant wrote that a team new to .NET couldn't get auth working for a month and gave up for a while. Others pointed to Laravel, where this part just works. David Fowler was replying in that thread too. At the time, aspnetcore had no built-in auth endpoints at all. `MapIdentityApi` didn't come until .NET 8, in November 2023.
 
-The more I learned about auth (while building client projects), the more I saw how opinionated it is. Cookies or tokens. Passwords, email codes, passkeys, social logins, oauth, oidc, step ups, two factor authentication. Every app picks a different mix depending on its needs. I also think maybe that's why aspnetcore left the endpoints out. A framework that stays unopinionated can't pick one for you. Even MapIdentityApi is, in my opinion, an opinionated solution that can't fit every app out there. 
+The more I learned about auth (while building client projects), the more I saw how opinionated it is. Cookies or tokens. Passwords, email codes, passkeys, social logins, oauth, oidc, step ups, two factor authentication. Every app picks a different mix depending on its needs. I also think maybe that's why aspnetcore left the endpoints out. A framework that stays unopinionated can't pick one for you. Even `MapIdentityApi` is, in my opinion, an opinionated solution that can't fit every app out there. 
 
 That gave me the idea for AuthEndpoints: a set of minimal API endpoints where you pick the ones you need. But the execution was really bad. I didn't have the experience yet, so the early versions gave you no real choice. You got one opinionated way of doing auth, password auth, and that was it.
 
@@ -121,15 +121,15 @@ Run it, and you have `POST /auth/register`, `POST /auth/login`, `POST /auth/logo
 
 [Cookie sessions](https://authendpoints.harten.id/modules/cookie-auth/) for browser apps. [JWT](https://authendpoints.harten.id/modules/jwt/) with a rotating refresh token for clients that need a bearer token. Identity bearer tokens for mobile apps, on the 3.x facade. In 4, the JWT refresh token can also come back in the JSON body for native apps and CLIs that have no cookie. Cookie transport stays the default.
 
-### [2FA](https://authendpoints.harten.id/guides/two-factor/)
+### 2FA
 
 Authenticator codes and recovery codes through `/auth/manage/2fa`.
 
-### [Passkeys](https://authendpoints.harten.id/modules/passkeys/)
+### Passkeys
 
 Set `Passkeys.ServerDomain` and the password facade maps passkey sign-in and passkey management under `/auth/passkeys`. Users can add, rename and remove them.
 
-### [Step-up (ReAuth)](https://authendpoints.harten.id/guides/step-up/)
+### Step-up (ReAuth)
 
 Before a sensitive change, the user proves who they are again with a password, an authenticator code, a recovery code, a passkey, or an email code. You can require it on your own routes too.
 
@@ -137,11 +137,11 @@ Before a sensitive change, the user proves who they are again with a password, a
 
 [Emailed one-time codes](https://authendpoints.harten.id/modules/email-code/), plus [GitHub and Google sign-in](https://authendpoints.harten.id/modules/external-oauth/) (currently plain OAuth flow, not OIDC).
 
-### [Protection](https://authendpoints.harten.id/concepts/security-model/)
+### Protection
 
 Rate limits, CSRF checks on cookie routes that change state, lockout, and checks at startup. Every `Map*` call throws at startup when its `Add*` call is missing, so a broken setup fails before the first request.
 
-### [Modules](https://authendpoints.harten.id/modules/composition/)
+### Modules
 
 If the facade maps more than you want, you can compose smaller modules and map only the routes you need on your own prefixes.
 
