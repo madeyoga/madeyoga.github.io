@@ -1,7 +1,9 @@
 import { canonicalUrl, personJsonLd, useJsonLdGraph } from '~/composables/useJsonLd'
+import { indexablePath } from '~/utils/blog-seo'
 
 export default defineNuxtPlugin(() => {
   const route = useRoute()
+  const path = indexablePath(route.path, useRuntimeConfig().public.untranslatedBlogSlugs)
 
   const website = {
     '@type': 'WebSite',
@@ -17,8 +19,8 @@ export default defineNuxtPlugin(() => {
     website,
     {
       '@type': 'WebPage',
-      '@id': `${canonicalUrl(route.path)}#webpage`,
-      url: canonicalUrl(route.path),
+      '@id': `${canonicalUrl(path)}#webpage`,
+      url: canonicalUrl(path),
       isPartOf: { '@id': 'https://madeyoga.harten.id/#website' },
       about: { '@id': 'https://madeyoga.harten.id/#person' },
     },

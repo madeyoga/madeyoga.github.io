@@ -2,6 +2,21 @@ import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 import { defineSitemapSchema } from '@nuxtjs/sitemap/content'
 import { defineSchemaOrgSchema } from 'nuxt-schema-org/content'
 
+const postSchema = z.object({
+  sitemap: defineSitemapSchema(),
+  schemaOrg: defineSchemaOrgSchema(),
+  image: z.object({ src: z.string().nonempty().editor({ input: 'media' }), alt: z.string().optional() }).optional(),
+  authors: z.array(
+    z.object({
+      name: z.string().nonempty(),
+      to: z.string().nonempty(),
+      avatar: z.object({ src: z.string().nonempty().editor({ input: 'media' }) })
+    })
+  ),
+  date: z.date(),
+  badge: z.object({ label: z.string().nonempty() })
+})
+
 export default defineContentConfig({
   collections: {
     index: defineCollection({
@@ -73,21 +88,21 @@ export default defineContentConfig({
     }),
     posts: defineCollection({
       type: 'page',
-      source: 'blog/**/*.md',
-      schema: z.object({
-        sitemap: defineSitemapSchema(),
-        schemaOrg: defineSchemaOrgSchema(),
-        image: z.object({ src: z.string().nonempty().editor({ input: 'media' }), alt: z.string().optional() }).optional(),
-        authors: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            to: z.string().nonempty(),
-            avatar: z.object({ src: z.string().nonempty().editor({ input: 'media' }) })
-          })
-        ),
-        date: z.date(),
-        badge: z.object({ label: z.string().nonempty() })
-      })
+      // Indonesian copies live beside these files. See postsId and scripts/blog-translations.mjs.
+      source: {
+        include: 'blog/**/*.md',
+        exclude: ['blog/**/*.id.md', 'blog/id/**'],
+      },
+      schema: postSchema,
+    }),
+    postsId: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'id/blog/*.md', prefix: '/blog' },
+        { include: 'blog/id/*.md', prefix: '/blog' },
+        { include: 'blog/*.id.md', prefix: '/blog' },
+      ],
+      schema: postSchema,
     }),
     about: defineCollection({
       type: 'page',

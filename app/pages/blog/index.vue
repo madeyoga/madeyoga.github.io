@@ -10,7 +10,8 @@ useSeoMeta({
   title,
   ogTitle: title ? `${title} | Made Yoga Mahardika` : title,
   description,
-  ogDescription: description
+  ogDescription: description,
+  twitterDescription: description,
 })
 </script>
 

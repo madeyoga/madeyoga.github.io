@@ -5,6 +5,7 @@ useSeoMeta({
   title: t('nav.contact'),
   ogTitle: `${t('nav.contact')} | Made Yoga Mahardika`,
   description: t('cta.description'),
+  twitterDescription: t('cta.description'),
 })
 </script>
 
