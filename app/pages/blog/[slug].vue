@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { blogPostSlug, isUntranslatedBlogPost, indexablePath } from '~/utils/blog-seo'
+
 const route = useRoute()
-const { locales, defaultLocale } = useI18n()
+const { locale, locales, defaultLocale } = useI18n()
+const untranslatedBlogSlugs = useRuntimeConfig().public.untranslatedBlogSlugs
 
 /** Content collection paths are locale-agnostic; strip i18n prefix for queries. */
 const contentPath = computed(() => {
@@ -18,8 +21,14 @@ const contentPath = computed(() => {
 })
 
 const { data: post } = await useAsyncData(
-  () => `blog-post-${contentPath.value}`,
-  () => queryCollection('posts').path(contentPath.value).first()
+  () => `blog-post-${locale.value}-${contentPath.value}`,
+  async () => {
+    const english = await queryCollection('posts').path(contentPath.value).first()
+    const slug = blogPostSlug(contentPath.value)
+    if (locale.value !== 'id' || !slug || untranslatedBlogSlugs.includes(slug)) return english
+    const indonesian = await queryCollection('postsId').path(contentPath.value).first()
+    return indonesian || english
+  }
 )
 
 if (!post.value) {
@@ -52,6 +61,7 @@ useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
+  twitterDescription: description,
   ogImage: articleImage,
   twitterImage: articleImage,
   // Cover images are not the 460px avatar. Drop the avatar dimensions so
@@ -61,20 +71,25 @@ useSeoMeta({
   ogImageType: usesProfileShareImage ? 'image/png' : null,
 })
 
+const articlePath = indexablePath(route.path, untranslatedBlogSlugs)
+const articleLanguage = locale.value === 'id' && !isUntranslatedBlogPost(route.path, untranslatedBlogSlugs)
+  ? 'id'
+  : 'en'
+
 useJsonLdGraph([
   {
     '@type': 'Article',
-    '@id': `${canonicalUrl(contentPath.value)}#article`,
+    '@id': `${canonicalUrl(articlePath)}#article`,
     headline: title,
     name: title,
     description,
     image: articleImage,
     datePublished: post.value.date,
     dateModified: post.value.date,
-    inLanguage: 'en',
+    inLanguage: articleLanguage,
     author: { '@id': 'https://madeyoga.harten.id/#person' },
     publisher: { '@id': 'https://madeyoga.harten.id/#person' },
-    mainEntityOfPage: { '@id': `${canonicalUrl(contentPath.value)}#webpage` },
+    mainEntityOfPage: { '@id': `${canonicalUrl(articlePath)}#webpage` },
   },
 ], 'jsonld-article')
 

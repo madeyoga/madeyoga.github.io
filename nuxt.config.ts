@@ -1,9 +1,23 @@
 import tailwindcss from "@tailwindcss/vite";
 import { copyFileSync, existsSync, lstatSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { untranslatedBlogSlugs } from './scripts/blog-translations.mjs'
 
 const siteUrl = 'https://madeyoga.harten.id'
 const profileImagePng = 'https://media.harten.id/images/madeyoga-avatar.png'
+const untranslatedBlogPostSlugs = untranslatedBlogSlugs()
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function sitemapPath(loc: string) {
+  try {
+    return new URL(loc, siteUrl).pathname.replace(/\/+$/, '') || '/'
+  } catch {
+    return loc.split('?')[0]?.replace(/\/+$/, '') || '/'
+  }
+}
 
 export default defineNuxtConfig({
   modules: [
@@ -73,11 +87,20 @@ export default defineNuxtConfig({
       redirectOn: 'root'
     }
   },
+  runtimeConfig: {
+    public: {
+      untranslatedBlogSlugs: untranslatedBlogPostSlugs,
+    },
+  },
   sitemap: {
     xsl: false,
     discoverImages: false,
     // One real /sitemap.xml file (not an HTML meta-refresh to /sitemap_index.xml).
     sitemaps: false,
+    // English-only posts stay out of the sitemap, including as hreflang alternates.
+    exclude: untranslatedBlogPostSlugs.flatMap(slug => [
+      new RegExp(`^/id/blog/${escapeRegExp(slug)}/?$`),
+    ]),
   },
   robots: {
     sitemap: [
@@ -201,7 +224,23 @@ export default defineNuxtConfig({
     }
   },
   hooks: {
+    'content:file:afterParse'(ctx: { collection?: { name?: string }, content?: { stem?: string, path?: string } }) {
+      if (ctx.collection?.name !== 'postsId' || !ctx.content?.stem) return
+      const base = String(ctx.content.stem).split('/').pop() || ''
+      const slug = base.replace(/\.id$/i, '')
+      if (!slug || slug.includes('..')) return
+      ctx.content.path = `/blog/${slug}`
+    },
     'nitro:init'(nitro) {
+      const blockedIndonesianPosts = new Set(untranslatedBlogPostSlugs.map(slug => `/id/blog/${slug}`))
+      nitro.hooks.hook('sitemap:resolved', (ctx: { urls?: Array<{ loc?: string, alternatives?: Array<{ href?: string }> }> }) => {
+        if (!ctx.urls) return
+        ctx.urls = ctx.urls.filter(url => !blockedIndonesianPosts.has(sitemapPath(url.loc || '')))
+        for (const url of ctx.urls) {
+          if (!url.alternatives) continue
+          url.alternatives = url.alternatives.filter(alt => !blockedIndonesianPosts.has(sitemapPath(alt.href || '')))
+        }
+      })
       // Fallback shells are emitted before the app head. Give them a language
       // and a title, and run before html-validate reads the same payload.
       const ensureDocumentShell = (route: { contents?: string, fileName?: string }) => {

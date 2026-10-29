@@ -14,6 +14,7 @@ useSeoMeta({
   title: t('nav.projects'),
   ogTitle: `${t('nav.projects')} | Made Yoga Mahardika`,
   description: t('section.projects_description'),
+  twitterDescription: t('section.projects_description'),
 })
 </script>
 

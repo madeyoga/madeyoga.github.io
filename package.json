@@ -5,7 +5,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "node --experimental-strip-types --test tests/blog-seo.test.mjs tests/blog-translations.test.mjs && nuxt generate && node scripts/check-seo.mjs",
+    "test": "node --experimental-strip-types --test tests/blog-seo.test.mjs tests/blog-translations.test.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "deploy": "pnpm generate && wrangler deploy"

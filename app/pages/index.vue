@@ -13,6 +13,7 @@ useSeoMeta({
   ogTitle: homeTitle,
   description: t('seo.home_description'),
   ogDescription: t('seo.home_description'),
+  twitterDescription: t('seo.home_description'),
 })
 
 const openSourceProjects = computed(() =>
