@@ -32,7 +32,9 @@ In 2022 I started using ASP.NET Core for new projects. I came from Django, where
 
 It took me a while to understand why. I read the aspnetcore source and a lot of blog samples. The `Add*` and `Use*` calls register the auth services and middleware. They don't give you a single endpoint. Register, login, refresh, 2FA and password reset are all yours to write. To write them, you first have to learn `UserManager`, `SignInManager`, token providers and authentication schemes. That's a lot for a beginner. ASP.NET Core is unopinionated on purpose, and auth is where you feel it most.
 
-So I wrote the endpoints once and turned them into a library. I started AuthEndpoints in April 2022. I've used it ever since in every client project, including POS systems, CRMs and internal apps. 
+So I wrote the endpoints once and turned them into a library. I started AuthEndpoints in April 2022. I've used it ever since in every client project, including POS systems, CRMs and internal apps.
+
+AuthEndpoints is on [GitHub](https://github.com/madeyoga/AuthEndpoints) and [NuGet](https://www.nuget.org/packages/AuthEndpoints), with docs at [authendpoints.harten.id](https://authendpoints.harten.id).
 
 
 ![David Fowler forked AuthEndpoints](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/eqxf4ut8ytbcp3hub50i.png)
