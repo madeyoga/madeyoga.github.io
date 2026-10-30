@@ -34,7 +34,19 @@ It took me a while to understand why. I read the aspnetcore source and a lot of 
 
 So I wrote the endpoints once and turned them into a library. I started AuthEndpoints in April 2022. I've used it ever since in every client project, including POS systems, CRMs and internal apps.
 
-AuthEndpoints is on [GitHub](https://github.com/madeyoga/AuthEndpoints) and [NuGet](https://www.nuget.org/packages/AuthEndpoints), with docs at [authendpoints.harten.id](https://authendpoints.harten.id).
+::card-group
+  :::card{title="GitHub" icon="i-simple-icons-github" to="https://github.com/madeyoga/AuthEndpoints" target="_blank"}
+  Source and issues
+  :::
+
+  :::card{title="NuGet" icon="i-simple-icons-nuget" to="https://www.nuget.org/packages/AuthEndpoints" target="_blank"}
+  `dotnet add package AuthEndpoints`
+  :::
+
+  :::card{title="Docs" icon="i-lucide-book-open" to="https://authendpoints.harten.id" target="_blank"}
+  Quick start and guides
+  :::
+::
 
 
 ![David Fowler forked AuthEndpoints](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/eqxf4ut8ytbcp3hub50i.png)
